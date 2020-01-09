@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hhhfccz.github.io/hhhfccz.github.io">
-  <title>胡珈魁的小博客</title>
+  <title>Archives: 2020/1 | 胡珈魁的小博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="胡珈魁的小博客">
-<meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;hhhfccz.github.io&#x2F;index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;hhhfccz.github.io&#x2F;archives&#x2F;2020&#x2F;01&#x2F;index.html">
 <meta property="og:site_name" content="胡珈魁的小博客">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -155,252 +155,47 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="[layout]-简单的爬虫" class="article article-type-[layout]  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/hhhfccz.github.io/2020/01/09/%E7%AE%80%E5%8D%95%E7%9A%84%E7%88%AC%E8%99%AB/">简单的爬虫</a>
-    </h1>
-  
-
-        
-        <a href="/hhhfccz.github.io/2020/01/09/%E7%AE%80%E5%8D%95%E7%9A%84%E7%88%AC%E8%99%AB/" class="archive-article-date">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/hhhfccz.github.io/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-[layout]">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/hhhfccz.github.io/2020/01/09/%E7%AE%80%E5%8D%95%E7%9A%84%E7%88%AC%E8%99%AB/" class="archive-article-date">
   	<time datetime="2020-01-09T14:34:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-09</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>获取网页信息<br>首先导入库</p>
-<pre><code>&gt;&gt;&gt;import requests</code></pre><p>先尝试直接访问这个网页</p>
-<pre><code>&gt;&gt;&gt;r = requests.get(&apos;http://www.mot.gov.cn/shuju/&apos;)
-&gt;&gt;&gt;r.status_code</code></pre><p>我们发现它的返回值是403，<font color = "red">表明我们并没有访问成功</font><br>我首先查看了它的编码，（因为我需要查看一下返回的文本）：</p>
-<pre><code>&gt;&gt;&gt;r.encoding
-&apos;ISO-8859-1&apos;
-&gt;&gt;&gt;r.encoding = r.apparent.encoding
-&gt;&gt;&gt;t.text[:1000]                               </code></pre><p>就是一个简单的403错误<br>这个时候，我查看了一下我发起的请求的头部</p>
-<pre><code>&gt;&gt;&gt;r.request.headers
-{&apos;User-Agent&apos;: &apos;python-requests/2.22.0&apos;, &apos;Accept-Encoding&apos;: &apos;gzip, deflate&apos;, &apos;Accept&apos;: &apos;*/*&apos;, &apos;Connection&apos;: &apos;keep-alive&apos;}</code></pre><p>我告诉了这个网站，我是python的requests库。<br>我就是馋你的数据，我诚实。</p>
-<p>好吧，<font color = "red">于是我决定模拟成一个浏览器向网页发送请求</font></p>
-<pre><code>&gt;&gt;&gt;kv = {&apos;user-agent&apos;:&apos;Mozilla/5.0&apos;}
-&gt;&gt;&gt;url = &apos;http://www.mot.gov.cn/shuju/&apos;
-&gt;&gt;&gt;r = requests.get(url,headers = kv)
-&gt;&gt;&gt;r.status_code
-200
-&gt;&gt;&gt;r.text</code></pre><p>以上是获取网页信息</p>
-<p>然后开始寻找表格在HTML文件中的位置<br>我打开网页源代码：</p>
-<pre><code>&lt;div class=&quot;fl w100 mod1_kshsj1_a_sj&quot;&gt;
-    &lt;IFRAME align=&quot;top&quot; width=&quot;1110px&quot; height=&quot;820px&quot; frameborder=&quot;0&quot; src=&quot;http://106.3.149.173/CatsCategory/listGLJCSJ5?tableName=cats_jtysybsjk_csky&amp;pubflag=1&amp;code=C13&quot; scrolling=&quot;no&quot; &gt;&lt;/IFRAME&gt;
-&lt;/div&gt;</code></pre><p>这里面的网址：<br><a href="http://106.3.149.173/CatsCategory/listGLJCSJ5?tableName=cats_jtysybsjk_csky&amp;pubflag=1&amp;code=C13" target="_blank" rel="noopener">http://106.3.149.173/CatsCategory/listGLJCSJ5?tableName=cats_jtysybsjk_csky&amp;pubflag=1&amp;code=C13</a><br>就对应了那个表格，也就是我们的爬取对象。（其中有图像对象，那个是用js生成的，咱不会爬）<br>然后我试了一下直接向网址发起访问，发现并不需要伪装成浏览器发起请求<br>好吧，我爬</p>
-<p>然后，我利用bs4库整理了一下HTML页面<br>接着，我分析了一下HTML页面的标签情况，发现有个标签</p>
-<pre><code>&lt;div id=&quot;biaoge&quot; style=&quot;&quot;&gt;</code></pre><p>在这个id = ‘biaoge’里面就是我们需要的全部数据，咱们把它爬出来</p>
-<p>这里面的数据有前面一段的HTML，加上后面一段js代码，咱把它扔掉<br>目前为止的代码：</p>
-<pre><code>&gt;&gt;&gt; import requests
-&gt;&gt;&gt; url = &apos;http://106.3.149.173/CatsCategory/listGLJCSJ5?tableName=cats_jtysybsjk_csky&amp;pubflag=1&amp;code=C13&apos;
-&gt;&gt;&gt; r = requests.get(url)
-&gt;&gt;&gt; demo = r.text
-&gt;&gt;&gt; from bs4 import BeautifulSoup
-&gt;&gt;&gt; soup = BeautifulSoup(demo,&apos;html.parser&apos;)
-&gt;&gt;&gt; soup.find_all(id = &apos;biaoge&apos;)</code></pre><p>以上代码可以较快地爬取数据，关键其实是找到正确的URL，可以节省很多时间</p>
-<p>其实到这里，把那一坨数据放在那里应该就算是完成任务了（确信）。<br>后续会继续优化一下，比如整理整理数据（下面是爬出来的东西，我没有把它放在excel里面，主要是嫌麻烦）</p>
-<div id="biaoge" >
-<div style="width: 1100px;overflow: auto;">
-<table class="JKY2019_Table1">
-<tr>
-<th style="width:120px">年份</th>
-<th style="width:120px">月份</th>
-<th style="width:120px">本月中心城市客运完成量（万人次）</th>
-<th style="width:120px">本月公共汽电车客运完成量（万人次）</th>
-<th style="width:120px">本月轨道交通客运完成量（万人次）</th>
-<th style="width:120px">本月客运轮渡客运完成量（万人次）</th>
-<th style="width:120px">本月巡游出租汽车客运完成量（万人次）</th>
-</tr>
-<tr>
-<td>2019年</td>
-<td>1月</td>
-<td>550977.80</td>
-<td>282636.50</td>
-<td>182756.40</td>
-<td>671.50</td>
-<td>84913.40</td>
-</tr>
-<tr>
-<td>2019年</td>
-<td>2月</td>
-<td>442061.90</td>
-<td>225458.60</td>
-<td>138665.00</td>
-<td>652.70</td>
-<td>77285.60</td>
-</tr>
-<tr>
-<td>2019年</td>
-<td>3月</td>
-<td>575506.80</td>
-<td>292731.20</td>
-<td>198048.40</td>
-<td>781.20</td>
-<td>83946.00</td>
-</tr>
-<tr>
-<td>2019年</td>
-<td>4月</td>
-<td>577269.30</td>
-<td>299247.20</td>
-<td>195630.50</td>
-<td>842.00</td>
-<td>81549.60</td>
-</tr>
-<tr>
-<td>2019年</td>
-<td>5月</td>
-<td>581810.70</td>
-<td>298684.70</td>
-<td>198141.90</td>
-<td>929.60</td>
-<td>84054.50</td>
-</tr>
-<tr>
-<td>2019年</td>
-<td>6月</td>
-<td>562885.00</td>
-<td>286398.30</td>
-<td>191754.80</td>
-<td>918.80</td>
-<td>83813.10</td>
-</tr>
-<tr>
-<td>2019年</td>
-<td>7月</td>
-<td>581889.60</td>
-<td>285679.60</td>
-<td>210682.50</td>
-<td>1012.00</td>
-<td>84515.50</td>
-</tr>
-<tr>
-<td>2019年</td>
-<td>8月</td>
-<td>565432.00</td>
-<td>273532.50</td>
-<td>206245.80</td>
-<td>1054.30</td>
-<td>84599.40</td>
-</tr>
-</table>
-</div>
-
-<p>以上，爬虫第一期，收工。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/hhhfccz.github.io/2020/01/09/%E7%AE%80%E5%8D%95%E7%9A%84%E7%88%AC%E8%99%AB/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-My-First-Blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/hhhfccz.github.io/2019/12/08/My-First-Blog/">My First Blog</a>
+      <a class="archive-article-title" href="/hhhfccz.github.io/2020/01/09/%E7%AE%80%E5%8D%95%E7%9A%84%E7%88%AC%E8%99%AB/">简单的爬虫</a>
     </h1>
   
 
-        
-        <a href="/hhhfccz.github.io/2019/12/08/My-First-Blog/" class="archive-article-date">
-  	<time datetime="2019-12-08T06:07:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>大家好，我是练习时长不足三个月的西电电科练习生胡珈魁，<br>讨厌高数、计导、工图……</p>
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/hhhfccz.github.io/2019/12/08/My-First-Blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
+    </div></section>
+  
+
+    
 
 
           </div>
@@ -422,9 +217,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
