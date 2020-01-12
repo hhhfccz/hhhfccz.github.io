@@ -184,6 +184,751 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-电科菜狗的python基础复习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+        
+        
+<a href="/hhhfccz.github.io/2020/01/12/%E7%94%B5%E7%A7%91%E8%8F%9C%E7%8B%97%E7%9A%84python%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2020-01-12T11:28:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-12</time>
+</a>
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">6.7k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">25分</span>
+      </span>
+    </span>
+</div>
+          
+        
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+    <center><p>
+  
+    <h1 itemprop="name">
+      <a class="article-title_code_ant" href="/hhhfccz.github.io/2020/01/12/%E7%94%B5%E7%A7%91%E8%8F%9C%E7%8B%97%E7%9A%84python%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/">电科菜狗的python基础复习</a>
+    </h1>
+  
+</p></center>
+      
+        <h1 id="数据对象与组织："><a href="#数据对象与组织：" class="headerlink" title="数据对象与组织："></a>数据对象与组织：</h1><h2 id="值："><a href="#值：" class="headerlink" title="值："></a>值：</h2><blockquote>
+<p>整形、浮点型、复数、逻辑值、字符串</p>
+</blockquote>
+<h2 id="容器：用来组织值"><a href="#容器：用来组织值" class="headerlink" title="容器：用来组织值"></a>容器：用来组织值</h2><blockquote>
+<p>列表、元组、集合、字典</p>
+</blockquote>
+<pre><code>数据之间几乎都可以相互转换</code></pre><h2 id="如何对数据进行组织："><a href="#如何对数据进行组织：" class="headerlink" title="如何对数据进行组织："></a>如何对数据进行组织：</h2><blockquote>
+<p>1.不组织；<br>2.标签式组织数据；<br>3.队列，栈，树，图……（数据结构）；</p>
+</blockquote>
+<h1 id="计算与控制流"><a href="#计算与控制流" class="headerlink" title="计算与控制流"></a>计算与控制流</h1><h2 id="计算与流程：计算的本质就是一个将现实世界抽象化的过程（包括过程与结果）"><a href="#计算与流程：计算的本质就是一个将现实世界抽象化的过程（包括过程与结果）" class="headerlink" title="计算与流程：计算的本质就是一个将现实世界抽象化的过程（包括过程与结果）"></a>计算与流程：计算的本质就是一个将现实世界抽象化的过程（包括过程与结果）</h2><blockquote>
+<p>各种数据类型的对象，都可以通过各种运算组织成复杂的表达式；<br>数值计算；<br>字符串计算，+就是连接，*就是copy；<br>调用封装好的math库等进行更加高级的数学计算；</p>
+</blockquote>
+<h2 id="运算语句：将表达式赋值给变量进行使用"><a href="#运算语句：将表达式赋值给变量进行使用" class="headerlink" title="运算语句：将表达式赋值给变量进行使用"></a>运算语句：将表达式赋值给变量进行使用</h2><blockquote>
+<p>表达式计算；<br>函数调用；<br>赋值：将表达式赋值给变量用于后续引用，赋值语句用来实现处理与暂存（在这里这个表达式可以是一个值，也可以是一个函数）</p>
+</blockquote>
+<h2 id="控制流语句：对这些语句进行组织（用来组织语句进行描述过程）"><a href="#控制流语句：对这些语句进行组织（用来组织语句进行描述过程）" class="headerlink" title="控制流语句：对这些语句进行组织（用来组织语句进行描述过程）"></a>控制流语句：对这些语句进行组织（用来组织语句进行描述过程）</h2><blockquote>
+<p>顺序结构（最基本的结构）；<br>条件分支（if）结构；<br>循环（while，for）结构；</p>
+</blockquote>
+<h2 id="定义语句：同样用来组织语句，把一系列的运算语句集合起来赋予它一个名字（并不改变流程）"><a href="#定义语句：同样用来组织语句，把一系列的运算语句集合起来赋予它一个名字（并不改变流程）" class="headerlink" title="定义语句：同样用来组织语句，把一系列的运算语句集合起来赋予它一个名字（并不改变流程）"></a>定义语句：同样用来组织语句，把一系列的运算语句集合起来赋予它一个名字（并不改变流程）</h2><blockquote>
+<p>提供源代码的复用（C语言中函数） def用来定义一个代码块（函数）；<br>我们可以定义函数、类等代码对象（可调用的callable，即包括函数定义、类的定义）；</p>
+</blockquote>
+<h1 id="数据类型介绍"><a href="#数据类型介绍" class="headerlink" title="数据类型介绍"></a>数据类型介绍</h1><h2 id="数值"><a href="#数值" class="headerlink" title="数值"></a>数值</h2><h3 id="整数类型int：最大的特点就是不限制大小"><a href="#整数类型int：最大的特点就是不限制大小" class="headerlink" title="整数类型int：最大的特点就是不限制大小"></a>整数类型int：最大的特点就是不限制大小</h3><h4 id="常见运算符"><a href="#常见运算符" class="headerlink" title="常见运算符"></a>常见运算符</h4><blockquote>
+<p>+、-、*、/   加减乘除</p>
+</blockquote>
+<blockquote>
+<p>//   整数除法，结果是商的整数部分</p>
+</blockquote>
+<blockquote>
+<p>%    取余数</p>
+</blockquote>
+<blockquote>
+<p>divmod(m,n)  求整数除法和余数   得到两个数，一个是商的整数部分（m//n），一个是商的小数部分（m%n）</p>
+</blockquote>
+<blockquote>
+<p>**   求一个数的乘方</p>
+</blockquote>
+<blockquote>
+<p>abs(m) 求m的绝对值</p>
+</blockquote>
+<h4 id="大小比较"><a href="#大小比较" class="headerlink" title="大小比较"></a>大小比较</h4><blockquote>
+<p>== 相等比较</p>
+</blockquote>
+<blockquote>
+<p>&gt;  大于比较（&gt;= 大于等于比较）</p>
+</blockquote>
+<blockquote>
+<p>&lt;  小于比较（&lt;= 小于等于比较）</p>
+</blockquote>
+<pre><code>连续的比较判断：也是可以的（C语言不行）
+同时，这些比较结果最终返回逻辑值</code></pre><h4 id="数的进制"><a href="#数的进制" class="headerlink" title="数的进制"></a>数的进制</h4><h5 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h5><blockquote>
+<p>略（数学知识，挺简单的）</p>
+</blockquote>
+<h5 id="py中不同进制的表达：（前缀写在数字前）"><a href="#py中不同进制的表达：（前缀写在数字前）" class="headerlink" title="py中不同进制的表达：（前缀写在数字前）"></a>py中不同进制的表达：（前缀写在数字前）</h5><blockquote>
+<p>十进制：无前缀<br>二进制：0b前缀<br>八进制：0o前缀<br>十六进制：0x前缀</p>
+</blockquote>
+<h3 id="浮点类型float：操作与整形类似，浮点数受到17位有效数字的限制，超过的就需要用科学计数法"><a href="#浮点类型float：操作与整形类似，浮点数受到17位有效数字的限制，超过的就需要用科学计数法" class="headerlink" title="浮点类型float：操作与整形类似，浮点数受到17位有效数字的限制，超过的就需要用科学计数法"></a>浮点类型float：操作与整形类似，浮点数受到17位有效数字的限制，超过的就需要用科学计数法</h3><blockquote>
+<p>但是，有因为进制转换导致精度误差（例如：4.2 + 2.1 == 6.3返回false），我们需要小心浮点数的大小判断<br>即，我们要避免用==判断浮点数，要用两者的差小于一定数字（很小的数）</p>
+</blockquote>
+<h3 id="复数类型（虚数）"><a href="#复数类型（虚数）" class="headerlink" title="复数类型（虚数）"></a>复数类型（虚数）</h3><pre><code>py中用j表示虚部i：a + bj</code></pre><h4 id="支持常见的复数运算"><a href="#支持常见的复数运算" class="headerlink" title="支持常见的复数运算"></a>支持常见的复数运算</h4><blockquote>
+<p>.imag 提取出该复数的虚部<br>.real 提取出该复数的实部</p>
+</blockquote>
+<h4 id="复数之间不可以做除-以外的大小比较（只能比较是否相等）"><a href="#复数之间不可以做除-以外的大小比较（只能比较是否相等）" class="headerlink" title="复数之间不可以做除 == 以外的大小比较（只能比较是否相等）"></a>复数之间不可以做除 == 以外的大小比较（只能比较是否相等）</h4><h4 id="复数的应用"><a href="#复数的应用" class="headerlink" title="复数的应用"></a>复数的应用</h4><blockquote>
+<p>可以用abs处理复数和复数的加减乘除（就是得到数轴平面上两点之间的距离）</p>
+</blockquote>
+<h3 id="math模块"><a href="#math模块" class="headerlink" title="math模块"></a>math模块</h3><pre><code>&gt;&gt;&gt;import math
+&gt;&gt;&gt;dir(math)</code></pre><blockquote>
+<p>用来查看math模块（专门用来处理整数与浮点数的）</p>
+</blockquote>
+<h3 id="cmath模块"><a href="#cmath模块" class="headerlink" title="cmath模块"></a>cmath模块</h3><blockquote>
+<p>用来专门面向复数计算（还可以支持平面直角坐标与极坐标之间的转换）（0，可能会是一大堆莫名其妙的是-17位数，这很正常，我们将它看成0）</p>
+</blockquote>
+<h2 id="逻辑（bool-布尔）值"><a href="#逻辑（bool-布尔）值" class="headerlink" title="逻辑（bool/布尔）值"></a>逻辑（bool/布尔）值</h2><h3 id="判断与真值"><a href="#判断与真值" class="headerlink" title="判断与真值"></a>判断与真值</h3><h4 id="逻辑值"><a href="#逻辑值" class="headerlink" title="逻辑值"></a>逻辑值</h4><blockquote>
+<p>true真；</p>
+</blockquote>
+<blockquote>
+<p>false假；</p>
+</blockquote>
+<pre><code>一般用来配合if/while等语句做条件判断</code></pre><h4 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h4><blockquote>
+<p>“与” and  双目</p>
+</blockquote>
+<blockquote>
+<p>“或” or  双目</p>
+</blockquote>
+<blockquote>
+<p>“非” not  单目</p>
+</blockquote>
+<pre><code>这个值仅仅连接一个值（放在值的前面），非真为假，非假为真（&apos;-&apos;也是如此）</code></pre><h5 id="优先级："><a href="#优先级：" class="headerlink" title="优先级："></a>优先级：</h5><blockquote>
+<p>not&gt;and&gt;or（更推荐把表达式用括号括起来）</p>
+</blockquote>
+<h4 id="各种类型对应的真值"><a href="#各种类型对应的真值" class="headerlink" title="各种类型对应的真值"></a>各种类型对应的真值</h4><blockquote>
+<p>0是假，其他数都是真；<br>空字符串是假，其余非空字符串为真；<br>空序列是假，非空的序列是真；<br>空类型None，表示无意义，不知道，属于假</p>
+</blockquote>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="文本的表示"><a href="#文本的表示" class="headerlink" title="文本的表示"></a>文本的表示</h3><blockquote>
+<p>字符串就是把一个个文字的字符“串起来”的数据（文字符号包括：拉丁字母、数字、标点符号、特殊符号以及各种语言文字字符）</p>
+</blockquote>
+<h4 id="表示字符串的数值"><a href="#表示字符串的数值" class="headerlink" title="表示字符串的数值"></a>表示字符串的数值</h4><blockquote>
+<p>用双引号或者单引号</p>
+</blockquote>
+<pre><code>要求：必须成对；（如果你要换行，需要连续的三个引号）</code></pre><h4 id="特殊字符的转义符号"><a href="#特殊字符的转义符号" class="headerlink" title="特殊字符的转义符号"></a>特殊字符的转义符号</h4><blockquote>
+<p>略，自行百度</p>
+</blockquote>
+<h4 id="字符的编号，用于提取字符"><a href="#字符的编号，用于提取字符" class="headerlink" title="字符的编号，用于提取字符"></a>字符的编号，用于提取字符</h4><blockquote>
+<p>顺序排列：从（最左边）0开始；<br>逆序排列：从（最右边）-1开始；</p>
+</blockquote>
+<h3 id="字符串和名字的区别"><a href="#字符串和名字的区别" class="headerlink" title="字符串和名字的区别"></a>字符串和名字的区别</h3><blockquote>
+<p>字符串是数据本身，是值<br>名字是数据的标签，是名 </p>
+</blockquote>
+<pre><code>名称当中不要包含特殊字符</code></pre><blockquote>
+<p>一个字符串数值可以关联多个名字（t = s = “abc”，t、s都是关联了”abc”字符串）<br>一个名字在同一时刻只能关联一个字符串（赋值之后，s只能代表”abc”,而不能代表其他值）</p>
+</blockquote>
+<blockquote>
+<p>字符串数值只能是字符串类型；<br>名字可以关联任意类型的数值；</p>
+</blockquote>
+<h3 id="常见的字符串操作"><a href="#常见的字符串操作" class="headerlink" title="常见的字符串操作"></a>常见的字符串操作</h3><blockquote>
+<p>len 获取字符串长度；</p>
+</blockquote>
+<blockquote>
+<p>slice 切片操作：</p>
+<blockquote>
+<p>s[start:end:step]<br>s就是字符串；start就是开始位置；end就是结束位置；step就是步长（每step个字符取一个，可以是一个负数）；</p>
+</blockquote>
+</blockquote>
+<pre><code>在这里，python一般都是左闭右开区间，包括start，不包括end（字符串连接时避免重复）</code></pre><blockquote>
+<p>+ * 加法乘法 略</p>
+</blockquote>
+<blockquote>
+<p>==  字符串之间的比较 略</p>
+</blockquote>
+<blockquote>
+<p>in 判断字符串当中是否包含某个字符串 “d” in s 返回值为false（大小写敏感）</p>
+</blockquote>
+<blockquote>
+<p>str.strip 去掉字符串前后的所有空格，内部的空格不受影响</p>
+</blockquote>
+<blockquote>
+<p>str.lstrip 去掉字符串前部（左）的所有空格</p>
+</blockquote>
+<blockquote>
+<p>str.rstrip …………………（右）……………</p>
+</blockquote>
+<blockquote>
+<p>str.isalpha 判断字符串是否全部由字母构成</p>
+</blockquote>
+<blockquote>
+<p>str.isdigit 判断字符串是否全部由数字构成</p>
+</blockquote>
+<blockquote>
+<p>str.isalnum 判断字符串是否仅包含字母和数字而不包含特殊字符</p>
+</blockquote>
+<blockquote>
+<p>split分割  </p>
+</blockquote>
+<blockquote>
+<p>join合并 </p>
+</blockquote>
+<blockquote>
+<p>upper/lower/swapcase 大小写相关</p>
+</blockquote>
+<blockquote>
+<p>ljust/center/rjust 文本的排版（左中右对齐）</p>
+</blockquote>
+<blockquote>
+<p>replace 替换子串</p>
+</blockquote>
+<blockquote>
+<p>字符串变列表：</p>
+<blockquote>
+<p>m = t.split() t就是我们的字符串，m就是生成的列表</p>
+</blockquote>
+</blockquote>
+<h3 id="字符串是一种序列"><a href="#字符串是一种序列" class="headerlink" title="字符串是一种序列"></a>字符串是一种序列</h3><blockquote>
+<p>py中，字符串是序列的一种特殊情况（和C语言中，字符串是数组的一种比较类似）<br>序列（可以简单地理解为C语言中的数组）：</p>
+<blockquote>
+<p>能够按照整数顺序排列的数据</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>内部结构：</p>
+<blockquote>
+<p>可以通过从0开始的连续整数来索引<br>可以执行切片操作，获取序列的一部分<br>可以利用len来获取序列中包含多少个元素<br>可以用+ *连接成更长的字符<br>用in判断某元素是否存在于这个序列当中</p>
+</blockquote>
+</blockquote>
+<h2 id="变量和引用"><a href="#变量和引用" class="headerlink" title="变量和引用"></a>变量和引用</h2><h3 id="给数据命名"><a href="#给数据命名" class="headerlink" title="给数据命名"></a>给数据命名</h3><h4 id="命名的语法"><a href="#命名的语法" class="headerlink" title="命名的语法"></a>命名的语法</h4><blockquote>
+<p>&lt;名字&gt; = &lt;数据&gt;</p>
+</blockquote>
+<h4 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h4><blockquote>
+<p>规定，必须由字母与数字组成，下划线_算作字母，字母大小写敏感，名字中不能带上特殊的字符（空格，标点，运算符等），名字的第一个字符必须是字母，不能是数字<br> 汉字属于字母</p>
+</blockquote>
+<h2 id="名字与变量"><a href="#名字与变量" class="headerlink" title="名字与变量"></a>名字与变量</h2><blockquote>
+<p>名字就是一个变量的标签（未定义的名字（就是这个名字没有经过赋值）就无法使用）<br>名字与数值的关联，称作引用，关联数据后的名字就拥有了数据的值和类型<br>一个数值可以和很多名字关联</p>
+</blockquote>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><blockquote>
+<p>与数据相关联的名字也称作变量，表示名字和值都能随时变化<br>它可以指向任何一个数据对象（变量类型会随着所关联的数据的变化而变化）</p>
+</blockquote>
+<h3 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h3><blockquote>
+<p>名字与数值关联的过程就是赋值（“=”）</p>
+</blockquote>
+<h3 id="灵活多变的赋值语句"><a href="#灵活多变的赋值语句" class="headerlink" title="灵活多变的赋值语句"></a>灵活多变的赋值语句</h3><blockquote>
+<p>合并赋值： a = b = c = 1<br>按顺序依次复制： a,b,c = 7,8,9<br>简写赋值语句： p += 1（*= -= /=）</p>
+</blockquote>
+<pre><code>ord，符号转化为ASCII码；
+chr，ASCII码转化为符号；</code></pre><h1 id="容器类型介绍"><a href="#容器类型介绍" class="headerlink" title="容器类型介绍"></a>容器类型介绍</h1><h2 id="列表和元组（两者几乎完全一样，类似于C语言数组-与-const的数组）"><a href="#列表和元组（两者几乎完全一样，类似于C语言数组-与-const的数组）" class="headerlink" title="列表和元组（两者几乎完全一样，类似于C语言数组 与 const的数组）"></a>列表和元组（两者几乎完全一样，类似于C语言数组 与 const的数组）</h2><h3 id="数据收纳盒"><a href="#数据收纳盒" class="headerlink" title="数据收纳盒"></a>数据收纳盒</h3><h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><blockquote>
+<p>用来收纳数据对象的数据类型<br>以一种规则的下标索引方式（名字+序号）访问到每一个数据</p>
+</blockquote>
+<blockquote>
+<p>列表可以进行删除、添加、替换、重排序列中的元素（列表属于可变类型）<br>元组与列表唯一的不同就是元组是不可变序列，不能再更新（固定了）</p>
+</blockquote>
+<h2 id="列表和元组的创建"><a href="#列表和元组的创建" class="headerlink" title="列表和元组的创建"></a>列表和元组的创建</h2><h3 id="创建列表"><a href="#创建列表" class="headerlink" title="创建列表"></a>创建列表</h3><blockquote>
+<p>方括号法： []，返回一个空的列表<br>指明类型法： list()</p>
+</blockquote>
+<h3 id="创建元组"><a href="#创建元组" class="headerlink" title="创建元组"></a>创建元组</h3><blockquote>
+<p>圆括号法： ()，返回一个空的元组<br>指明类型法： tuple()  (23,)就代表一个只含有一个元素的元组（必须要有逗号）</p>
+</blockquote>
+<pre><code>列表或元组中保存的各个数据称作元素，其类型没有限制</code></pre><h2 id="列表和元组的操作"><a href="#列表和元组的操作" class="headerlink" title="列表和元组的操作"></a>列表和元组的操作</h2><h3 id="增长列表："><a href="#增长列表：" class="headerlink" title="增长列表："></a>增长列表：</h3><blockquote>
+<p>append：在列表末尾加上一个数据对象</p>
+</blockquote>
+<blockquote>
+<p>insert：在列表中间的任何一个部位，同时需要指定成为第几个元素（insert3），那么这个元素就会成为列表中序号为3的元素（第四个）</p>
+</blockquote>
+<blockquote>
+<p>extend：可以把一个列表接在另一个列表的后面</p>
+</blockquote>
+<h3 id="缩减列表："><a href="#缩减列表：" class="headerlink" title="缩减列表："></a>缩减列表：</h3><blockquote>
+<p>pop：提取出一个元素，从中间把它删掉（不带任何一个参数的pop，默认移走最后一个元素，pop0，就是移走序号为0的那一个元素）</p>
+</blockquote>
+<blockquote>
+<p>remove：remove hello，就会将原列表中值为hello的元素去掉，生成一个新列表</p>
+</blockquote>
+<blockquote>
+<p>clear：把整个列表变成空列表</p>
+</blockquote>
+<blockquote>
+<p>reverse/sort操作：</p>
+<blockquote>
+<p>reserve：把列表中的数据元素头尾反转重新排列(s.reserve()) s代表列表<br>sort:把列表中的数据元素按照大小顺序重新排列(s.sort(reserve = True)从大到小排，中间没有参数就是从小到大)</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>reversed/sorted操作：</p>
+<blockquote>
+<p>   reserved/sorted：得到重新排列的（新）列表，但不影响原有列表的值</p>
+</blockquote>
+</blockquote>
+<pre><code>更多操作，可以去MOOC北大陈斌教授的课16康</code></pre><h3 id="列表变字符串操作"><a href="#列表变字符串操作" class="headerlink" title="列表变字符串操作"></a>列表变字符串操作</h3><blockquote>
+<p>h = ‘’.join(t) t就是需要转变的列表，h就是我们需要生成的字符串</p>
+</blockquote>
+<h3 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h3><blockquote>
+<p>+：连接两个列表/元组，它会得到一个新的列表（原来两个列表都不会变），与extend（改变了原来那个列表）有所不同<br>*：复制n次，生成新列表/元组</p>
+</blockquote>
+<h3 id="列表-元组的大小"><a href="#列表-元组的大小" class="headerlink" title="列表/元组的大小"></a>列表/元组的大小</h3><blockquote>
+<p>len()：列表/元组中元素的个数</p>
+</blockquote>
+<h3 id="索引和切片"><a href="#索引和切片" class="headerlink" title="索引和切片"></a>索引和切片</h3><blockquote>
+<p>alist[n]或者atuple[n]都可以得到编号为n的元素</p>
+</blockquote>
+<pre><code>可以用于左值：给列表中对应元素赋值
+注意元组不能这样搞（元组被固定住了）</code></pre><h3 id="查找和计算"><a href="#查找和计算" class="headerlink" title="查找和计算"></a>查找和计算</h3><blockquote>
+<p>in操作：判断某个元素是否在列表/元组中</p>
+</blockquote>
+<blockquote>
+<p>index操作：指定的数据在列表/元组中的哪个位置（返回下标）</p>
+</blockquote>
+<blockquote>
+<p>count操作：指定的数据在列表/元组中出现过几次</p>
+</blockquote>
+<blockquote>
+<p>sum函数：将列表中所有的数据元素累加</p>
+</blockquote>
+<blockquote>
+<p>min/max函数：返回列表中最小/最大的数据元素</p>
+</blockquote>
+<h2 id="字典（类似于C语言结构体）"><a href="#字典（类似于C语言结构体）" class="headerlink" title="字典（类似于C语言结构体）"></a>字典（类似于C语言结构体）</h2><h3 id="贴标签的数据"><a href="#贴标签的数据" class="headerlink" title="贴标签的数据"></a>贴标签的数据</h3><h4 id="“标签收纳盒”"><a href="#“标签收纳盒”" class="headerlink" title="“标签收纳盒”"></a>“标签收纳盒”</h4><blockquote>
+<p>给数据贴上标签，就可以通过具有特定含义的名字或者别的记号来获取数据<br>字典就是通过一个标签索引到这些值（范围更加广泛）</p>
+</blockquote>
+<h4 id="标签（key）和数据值（value）"><a href="#标签（key）和数据值（value）" class="headerlink" title="标签（key）和数据值（value）"></a>标签（key）和数据值（value）</h4><h4 id="在字典容器中，保存着很多key-value对"><a href="#在字典容器中，保存着很多key-value对" class="headerlink" title="在字典容器中，保存着很多key-value对"></a>在字典容器中，保存着很多key-value对</h4><h3 id="创建一个字典"><a href="#创建一个字典" class="headerlink" title="创建一个字典"></a>创建一个字典</h3><blockquote>
+<p>花括号法：student = {}<br>指明类型法：student = dict()</p>
+</blockquote>
+<h3 id="访问字典的数据项"><a href="#访问字典的数据项" class="headerlink" title="访问字典的数据项"></a>访问字典的数据项</h3><h4 id="数据项"><a href="#数据项" class="headerlink" title="数据项"></a>数据项</h4><blockquote>
+<p>字典当中的每一项称之为数据项，即一个key-value对<br>标签和数据值之间用：连接</p>
+</blockquote>
+<h4 id="批量添加数据项"><a href="#批量添加数据项" class="headerlink" title="批量添加数据项"></a>批量添加数据项</h4><blockquote>
+<p>student = dict.fromkeys( ( “name”,”age” ) )<br>在后面没有参数的情况下，这两个标签所对应的值，被赋值为none</p>
+</blockquote>
+<blockquote>
+<p>字典是可变类型，可以添加、删除、替换元素<br>字典中的元素没有顺序，可以是任意类型，甚至可以是一个字典<br>字典中的键值（key也就是标签）可以是任意不可变类型（包括数值、字符串、元组）</p>
+</blockquote>
+<pre><code>我们可以用元组来作为坐标，索引元素（带入平面直角坐标系）</code></pre><h3 id="字典的更新"><a href="#字典的更新" class="headerlink" title="字典的更新"></a>字典的更新</h3><h4 id="合并-1"><a href="#合并-1" class="headerlink" title="合并"></a>合并</h4><blockquote>
+<p>update:student.update(bar) 意思就是将bar字典中的内容添加到student字典中去（key有重叠的话，用bar中的值来更新原值；没有重叠的话，直接添加）</p>
+</blockquote>
+<h4 id="增长"><a href="#增长" class="headerlink" title="增长"></a>增长</h4><blockquote>
+<p>利用关联操作<br>student.update(friends = [‘??’,’???’]) 这样也将这一对添加到student字典中了</p>
+</blockquote>
+<h4 id="缩减"><a href="#缩减" class="headerlink" title="缩减"></a>缩减</h4><blockquote>
+<p>del:del student[‘age’]  就是把student标签中的age那一栏去掉</p>
+</blockquote>
+<blockquote>
+<p>pop:student.pop(‘course’) 意思同上，同时，它会返回对应的数据值</p>
+</blockquote>
+<blockquote>
+<p>popitem:student.popitem() 删除并返回字典当中的任意一个数据项（用于遍历）</p>
+</blockquote>
+<blockquote>
+<p>clear:清空字典</p>
+</blockquote>
+<h3 id="字典的大小"><a href="#字典的大小" class="headerlink" title="字典的大小"></a>字典的大小</h3><blockquote>
+<p>len函数，返回数据项个数</p>
+</blockquote>
+<h3 id="标签索引"><a href="#标签索引" class="headerlink" title="标签索引"></a>标签索引</h3><blockquote>
+<p>dict[key] 来访问数据，同时也可以用来更新这个数据对象<br>student.get(key) 也可以访问数据，但是不能作为变量来使用</p>
+</blockquote>
+<h3 id="获取字典的标签、数据值和数据项"><a href="#获取字典的标签、数据值和数据项" class="headerlink" title="获取字典的标签、数据值和数据项"></a>获取字典的标签、数据值和数据项</h3><blockquote>
+<p>keys函数：返回字典中的所有标签<br>values函数：返回字典中的所有数据值<br>items函数：将每个数据项表示为二元元组，返回所有的数据项</p>
+</blockquote>
+<h3 id="在字典中查找"><a href="#在字典中查找" class="headerlink" title="在字典中查找"></a>在字典中查找</h3><blockquote>
+<p>in：判断字典中是否存在某个标签<br>in操作和values函数的组合：判断字典中是否存在某个数据值</p>
+</blockquote>
+<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h3 id="标签的容器"><a href="#标签的容器" class="headerlink" title="标签的容器"></a>标签的容器</h3><blockquote>
+<p>“标签袋”通过改变字典类型，去掉关联的数据值，只留下标签的新容器类型<br>集合是不重复元素的无序组合</p>
+</blockquote>
+<h3 id="创建一个集合"><a href="#创建一个集合" class="headerlink" title="创建一个集合"></a>创建一个集合</h3><blockquote>
+<p>{}<br>set()<br>可以生成一个空集合<br>可以用set从其他序列转换生成集合</p>
+</blockquote>
+<pre><code>集合会自动忽略重复的数据
+集合中不能添加可变类型的数据（字典中key的要求）</code></pre><h4 id="增长集合"><a href="#增长集合" class="headerlink" title="增长集合"></a>增长集合</h4><blockquote>
+<p>add/update</p>
+</blockquote>
+<h4 id="缩减集合"><a href="#缩减集合" class="headerlink" title="缩减集合"></a>缩减集合</h4><blockquote>
+<p>remove（参数在集合中不存在的时候会出错）</p>
+</blockquote>
+<blockquote>
+<p>discard（参数在集合中不存在的时候不会出错）</p>
+</blockquote>
+<blockquote>
+<p>pop删除任意数据并返回值</p>
+</blockquote>
+<blockquote>
+<p>clear清空</p>
+</blockquote>
+<h4 id="集合大小"><a href="#集合大小" class="headerlink" title="集合大小"></a>集合大小</h4><blockquote>
+<p>略</p>
+</blockquote>
+<h3 id="访问集合中的元素"><a href="#访问集合中的元素" class="headerlink" title="访问集合中的元素"></a>访问集合中的元素</h3><blockquote>
+<p>in：判断元素是否属于集合<br>pop：删除数据元素的同时将它返回给你，用于遍历，只不过最后集合会变为空集<br>copy：顾名思义，略</p>
+</blockquote>
+<pre><code>迭代循环：for a in aset:  （在循环过程中a代表其中的的一个元素，同时也不会删除任何数据）</code></pre><h3 id="集合的运算"><a href="#集合的运算" class="headerlink" title="集合的运算"></a>集合的运算</h3><h4 id="生成新集合的运算"><a href="#生成新集合的运算" class="headerlink" title="生成新集合的运算"></a>生成新集合的运算</h4><blockquote>
+<p>并：    a|b  union（生成新集合）  update（更新原集合）<br>交：    a&amp;b  intersection         intersection_update<br>差：    a-b  difference           difference_update<br>对称差：a^b  symmetric_difference symmetric_difference_update（把a-b和b-a并在一起）</p>
+</blockquote>
+<h4 id="关系判定"><a href="#关系判定" class="headerlink" title="关系判定"></a>关系判定</h4><blockquote>
+<p>&lt;= , = , &gt;……（符合高中所学集合概念）</p>
+</blockquote>
+<h4 id="交集判断"><a href="#交集判断" class="headerlink" title="交集判断"></a>交集判断</h4><blockquote>
+<p>isdisjoint() :判断两个集合的交集是否为空集，是空集返回True  </p>
+</blockquote>
+<pre><code>a.isdisjoint(b)</code></pre><h3 id="什么时候用集合"><a href="#什么时候用集合" class="headerlink" title="什么时候用集合"></a>什么时候用集合</h3><blockquote>
+<p>利用集合快速除去重复的数据项<br>判断一个元素是否在一组数据里，如果无次序要求，集合优于列表</p>
+</blockquote>
+<h1 id="更加复杂的数据结构"><a href="#更加复杂的数据结构" class="headerlink" title="更加复杂的数据结构"></a>更加复杂的数据结构</h1><h2 id="比较几种数据结构"><a href="#比较几种数据结构" class="headerlink" title="比较几种数据结构"></a>比较几种数据结构</h2><blockquote>
+<p>使用[]创建列表<br>使用()创建元组<br>使用{}创建字典、集合<br>在每种类型中，都可以通过[]对容器中单个元素进行访问</p>
+<blockquote>
+<p>对于列表和元组，[]内是整形的偏移量（可以理解为C语言中数组的下标）<br>对于集合和字典，[]内是key（标签值）</p>
+</blockquote>
+</blockquote>
+<p>  当然，最终都会返回为对应元素的值</p>
+<h2 id="建立大型数据结构"><a href="#建立大型数据结构" class="headerlink" title="建立大型数据结构"></a>建立大型数据结构</h2><blockquote>
+<p>我们可以将这些数据结构自由的组合成更大、更复杂的结构<br>创建自定义数据结构的过程，仅受到内置数据结构的限制</p>
+</blockquote>
+<h3 id="建立三个不同的列表"><a href="#建立三个不同的列表" class="headerlink" title="建立三个不同的列表"></a>建立三个不同的列表</h3><pre><code>alist = [1,2,3]
+blist = [&apos;hello&apos;,&apos;world&apos;,&apos;python&apos;]
+clist = [True,False]</code></pre><h3 id="嵌套的列表-元组"><a href="#嵌套的列表-元组" class="headerlink" title="嵌套的列表/元组"></a>嵌套的列表/元组</h3><blockquote>
+<p>以下列表带有三个数据对象（可以理解为C语言中的二维数组）</p>
+</blockquote>
+<pre><code>lists = [[1,2,3],[&apos;hello&apos;,&apos;world&apos;,&apos;python&apos;],[True,False]]</code></pre><h3 id="嵌套的字典"><a href="#嵌套的字典" class="headerlink" title="嵌套的字典"></a>嵌套的字典</h3><pre><code>dicts = {&apos;num&apos; = [1,2,3],&apos;word&apos; = [&apos;hello&apos;,&apos;world&apos;,&apos;python&apos;],&apos;bool&apos; = [True,False]}
+字典的元素可以是任意类型，也可以是字典</code></pre><h1 id="输入与输出（IPO，输入，处理，输出）"><a href="#输入与输出（IPO，输入，处理，输出）" class="headerlink" title="输入与输出（IPO，输入，处理，输出）"></a>输入与输出（IPO，输入，处理，输出）</h1><h2 id="input函数"><a href="#input函数" class="headerlink" title="input函数"></a>input函数</h2><h3 id="input-prompt"><a href="#input-prompt" class="headerlink" title="input(prompt)"></a>input(prompt)</h3><blockquote>
+<p>prompt作为一个提示符，作用：显示提示信息，提示用户输入何种值</p>
+</blockquote>
+<pre><code>我们需要注意的是input函数返回值是字符串</code></pre>  <br>
+
+<pre><code>&gt;&gt;&gt;x = input()
+5
+&gt;&gt;&gt;y = input()
+6
+&gt;&gt;&gt;x + y
+&apos;56&apos;           在这里我们得到的是一个字符串</code></pre><br>
+
+<pre><code>如果你希望整数相加，就需要类型转换
+&gt;&gt;&gt;(int)x + (int)y
+11             在这里我们得到了一个整形</code></pre><br>
+
+<pre><code>同时，我们可以采用嵌套函数
+&gt;&gt;&gt;x = int(input())</code></pre><br>
+
+<pre><code>（在现实生活中）我们需要有一个容忍机制，如果用户脑子抽了输入错误，我们需要检测到这个错误并返回告诉用户你个sa子</code></pre><h2 id="print函数"><a href="#print函数" class="headerlink" title="print函数"></a>print函数</h2><pre><code>print([object,……][,sep = &apos;&apos;][,end = &apos;\n&apos;][,file = sys.stdout])</code></pre><blockquote>
+<p>sep:表示变量之间用什么字符串隔开，默认空格</p>
+</blockquote>
+<blockquote>
+<p>end:表示为以这个字符串结尾，默认为换行</p>
+</blockquote>
+<blockquote>
+<p>file:指定文本将要发送到的文件、标准流或其他类似的文件对象，默认为sys.stdout</p>
+</blockquote>
+<h2 id="格式化字符串"><a href="#格式化字符串" class="headerlink" title="格式化字符串"></a>格式化字符串</h2><blockquote>
+<p>print函数默认把对象打印到stdout流，并且添加了一些自动的格式化<br>在这里就是格式化输出一个元组，v1按照整形输出，v2按照字符串输出，最终情况以字符串（‘’）形式输出</p>
+</blockquote>
+<pre><code>&apos;%d %s&apos; % (v1,v2)  </code></pre><br>
+
+<pre><code>&gt;&gt;&gt;&apos;%04d+%-10s&apos; % (3,&apos;hello&apos;)
+&apos;0003+hello                  
+注：(%04d：四位，有前导0) ，(%-10s:十位字符串，-代表左对齐，没有-就默认右对齐)</code></pre><h1 id="计算与控制流-1"><a href="#计算与控制流-1" class="headerlink" title="计算与控制流"></a>计算与控制流</h1><h2 id="自动计算过程"><a href="#自动计算过程" class="headerlink" title="自动计算过程"></a>自动计算过程</h2><h3 id="“冯诺依曼”计算机"><a href="#“冯诺依曼”计算机" class="headerlink" title="“冯诺依曼”计算机"></a>“冯诺依曼”计算机</h3><h4 id="“冯诺依曼”结构"><a href="#“冯诺依曼”结构" class="headerlink" title="“冯诺依曼”结构"></a>“冯诺依曼”结构</h4><blockquote>
+<p>运算器：进行算术运算和逻辑运算（关键与核心）</p>
+</blockquote>
+<blockquote>
+<p>控制器：控制计算机协调运行</p>
+</blockquote>
+<blockquote>
+<p>存储器：存储数据和程序</p>
+</blockquote>
+<blockquote>
+<p>输入设备：从计算机外部获取数据</p>
+</blockquote>
+<blockquote>
+<p>输出设备：将计算机结果反馈给外界</p>
+</blockquote>
+<h3 id="计算及内部运行过程"><a href="#计算及内部运行过程" class="headerlink" title="计算及内部运行过程"></a>计算及内部运行过程</h3><blockquote>
+<p>基本步骤</p>
+<blockquote>
+<p>1.控制器从存储器中取出程序语句和额外数据<br>2.数据齐全的语句交给运算器进行算术或者逻辑运算<br>3.运算结果再存回存储器<br>4.控制器确定下一条程序语句，返回步骤一（关键与核心）</p>
+</blockquote>
+</blockquote>
+<h3 id="基本计算语句"><a href="#基本计算语句" class="headerlink" title="基本计算语句"></a>基本计算语句</h3><h4 id="赋值语句"><a href="#赋值语句" class="headerlink" title="赋值语句"></a>赋值语句</h4><blockquote>
+<p>&lt;变量&gt; = &lt;表达式&gt;<br>对应着“冯诺依曼”的“运算”、“存储”</p>
+</blockquote>
+<h2 id="控制流程"><a href="#控制流程" class="headerlink" title="控制流程"></a>控制流程</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><blockquote>
+<p>如何确定下一条语句？</p>
+</blockquote>
+<pre><code>这种决定下一条语句的机制，就称为控制流程</code></pre><h2 id="三种结构"><a href="#三种结构" class="headerlink" title="三种结构"></a>三种结构</h2><blockquote>
+<p>顺序结构</p>
+<blockquote>
+<p>按照语句队列前后顺序来确定下一条将要执行的语句</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>条件分支结构</p>
+<blockquote>
+<p>根据当前条件循环结构来选择下一条语句的位置</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>循环结构</p>
+<blockquote>
+<p>周而复始地执行一系列的语句</p>
+</blockquote>
+</blockquote>
+<h2 id="条件分支语句"><a href="#条件分支语句" class="headerlink" title="条件分支语句"></a>条件分支语句</h2><h3 id="十字路口的选择"><a href="#十字路口的选择" class="headerlink" title="十字路口的选择"></a>十字路口的选择</h3><blockquote>
+<p>条件分支让程序有了判断能力</p>
+</blockquote>
+<h3 id="条件分支的要素"><a href="#条件分支的要素" class="headerlink" title="条件分支的要素"></a>条件分支的要素</h3><blockquote>
+<p>预设的判断条件<br>条件成立对应的执行语句<br>扩展要素（多个条件或者对应条件不满足时的执行语句）</p>
+</blockquote>
+<h2 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h2><pre><code>if&lt;逻辑表达式&gt;:
+    &lt;……&gt;
+else:
+    &lt;……&gt;
+if,else都是关键字</code></pre><blockquote>
+<p>逻辑表达式是指所有运算的结果为逻辑类型的表达式</p>
+<blockquote>
+<p>同时，None,0,0.0,’’,[],{},(),set()会被自动转化成False<br>其他的值被当做True</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>冒号表示语句层次（缩进）</p>
+</blockquote>
+<h2 id="多种情况的条件分支"><a href="#多种情况的条件分支" class="headerlink" title="多种情况的条件分支"></a>多种情况的条件分支</h2><h3 id="使用多个if语句进行判定"><a href="#使用多个if语句进行判定" class="headerlink" title="使用多个if语句进行判定"></a>使用多个if语句进行判定</h3><pre><code>&gt;&gt;&gt;if&lt;&gt;:
+       &lt;&gt;
+&gt;&gt;&gt;else:
+       if&lt;&gt;:
+           &lt;&gt;
+       else:
+           &lt;&gt;
+           ……</code></pre><p>对于下面的情况，我们令a = 12，它只会输出1</p>
+<pre><code>&gt;&gt;&gt;elif:
+       if a &gt; 10:
+           print(&apos;1&apos;)
+       elif a &gt; 6:
+           print(&apos;2&apos;)
+       else:
+           print(&apos;3&apos;)</code></pre><p>如果我们将前两个条件换个位置</p>
+<pre><code>&gt;&gt;&gt;if a &gt; 6:
+       print(&apos;2&apos;)
+elif a &gt; 10:
+       print(&apos;1&apos;)
+else:
+       print(&apos;3&apos;)
+在这里，我们令a = 12，它也只会输出2（可参考C语言的if语句和else if语句）</code></pre><h2 id="条件循环"><a href="#条件循环" class="headerlink" title="条件循环"></a>条件循环</h2><h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><blockquote>
+<p>让计算机执行重复性任务<br>能持续地对大量数据作出处理<br>在长时间里对一些未知状况进行连续监测循环结构</p>
+</blockquote>
+<h3 id="循环结构的要素"><a href="#循环结构的要素" class="headerlink" title="循环结构的要素"></a>循环结构的要素</h3><h4 id="循环前提"><a href="#循环前提" class="headerlink" title="循环前提"></a>循环前提</h4><blockquote>
+<p>从某个容器或者潜在的数据集中逐一获取数据项，什么时候取不到数据集了就结束<br>逻辑表达式（循环结构会多次检查循环前提）</p>
+</blockquote>
+<h3 id="前提存在时需要反复执行的语句"><a href="#前提存在时需要反复执行的语句" class="headerlink" title="前提存在时需要反复执行的语句"></a>前提存在时需要反复执行的语句</h3><blockquote>
+<p>略</p>
+</blockquote>
+<h3 id="扩展前提"><a href="#扩展前提" class="headerlink" title="扩展前提"></a>扩展前提</h3><blockquote>
+<p>略</p>
+</blockquote>
+<h2 id="条件循环介绍"><a href="#条件循环介绍" class="headerlink" title="条件循环介绍"></a>条件循环介绍</h2><h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><p>方便起见，以下代码不标注&gt;&gt;&gt;</p>
+<pre><code>while&lt;逻辑表达式&gt;
+    &lt;……&gt;
+    break    #跳出这个循环（不会执行else后面的语句）
+    continue #略过余下循环语句
+else:        #条件不满足时退出循环，执行以下语句（逻辑表达式结果为False时）
+    &lt;……&gt;
+while也是关键字</code></pre><h2 id="嵌套循环"><a href="#嵌套循环" class="headerlink" title="嵌套循环"></a>嵌套循环</h2><h3 id="多重循环"><a href="#多重循环" class="headerlink" title="多重循环"></a>多重循环</h3><pre><code>for i in range(1,10000):
+    n = i
+    step = 0
+    while n != 1:
+        if n % 2 == 0:
+            n = n / 2
+        else:
+            n = n*3 + 1
+        step += 1
+    else:
+        print(i,step)</code></pre><h3 id="迭代循环"><a href="#迭代循环" class="headerlink" title="迭代循环"></a>迭代循环</h3><h4 id="什么是迭代循环"><a href="#什么是迭代循环" class="headerlink" title="什么是迭代循环"></a>什么是迭代循环</h4><pre><code>for &lt;循环变量&gt; in &lt;可迭代对象&gt;:
+    &lt;……&gt;
+    break     #跳出循环
+    continue  #略过余下语句重新循环
+else:         #迭代完毕，执行else下的语句块</code></pre><br>
+
+<h4 id="可迭代对象：表示从这个数据对象中可以逐个取出数据项赋值给“循环变量”（可以看做一个容器）"><a href="#可迭代对象：表示从这个数据对象中可以逐个取出数据项赋值给“循环变量”（可以看做一个容器）" class="headerlink" title="可迭代对象：表示从这个数据对象中可以逐个取出数据项赋值给“循环变量”（可以看做一个容器）"></a>可迭代对象：表示从这个数据对象中可以逐个取出数据项赋值给“循环变量”（可以看做一个容器）</h4><blockquote>
+<p>也有很多类型：<br>字符串、列表、元组、字典、集合等<br>也可以是生成器、迭代器等</p>
+</blockquote>
+<pre><code>adic = {&apos;name&apos; = &apos;hhhfccz&apos;}
+for k in adic:             #遍历字典的keys
+    print(k,adic(k))
+for k,v in adic.items():   #adic,items将其遍历为一个二元组
+    print(k, v)
+以上两种方法输出结果一样</code></pre><h4 id="range函数（类似字符串切片操作）"><a href="#range函数（类似字符串切片操作）" class="headerlink" title="range函数（类似字符串切片操作）"></a>range函数（类似字符串切片操作）</h4><blockquote>
+<p>range(&lt;起点&gt;,&lt;终点&gt;)，前闭后开<br>range(&lt;起点&gt;,&lt;终点&gt;,&lt;步长&gt;) 就是i += 步长的意思（步长可以是负数）</p>
+</blockquote>
+<h4 id="range类型的对象"><a href="#range类型的对象" class="headerlink" title="range类型的对象"></a>range类型的对象</h4><blockquote>
+<p>直接当做序列<br>可转换为list、tuple等容器类型   list(range(10))（真正使用时不需要这么做）</p>
+</blockquote>
+<h3 id="跳出与继续"><a href="#跳出与继续" class="headerlink" title="跳出与继续"></a>跳出与继续</h3><p>  continue与break</p>
+<blockquote>
+<p>都只能在循环内部使用<br>均作用于离他们最近的一个循环</p>
+</blockquote>
+<blockquote>
+<p>break是跳出并结束当前循环<br>continue是略过余下循环语句并接着下一次循环</p>
+</blockquote>
+<h1 id="代码组织：函数（def）"><a href="#代码组织：函数（def）" class="headerlink" title="代码组织：函数（def）"></a>代码组织：函数（def）</h1><h2 id="封装一个功能"><a href="#封装一个功能" class="headerlink" title="封装一个功能"></a>封装一个功能</h2><h3 id="函数是对语句的封装（类是对方法和属性的封装）"><a href="#函数是对语句的封装（类是对方法和属性的封装）" class="headerlink" title="函数是对语句的封装（类是对方法和属性的封装）"></a>函数是对语句的封装（类是对方法和属性的封装）</h3><blockquote>
+<p>程序中实现明确功能的代码段可以封装成一个函数，以便复用</p>
+</blockquote>
+<h3 id="定义和调用一个函数"><a href="#定义和调用一个函数" class="headerlink" title="定义和调用一个函数"></a>定义和调用一个函数</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><blockquote>
+<p>用def创建一个函数<br>用return指定函数返回的值</p>
+</blockquote>
+<pre><code>def&lt;函数名&gt;(&lt;参数表&gt;):
+    &lt;……&gt;
+    return&lt;返回值&gt;</code></pre><blockquote>
+<p>python的return可以返回多个值，以元组类型存储</p>
+</blockquote>
+<h4 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h4><pre><code>&lt;函数名&gt;(&lt;参数&gt;)</code></pre><h2 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h2><h3 id="局部变量（可参考C语言）"><a href="#局部变量（可参考C语言）" class="headerlink" title="局部变量（可参考C语言）"></a>局部变量（可参考C语言）</h3><h4 id="global关键字（不推荐使用）"><a href="#global关键字（不推荐使用）" class="headerlink" title="global关键字（不推荐使用）"></a>global关键字（不推荐使用）</h4><blockquote>
+<p>在函数内部使用与全局变量同名的变量的时候，若函数内部无定义，则使用全局变量的值<br>一旦在函数中定义了，这便成为一个局部变量，与函数外部无关<br>使用global可以在函数内部定义全局变量</p>
+</blockquote>
+<h2 id="函数小技巧"><a href="#函数小技巧" class="headerlink" title="函数小技巧"></a>函数小技巧</h2><blockquote>
+<p>map()函数：有时我们需要对列表中的每一个元素做相同的处理，得到一个新的列表</p>
+</blockquote>
+<pre><code>map(function,list1,list2,……)</code></pre><blockquote>
+<p>第一个参数是一个函数，后面的参数是列表（第一个参数所对应的函数有几个参数，后面就需要有几个列表）</p>
+</blockquote>
+<blockquote>
+<p>匿名函数lambda：有时候函数只使用一次，其名称不大重要，我们懒得去def</p>
+</blockquote>
+<pre><code>map(lambda a,b:a + 1.0 / b, num, list)     </code></pre><blockquote>
+<p>前面那一串就是一个匿名函数lambda &lt;参数表&gt;:&lt;表达式&gt;</p>
+</blockquote>
+<h2 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h2><blockquote>
+<p>形参与实参等，略<br>可变参数定义的时候要在前面加上*</p>
+</blockquote>
+<pre><code>def func(*args)      #不带key的多个参数（不带名字，列表）
+def func(**kwargs)   #key = value的多个参数（带名字，字典）</code></pre><blockquote>
+<p>位置参数在前，关键字参数在后</p>
+</blockquote>
+<h1 id="以上是我对python最最基础知识的小小总结"><a href="#以上是我对python最最基础知识的小小总结" class="headerlink" title="以上是我对python最最基础知识的小小总结"></a>以上是我对python最最基础知识的小小总结</h1><h2 id="下面贴一个代码，运用以上知识就能大致看懂"><a href="#下面贴一个代码，运用以上知识就能大致看懂" class="headerlink" title="下面贴一个代码，运用以上知识就能大致看懂"></a>下面贴一个代码，运用以上知识就能大致看懂</h2><pre><code>#！/uer/bin/env python
+# ——*——coding:utf-8——*——
+# author:hhhfccz（胡珈魁） time:2020/1/11
+import math
+print(&apos;processing data……&apos;)
+
+b = 0                             # 代价函数变量theta0
+k = 0                             # 代价函数变量theta1
+temp_b = 0
+temp_k = 0
+a = input(&apos;学习速率：&apos;)             #我用的是0.005
+x = float(a)
+sumk = []
+sumb = []
+
+with open(&apos;data.txt&apos;) as f:       # 打开文件
+    file = f.readlines()
+length = len(file)
+m = length - 1                    # 得到我们数据集数据个数
+
+def sta(file,k,b,length):
+    sum_b = 0
+    sum_k = 0
+    for i in range(1,length):
+        list1 = file[i].split()
+        num1 = float(list1[0])        # 得到我们的x值
+        num2 = float(list1[1])        # 得到我们真实的y值（有误差）
+        fore_y = k * num1 + b         # 得到我们预测的y值
+        sum_b += x * ( fore_y - num2 )                                #b梯度计算
+        sum_k += x * ( ( fore_y - num2 ) * num1 ) / m                 #k梯度计算
+    return sum_k,sum_b
+
+def var(file,k,b,length):
+    var_sum = 0
+    for i in range(1,length):
+        list1 = file[i].split()
+        num1 = float(list1[0])        # 得到我们的x值
+        num2 = float(list1[1])        # 得到我们真实的y值
+        fore_y = k * num1 + b         # 得到我们预测的y值
+        var_sum += math.pow((fore_y - num2), 2) / m / 2
+    # print(&apos;%f&apos;%var_sum)
+    return var_sum
+
+l = 5000
+while l &gt; 4770.132844:
+    sum_k = float(sta(file, k, b, length)[0])
+    sum_b = float(sta(file, k, b, length)[1])
+    temp_k = k - x * sum_k
+    temp_b = b - x * sum_b
+    k = (temp_k)
+    b = (temp_b)
+    l = float( var(file,k,b,length) )
+else:
+    print(&apos;%f %f&apos; % (k, b))
+    writelist_k = str(k)
+    writelist_b = str(b)
+    writelist = &apos;k:&apos; + writelist_k + &apos;\n&apos; + &apos;b:&apos; + writelist_b
+    with open(&apos;胡珈魁.txt&apos;,&apos;w&apos;) as fi:
+        fi.write(writelist)
+print(&apos;--*--END--*--&apos;)</code></pre><div><br>
+    python学习第一弹，收工。    
+ </div>
+
+      
+
+      
+
+  <div class="declare" hidden="hidden"></div>
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/hhhfccz.github.io/2020/01/12/%E7%94%B5%E7%A7%91%E8%8F%9C%E7%8B%97%E7%9A%84python%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/">查看更多 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="[layout]-简单的爬虫学习总结" class="article article-type-[layout]  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -527,6 +1272,10 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">爬虫</a>
