@@ -6,15 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hhhfccz.github.io/hhhfccz.github.io">
-  <title>简单的爬虫 | 电科菜狗的小博客</title>
+  <title>python的特性 | 电科菜狗的小博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="爬虫">
+  <meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="简单的爬虫">
-<meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;01&#x2F;09&#x2F;%E7%AE%80%E5%8D%95%E7%9A%84%E7%88%AC%E8%99%AB&#x2F;index.html">
+<meta property="og:title" content="python的特性">
+<meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;01&#x2F;18&#x2F;python%E7%9A%84%E7%89%B9%E6%80%A7&#x2F;index.html">
 <meta property="og:site_name" content="电科菜狗的小博客">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-01-10T13:03:59.056Z">
+<meta property="og:updated_time" content="2020-01-18T13:16:23.585Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -177,15 +177,15 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="[layout]-简单的爬虫" class="article article-type-[layout] " itemscope itemprop="blogPost">
+            <article id="post-python的特性" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
         
         
-<a href="/hhhfccz.github.io/2020/01/09/%E7%AE%80%E5%8D%95%E7%9A%84%E7%88%AC%E8%99%AB/" class="archive-article-date">
-  	<time datetime="2020-01-09T14:34:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-09</time>
+<a href="/hhhfccz.github.io/2020/01/18/python%E7%9A%84%E7%89%B9%E6%80%A7/" class="archive-article-date">
+  	<time datetime="2020-01-18T12:32:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-18</time>
 </a>
         
           <div style="margin-top:10px;">
@@ -193,7 +193,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">924字</span>
+        <span class="post-count">3k字</span>
       </span>
     </span>
 
@@ -202,7 +202,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">4分</span>
+        <span class="post-count">12分</span>
       </span>
     </span>
 </div>
@@ -215,135 +215,345 @@
     <center><p>
   
     <h1 class="article-title_code_ant" itemprop="name">
-      简单的爬虫
+      python的特性
     </h1>
   
 </p></center>
       
         <div><a id="more"></a></div>
-获取网页信息
 
-<p>首先导入库</p>
-<pre><code>&gt;&gt;&gt;import requests</code></pre><p>先尝试直接访问这个网页</p>
-<pre><code>&gt;&gt;&gt;r = requests.get(&apos;http://www.mot.gov.cn/shuju/&apos;)
-&gt;&gt;&gt;r.status_code</code></pre><p>我们发现它的返回值是403，<font color="red">表明我们并没有访问成功</font><br>我首先查看了它的编码，（因为我需要查看一下返回的文本）：</p>
-<pre><code>&gt;&gt;&gt;r.encoding
-&apos;ISO-8859-1&apos;
-&gt;&gt;&gt;r.encoding = r.apparent.encoding
-&gt;&gt;&gt;t.text[:1000]                               </code></pre><p>就是一个简单的403错误<br>这个时候，我查看了一下我发起的请求的头部</p>
-<pre><code>&gt;&gt;&gt;r.request.headers
-{&apos;User-Agent&apos;: &apos;python-requests/2.22.0&apos;, &apos;Accept-Encoding&apos;: &apos;gzip, deflate&apos;, &apos;Accept&apos;: &apos;*/*&apos;, &apos;Connection&apos;: &apos;keep-alive&apos;}</code></pre><p>我告诉了这个网站，我是python的requests库。<br>我就是馋你的数据，我诚实。</p>
-<p>好吧，<font color="red">于是我决定模拟成一个浏览器向网页发送请求</font></p>
-<pre><code>&gt;&gt;&gt;kv = {&apos;user-agent&apos;:&apos;Mozilla/5.0&apos;}
-&gt;&gt;&gt;url = &apos;http://www.mot.gov.cn/shuju/&apos;
-&gt;&gt;&gt;r = requests.get(url,headers = kv)
-&gt;&gt;&gt;r.status_code
-200
-&gt;&gt;&gt;r.text</code></pre><p>以上是获取网页信息</p>
-<p>然后开始寻找表格在HTML文件中的位置<br>我打开网页源代码：</p>
-<pre><code>&lt;div class=&quot;fl w100 mod1_kshsj1_a_sj&quot;&gt;
-    &lt;IFRAME align=&quot;top&quot; width=&quot;1110px&quot; height=&quot;820px&quot; frameborder=&quot;0&quot; src=&quot;http://106.3.149.173/CatsCategory/listGLJCSJ5?tableName=cats_jtysybsjk_csky&amp;pubflag=1&amp;code=C13&quot; scrolling=&quot;no&quot; &gt;&lt;/IFRAME&gt;
-&lt;/div&gt;</code></pre><p>这里面的网址：<br><a href="http://106.3.149.173/CatsCategory/listGLJCSJ5?tableName=cats_jtysybsjk_csky&amp;pubflag=1&amp;code=C13" target="_blank" rel="noopener">http://106.3.149.173/CatsCategory/listGLJCSJ5?tableName=cats_jtysybsjk_csky&amp;pubflag=1&amp;code=C13</a><br>就对应了那个表格，也就是我们的爬取对象。（其中有图像对象，那个是用js生成的，咱不会爬）<br>然后我试了一下直接向网址发起访问，发现并不需要伪装成浏览器发起请求<br>好吧，我爬</p>
-<p>然后，我利用bs4库整理了一下HTML页面<br>接着，我分析了一下HTML页面的标签情况，发现有个标签</p>
-<pre><code>&lt;div id=&quot;biaoge&quot; style=&quot;&quot;&gt;</code></pre><p>在这个id = ‘biaoge’里面就是我们需要的全部数据，咱们把它爬出来</p>
-<p>这里面的数据有前面一段的HTML，加上后面一段js代码，咱把它扔掉<br>目前为止的代码：</p>
-<pre><code>&gt;&gt;&gt; import requests
-&gt;&gt;&gt; url = &apos;http://106.3.149.173/CatsCategory/listGLJCSJ5?tableName=cats_jtysybsjk_csky&amp;pubflag=1&amp;code=C13&apos;
-&gt;&gt;&gt; r = requests.get(url)
-&gt;&gt;&gt; demo = r.text
-&gt;&gt;&gt; from bs4 import BeautifulSoup
-&gt;&gt;&gt; soup = BeautifulSoup(demo,&apos;html.parser&apos;)
-&gt;&gt;&gt; soup.find_all(id = &apos;biaoge&apos;)</code></pre><p>以上代码可以较快地爬取数据，关键其实是找到正确的URL，可以节省很多时间</p>
-<p>其实到这里，把那一坨数据放在那里应该就算是完成任务了（确信）。<br>后续会继续优化一下，比如整理整理数据（下面是爬出来的东西，我没有把它放在excel里面，主要是嫌麻烦）</p>
-<div id="biaoge">
-<div style="width: 1100px;overflow: auto;">
-<table class="JKY2019_Table1">
-<tr>
-<th style="width:120px">年份</th>
-<th style="width:120px">月份</th>
-<th style="width:120px">本月中心城市客运完成量（万人次）</th>
-<th style="width:120px">本月公共汽电车客运完成量（万人次）</th>
-<th style="width:120px">本月轨道交通客运完成量（万人次）</th>
-<th style="width:120px">本月客运轮渡客运完成量（万人次）</th>
-<th style="width:120px">本月巡游出租汽车客运完成量（万人次）</th>
-</tr>
-<tr>
-<td>2019年</td>
-<td>1月</td>
-<td>550977.80</td>
-<td>282636.50</td>
-<td>182756.40</td>
-<td>671.50</td>
-<td>84913.40</td>
-</tr>
-<tr>
-<td>2019年</td>
-<td>2月</td>
-<td>442061.90</td>
-<td>225458.60</td>
-<td>138665.00</td>
-<td>652.70</td>
-<td>77285.60</td>
-</tr>
-<tr>
-<td>2019年</td>
-<td>3月</td>
-<td>575506.80</td>
-<td>292731.20</td>
-<td>198048.40</td>
-<td>781.20</td>
-<td>83946.00</td>
-</tr>
-<tr>
-<td>2019年</td>
-<td>4月</td>
-<td>577269.30</td>
-<td>299247.20</td>
-<td>195630.50</td>
-<td>842.00</td>
-<td>81549.60</td>
-</tr>
-<tr>
-<td>2019年</td>
-<td>5月</td>
-<td>581810.70</td>
-<td>298684.70</td>
-<td>198141.90</td>
-<td>929.60</td>
-<td>84054.50</td>
-</tr>
-<tr>
-<td>2019年</td>
-<td>6月</td>
-<td>562885.00</td>
-<td>286398.30</td>
-<td>191754.80</td>
-<td>918.80</td>
-<td>83813.10</td>
-</tr>
-<tr>
-<td>2019年</td>
-<td>7月</td>
-<td>581889.60</td>
-<td>285679.60</td>
-<td>210682.50</td>
-<td>1012.00</td>
-<td>84515.50</td>
-</tr>
-<tr>
-<td>2019年</td>
-<td>8月</td>
-<td>565432.00</td>
-<td>273532.50</td>
-<td>206245.80</td>
-<td>1054.30</td>
-<td>84599.40</td>
-</tr>
-</table>
-</div>
+<h1 id="高级特性"><a href="#高级特性" class="headerlink" title="高级特性"></a>高级特性</h1><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h3 id="什么是对象"><a href="#什么是对象" class="headerlink" title="什么是对象"></a>什么是对象</h3><h4 id="对象的基本概念"><a href="#对象的基本概念" class="headerlink" title="对象的基本概念"></a>对象的基本概念</h4><blockquote>
+<p>“万物皆对象”，即python中所有事物都以对象的形式存在</p>
+</blockquote>
+<h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4><blockquote>
+<p>既表示客观世界问题空间中的某个具体事物，又表示软件系统解空间中的基本元素</p>
+</blockquote>
+<h4 id="对象-属性-方法"><a href="#对象-属性-方法" class="headerlink" title="对象 = 属性 + 方法"></a>对象 = 属性 + 方法</h4><blockquote>
+<p>对象以id作为标识，包含数据（属性），代码（方法）<br>即某一类具体事物的抽象化后的具体实例<br>随着数据（属性）的不同，这个对象就会发生改变</p>
+</blockquote>
+<h4 id="查看对象"><a href="#查看对象" class="headerlink" title="查看对象"></a>查看对象</h4><blockquote>
+<p>id(1) 1这个对象</p>
+</blockquote>
+<blockquote>
+<p>id type(1) 1的类型（这个对象所属的类） </p>
+</blockquote>
+<blockquote>
+<p>dir(1) 查看1这个对象的属性与方法</p>
+</blockquote>
+<h2 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h2><blockquote>
+<p>对象是类的实例，是程序的基本单元<br>要创建一个新的对象，首先必须定义一个类，指明属性与方法<br>每个对象只能有一个id<br>对象实现了属性和方法的封装，是一种数据抽象机制</p>
+</blockquote>
+<h2 id="对象属性和方法的引用"><a href="#对象属性和方法的引用" class="headerlink" title="对象属性和方法的引用"></a>对象属性和方法的引用</h2><h3 id="引用形式"><a href="#引用形式" class="headerlink" title="引用形式"></a>引用形式</h3><pre><code>&lt;对象名&gt;.&lt;属性名/方法名&gt;</code></pre><h3 id="python动态"><a href="#python动态" class="headerlink" title="python动态"></a>python动态</h3><blockquote>
+<p>对象（的属性与方法）可以随意增加或删除</p>
+</blockquote>
+<pre><code>增加：f3.fx = 0
+     print(f3.fx)
+     0
+删除：del f3.fz
+     print(f3.fz)
+     报错</code></pre><h2 id="面向对象编程-OOP"><a href="#面向对象编程-OOP" class="headerlink" title="面向对象编程(OOP)"></a>面向对象编程(OOP)</h2><h3 id="面向对象编程是一种程序设计泛型，同时也是一种程序开发方法"><a href="#面向对象编程是一种程序设计泛型，同时也是一种程序开发方法" class="headerlink" title="面向对象编程是一种程序设计泛型，同时也是一种程序开发方法"></a>面向对象编程是一种程序设计泛型，同时也是一种程序开发方法</h3><blockquote>
+<p>程序中包含各种独立而又能互相调用的对象<br>每个对象都能接受、处理数据并将数据传递给其他对象</p>
+</blockquote>
+<h3 id="传统程序设计"><a href="#传统程序设计" class="headerlink" title="传统程序设计"></a>传统程序设计</h3><blockquote>
+<p>将程序看做函数与指令的集合（分离属性与方法）</p>
+</blockquote>
+<h3 id="三个重要特性"><a href="#三个重要特性" class="headerlink" title="三个重要特性"></a>三个重要特性</h3><blockquote>
+<p>封装性：即将数据属性与代码方法封装到一起，便于调用</p>
+</blockquote>
+<blockquote>
+<p>继承性：以人类为例，各个国家的人都有自己的特殊的属性，但是都继承了人类这个大类的基本属性</p>
+</blockquote>
+<blockquote>
+<p>多态性：同一段代码可以处理不同（包括不同类型）的对象</p>
+</blockquote>
+<h2 id="类的定义和调用"><a href="#类的定义和调用" class="headerlink" title="类的定义和调用"></a>类的定义和调用</h2><h3 id="什么是类"><a href="#什么是类" class="headerlink" title="什么是类"></a>什么是类</h3><blockquote>
+<p>类是对象的模板，封装了对应现实实体的性质与行为<br>实例对象是类的具体化（人类是一个类，我们每一个人就是人类这个类的实例对象）<br>每一个对象都有自己的独特的、不同于其他对象的属性<br>我们通常把类比作模具，对象就是用模具制造出来的零件<br>类与函数相似，也是一系列代码的封装</p>
+</blockquote>
+<blockquote>
+<p>约定：类的名字用大写字母开头，函数名用小写字母开头，用以区分</p>
+</blockquote>
+<h3 id="定义类"><a href="#定义类" class="headerlink" title="定义类"></a>定义类</h3><pre><code>class&lt;类的名字&gt;:
+    &lt;方法&gt;</code></pre><h3 id="初始化类"><a href="#初始化类" class="headerlink" title="初始化类"></a>初始化类</h3><pre><code>class&lt;类的名字&gt;:
+    def __init__(self,&lt;参数表&gt;):  #用于根据类的定义创建实例对象
+    def &lt;方法名字&gt;(self,&lt;参数表&gt;):</code></pre><h3 id="调用类"><a href="#调用类" class="headerlink" title="调用类"></a>调用类</h3><pre><code>&lt;类的名字&gt;(&lt;参数&gt;)</code></pre><blockquote>
+<p>调用后会创建一个对象实例，并返回</p>
+</blockquote>
+<pre><code>obj = &lt;类的名字&gt;(&lt;参数&gt;)</code></pre><blockquote>
+<p>类的第一个参数self就是指这个对象<br>用’.’操作符来调用对象里面的方法</p>
+</blockquote>
+<div> <font color="red">E.G.</font> </div>
 
-<p>以上，爬虫第一期，收工。</p>
-</div>
+<pre><code>class Force:
+    def __init__(self,x,y):
+        self.fx,self.fy = x,y
+    def show(self):
+        print(&apos;Force&lt;%s,%s&gt;&apos;%(self.fx,self.fy))
+    def add(self,force):
+        x = self.fx + force.fx
+        y = self.fy + force.fx
+        retrun Force(x,y)
+
+f1 = Force(0,1)  #创建一个对象f1
+f1.show()        #执行Force类中的show函数</code></pre><h2 id="类定义中的特殊方法"><a href="#类定义中的特殊方法" class="headerlink" title="类定义中的特殊方法"></a>类定义中的特殊方法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><h4 id="特殊方法（可以理解成拓展内置操作，例如-可以进行对象之间的相加而不是只能数值相加）"><a href="#特殊方法（可以理解成拓展内置操作，例如-可以进行对象之间的相加而不是只能数值相加）" class="headerlink" title="特殊方法（可以理解成拓展内置操作，例如+可以进行对象之间的相加而不是只能数值相加）"></a>特殊方法（可以理解成拓展内置操作，例如+可以进行对象之间的相加而不是只能数值相加）</h4><blockquote>
+<p>用系统内置的函数去调用自己定义的类<br>在类的定义中实现一些特殊方法，可以方便地使用python中的一些内置操作<br>所有特殊方法的名称以两个下划线__开始和结束</p>
+</blockquote>
+<h3 id="构造与解构"><a href="#构造与解构" class="headerlink" title="构造与解构"></a>构造与解构</h3><h4 id="对象构造器"><a href="#对象构造器" class="headerlink" title="对象构造器"></a>对象构造器</h4><pre><code>__init__ 对象的构造器，实例化对象时调用</code></pre><h4 id="析构器"><a href="#析构器" class="headerlink" title="析构器"></a>析构器</h4><pre><code>__del__ 销毁对象</code></pre><div> <font color="red">E.G.</font> </div>
+
+<pre><code> from os.path import join
+
+ class FileObject:
+     def __init__(self,filepath = &apos;~&apos;,filename = &apos;sample.txt&apos;):
+         self.file = open(join(filepath,filename), &apos;r+&apos;) #join即生成文件路径
+     def __del__(self):
+         self.file.close()
+         del self.file
+# 给对象进行包装，确认在FileObject类对象被删除时文件关闭</code></pre><h3 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h3><blockquote>
+<p><strong>add</strong>(self,other)  左加 ‘+’</p>
+</blockquote>
+<blockquote>
+<p><strong>sub</strong>……            左减 ‘-‘</p>
+</blockquote>
+<blockquote>
+<p><strong>mul</strong>……            左乘 ‘*‘</p>
+</blockquote>
+<blockquote>
+<p><strong>div</strong>……            左除 ‘/‘</p>
+</blockquote>
+<blockquote>
+<p><strong>r…</strong>               右…</p>
+</blockquote>
+<blockquote>
+<p><strong>i…</strong>               (操作符)= </p>
+</blockquote>
+<div> <font color="red">E.G.</font> </div>
+
+<pre><code>class A:
+    pass
+class B:
+    def __add__(self,obj):
+    print (&apos;B.__add__&apos;)
+    return self.v+obj.v
+b=B()
+a=A()
+b.v=2
+a.v=3
+b+a
+B.__add__
+5
+a+b
+报错</code></pre><blockquote>
+<p><strong>eq</strong>               ==</p>
+</blockquote>
+<blockquote>
+<p><strong>ne</strong>               !=</p>
+</blockquote>
+<blockquote>
+<p><strong>lt</strong>               &lt;</p>
+</blockquote>
+<blockquote>
+<p><strong>gt</strong>               &gt;</p>
+</blockquote>
+<blockquote>
+<p><strong>le</strong>               &lt;=</p>
+</blockquote>
+<blockquote>
+<p><strong>ge</strong>               &gt;=</p>
+</blockquote>
+<div> <font color="red">E.G.</font> </div>
+
+<pre><code>def __str__(self):
+    return &apos;Force&lt;%s %s&gt;&apos;%(self.fx,self.fy)
+
+def __mul__(self,n):
+    x,y = self.fx * n,self.fy * n
+    return Force(x,y)
+# __rmul__ = __mul__ 这样正反就都能使用了
+def __eq__(self,force):
+    return (self.fx == force.fx) and (self.fy == force.fy)</code></pre><h3 id="其他特殊方法"><a href="#其他特殊方法" class="headerlink" title="其他特殊方法"></a>其他特殊方法</h3><pre><code>字符串操作
+  __str__ 自动转换为字符串
+  __repr__返回一个用来表示对象的字符串
+  __len__ 返回元素个数
+其他
+  http://gis4g.pku.edu.cn/python-magic-method/</code></pre><h2 id="自定义对象的排序"><a href="#自定义对象的排序" class="headerlink" title="自定义对象的排序"></a>自定义对象的排序</h2><h3 id="列表排序"><a href="#列表排序" class="headerlink" title="列表排序"></a>列表排序</h3><h4 id="列表方法"><a href="#列表方法" class="headerlink" title="列表方法"></a>列表方法</h4><pre><code>.sort() # 对原列表进行排序，改变列表内容</code></pre><blockquote>
+<p>如果列表中的元素都是数字，默认按升序排序<br>通过添加列表reverse = True修改为降序排序<br>如果列表中的元素是字符串，按照字母表排序<br>如果列表中的元素是中文，按照首字拼音排序</p>
+</blockquote>
+<h4 id="内置排序函数"><a href="#内置排序函数" class="headerlink" title="内置排序函数"></a>内置排序函数</h4><pre><code>.sorted() # 返回排好序的列表的副本，不改变原列表</code></pre><blockquote>
+<p>只有列表中元素数据类型相同的时候，这两个函数才能使用</p>
+</blockquote>
+<h4 id="特殊方法"><a href="#特殊方法" class="headerlink" title="特殊方法"></a>特殊方法</h4><blockquote>
+<p>这两个函数本质上是使用<strong>lt</strong>实现的，我们可以扩展定义不同数据类型之间的大小关系进行排序</p>
+</blockquote>
+<pre><code>def __lt__(self,other):
+# 返回True 就在前，反之在后</code></pre><h3 id="可拓展的“大小”比较及排序"><a href="#可拓展的“大小”比较及排序" class="headerlink" title="可拓展的“大小”比较及排序"></a>可拓展的“大小”比较及排序</h3><div> <font color="red">E.G.</font> </div>
+
+<pre><code># 按照学生成绩高低排序
+class Student:
+    def __init__(self,name,grade):
+        self.name,self.grade = name,grade
+
+    def __lt__(self,other):
+        return self.grade &gt; other.grade
+    #主要操作，进行排序（可以随心所欲）
+    def __str__(self):
+        return &apos;(%s,%d)&apos; % (self.name,self.grade)
+    #用字符串表示
+    __repr__ = __str__
+    #正式字符串（不要也可）
+
+s = []
+
+s.append(……)
+……
+
+s.sort()
+#这里我们应用的就是我们设置的sort函数了
+print(s)</code></pre><h2 id="类的继承"><a href="#类的继承" class="headerlink" title="类的继承"></a>类的继承</h2><h3 id="类的继承机制"><a href="#类的继承机制" class="headerlink" title="类的继承机制"></a>类的继承机制</h3><h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><blockquote>
+<p>如果A类继承自B类，就把A类称为子类，B类称为父类（对于python内置的数据类型我们也可以继承）</p>
+</blockquote>
+<h4 id="代码复用"><a href="#代码复用" class="headerlink" title="代码复用"></a>代码复用</h4><blockquote>
+<p>利用继承可以从已有的类中衍生出新的类，添加或者修改部分功能<br>新类就拥有了旧类的各种属性与方法，以达到复用的目的</p>
+</blockquote>
+<div> <font color="red">E.G.</font> </div>
+
+<pre><code>class Car:
+    def __init__(self,name):
+        self.name = name
+        self.remain_mile = 0
+
+    def fill_fuel(self,miles):                #加燃料里程
+        self.remain_miles = miles
+
+    def run(self,miles):                      #跑了miles公里
+        print(self.name,end = &apos;:&apos;)
+        if self.remain_mile &gt;= miles:
+            self.remain_mile -= miles
+            print(&apos;run %d miles&apos; % (miles,)) 
+        else:
+            print(&apos;fuel out&apos;)
+
+class GasCar(Car):
+    def fill_fuel(self,gas):                  #汽油，每升6公里
+        self.remain_mile = gas * 6.0
+
+class ElecCar(Car):
+    def fill_fuel(self,power):                #电，每度3公里
+        self.remain_mile = power * 3.0        </code></pre><blockquote>
+<p>上述代码中，Car是一个父类，GasCar/ElecCar是子类</p>
+</blockquote>
+<pre><code># 执行代码
+gcar = GasCar(&apos;BWM&apos;)
+gcar.fill_fuel(50.0)
+gacr.run(200.0)
+
+ecar = ElecCar(&apos;Tesla&apos;)
+ecar.fill_fuel(60.0)
+ecar.run(200.0)</code></pre><h2 id="子类与父类"><a href="#子类与父类" class="headerlink" title="子类与父类"></a>子类与父类</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><blockquote>
+<p>如果两个类具有‘一般-特殊’的逻辑关系，那么特殊类就可以作为一般类的‘子类’来定义，使其从‘父类’继承属性与方法</p>
+</blockquote>
+<pre><code>class&lt;子类名字&gt;(&lt;父类名字&gt;):
+    def &lt;新的/重新定义的 方法&gt;(self,……):</code></pre><h3 id="覆盖与添加"><a href="#覆盖与添加" class="headerlink" title="覆盖与添加"></a>覆盖与添加</h3><blockquote>
+<p>子类对象可以调用父类的方法，子类也可以修改父类中出现的方法（作用域仅限于子类）</p>
+</blockquote>
+<div> <font color="red">E.G.</font> </div>
+
+<pre><code>class GasCar(Car):
+    def __init__(self,name,capacity):
+        super().__init__(name)    # 因为在子类中，重新定义了__init__，所以这里我们得调用父类的__init__以添加属性（先覆盖，然后调用原方法）
+        self.capacity = capacity</code></pre><h3 id="关于self"><a href="#关于self" class="headerlink" title="关于self"></a>关于self</h3><blockquote>
+<p>在类定义中，所有方法的第一个参数都是self</p>
+</blockquote>
+<h4 id="self的作用"><a href="#self的作用" class="headerlink" title="self的作用"></a>self的作用</h4><blockquote>
+<p>在类的内部实例化的过程中，其传入的所有数据都赋给了这个变量（每一个不同的实例对象都拥有不同的self）</p>
+</blockquote>
+<h4 id="self实际上代表对象实例"><a href="#self实际上代表对象实例" class="headerlink" title="self实际上代表对象实例"></a>self实际上代表对象实例</h4><blockquote>
+<p> &lt;对象&gt;.&lt;方法&gt;(&lt;参数&gt;) == &lt;类&gt;.&lt;方法&gt;(&lt;对象实例(self)&gt;,&lt;参数&gt;)</p>
+</blockquote>
+<h4 id="self去哪了"><a href="#self去哪了" class="headerlink" title="self去哪了"></a>self去哪了</h4><p>我们以上述执行代码为例</p>
+<pre><code>gcar = GasCar(&apos;BWM&apos;) # gcar就是GasCar的一个实例对象
+gcar.fill_fuel(50.0) # == GasCar.fill_fuel(gcar,50.0)
+gacr.run(200.0)      # == GasCar.run(gcar,200.0)</code></pre><h1 id="例外处理"><a href="#例外处理" class="headerlink" title="例外处理"></a>例外处理</h1><h2 id="代码错误类型"><a href="#代码错误类型" class="headerlink" title="代码错误类型"></a>代码错误类型</h2><h3 id="代码运行可能会意外出现各种错误"><a href="#代码运行可能会意外出现各种错误" class="headerlink" title="代码运行可能会意外出现各种错误"></a>代码运行可能会意外出现各种错误</h3><blockquote>
+<p>逻辑错误、用户输入不合法……</p>
+</blockquote>
+<h3 id="引起程序终止退出的错误"><a href="#引起程序终止退出的错误" class="headerlink" title="引起程序终止退出的错误"></a>引起程序终止退出的错误</h3><blockquote>
+<p>语法错误：SyntaxError</p>
+</blockquote>
+<blockquote>
+<p>除以0错误：ZeroDivisionError</p>
+</blockquote>
+<blockquote>
+<p>列表下标越界：IndexError</p>
+</blockquote>
+<blockquote>
+<p>类型不匹配错误：TypeError  </p>
+</blockquote>
+<blockquote>
+<p>访问变量不存在：NameError</p>
+</blockquote>
+<blockquote>
+<p>字典关键字不存在：KeyError</p>
+</blockquote>
+<blockquote>
+<p>未知变量属性：AttributeError<br>如果希望掌控意外，就需要在可能出现错误的地方捕捉错误    </p>
+</blockquote>
+<h2 id="捕捉错误"><a href="#捕捉错误" class="headerlink" title="捕捉错误"></a>捕捉错误</h2><h3 id="try-except语句"><a href="#try-except语句" class="headerlink" title="try-except语句"></a>try-except语句</h3><pre><code>try:                        # 为缩进的代码设置陷阱
+    &lt;……&gt;
+except&lt;错误类型&gt; [ as e ]:   # 处理错误的代码
+    &lt;处理异常&gt;
+# 针对不同异常可以设置多个except</code></pre><h3 id="try-finally语句"><a href="#try-finally语句" class="headerlink" title="try-finally语句"></a>try-finally语句</h3><pre><code>try-except语句
+try:                         
+    &lt;……&gt;
+except&lt;错误类型&gt; [ as e ]:   
+    &lt;处理异常&gt;
+finally:
+    &lt;语句块&gt;                 #无论所监测的语句是否出错都会执行的语句</code></pre><h3 id="else语句"><a href="#else语句" class="headerlink" title="else语句"></a>else语句</h3><pre><code>try:                        
+    &lt;……&gt;
+except&lt;错误类型&gt; [ as e ]:   
+    &lt;处理异常&gt;
+else:                        #如果没有出错就执行这些代码
+    &lt;语句块&gt;</code></pre><div> <font color="red">E.G.</font> </div>
+
+<pre><code>try:
+    print(&apos;try……&apos;)
+    r = 100 / &apos;hhhfccz&apos;
+    print(&apos;result:&apos; , r)
+except TypeError as e:
+    print(&apos;TypeError:&apos;, e)
+except ZeroDivisionError as e:
+    print(&apos;ZeroDivisionError:&apos;, e)
+else:
+    print(&apos;no error&apos;)
+finally:
+    print(&apos;--END--&apos;)</code></pre><h1 id="推导式"><a href="#推导式" class="headerlink" title="推导式"></a>推导式</h1><h2 id="什么是推导式"><a href="#什么是推导式" class="headerlink" title="什么是推导式"></a>什么是推导式</h2><blockquote>
+<p>推导式是从一个或者多个迭代器快速、简洁地创建数据结构的一种方法（迭代器：可放入迭代循环当中，一个一个地生成、返回数据对象的对象）<br>将循环和条件判断相结合，从而简化代码<br>可以用来生成列表、字典、集合（可变类型容器）</p>
+</blockquote>
+<h2 id="推导式基本语法"><a href="#推导式基本语法" class="headerlink" title="推导式基本语法"></a>推导式基本语法</h2><h3 id="列表推导式"><a href="#列表推导式" class="headerlink" title="列表推导式"></a>列表推导式</h3><pre><code>alist = [&lt;表达式&gt;for&lt;变量&gt;in&lt;可迭代对象&gt;if&lt;逻辑条件&gt;]</code></pre><blockquote>
+<p>首先for从可迭代对象中取值，送到if判断条件，条件成立，送到表达式进行计算生成值放入alist列表</p>
+</blockquote>
+<h3 id="字典推导式"><a href="#字典推导式" class="headerlink" title="字典推导式"></a>字典推导式</h3><pre><code>adict = {&lt;键值表达式&gt;:&lt;元素表达式&gt;for&lt;变量&gt;in&lt;可迭代对象&gt;if&lt;逻辑条件&gt;}</code></pre><blockquote>
+<p>理解与列表表达式相同（无if即表示逻辑条件永真）</p>
+</blockquote>
+<h3 id="集合推导式"><a href="#集合推导式" class="headerlink" title="集合推导式"></a>集合推导式</h3><pre><code>a = {&lt;元素表达式&gt;for&lt;变量&gt;in&lt;可迭代对象&gt;if&lt;逻辑条件&gt;}</code></pre><div> <font color="red">E.G.</font> </div>
+
+<pre><code>[x*x for x in range(10)]
+
+{&apos;%d的三次方为&apos;%(x,):x**3 for x in range(10)}
+
+康康{x+y for x in range(10) for y in range(x)}与[x+y for x in range(10) for y in range(x)]的区别</code></pre><h2 id="生成器推导式"><a href="#生成器推导式" class="headerlink" title="生成器推导式"></a>生成器推导式</h2><pre><code>alist = (&lt;表达式&gt;for&lt;变量&gt;in&lt;可迭代对象&gt;if&lt;逻辑条件&gt;)</code></pre><blockquote>
+<p>上述式子返回一个生成器对象，也属于可迭代对象（当你要用到alist的时候，它才会开始计算）<br>也就是说，生成器将计算分散在每一次迭代调用中了<br>生成器本身不会立即产生全部元素，仅在要用到元素的时候才生成，用以节省内存（当然，你也可以对它进行数据类型转换）</p>
+</blockquote>
+<h2 id="yield语句（函数暂停与挂起）"><a href="#yield语句（函数暂停与挂起）" class="headerlink" title="yield语句（函数暂停与挂起）"></a>yield语句（函数暂停与挂起）</h2><blockquote>
+<p>在函数中，遇到yield会立即返回一个值<br>而在下一次迭代生成器函数时，从yield后的语句开始执行，直到再次遇到yield</p>
+</blockquote>
+<div> <font color="red">E.G.</font> </div>
+
+<pre><code>def even(max):
+    n = 0
+    while n &lt; max:
+        yield n
+        n += 2
+
+for i in even(10):
+    print(i)</code></pre>
       
 
       
@@ -382,7 +592,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">爬虫</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
@@ -438,7 +648,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://hhhfccz.github.io/hhhfccz.github.io/2020/01/09/%E7%AE%80%E5%8D%95%E7%9A%84%E7%88%AC%E8%99%AB/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://hhhfccz.github.io/hhhfccz.github.io/2020/01/18/python%E7%9A%84%E7%89%B9%E6%80%A7/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -453,15 +663,11 @@
   
 <nav id="article-nav">
   
-    <a href="/hhhfccz.github.io/2020/01/10/%E7%AE%80%E5%8D%95%E7%9A%84%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          简单的爬虫学习总结
-        
-      </div>
-    </a>
   
+    <a href="/hhhfccz.github.io/2020/01/12/%E7%94%B5%E7%A7%91%E8%8F%9C%E7%8B%97%E7%9A%84python%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">电科菜狗的python基础复习</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -486,7 +692,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#高级特性"><span class="toc-number">1.</span> <span class="toc-text">高级特性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#面向对象"><span class="toc-number">1.1.</span> <span class="toc-text">面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是对象"><span class="toc-number">1.1.1.</span> <span class="toc-text">什么是对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#对象的基本概念"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">对象的基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对象"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对象-属性-方法"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">对象 = 属性 + 方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看对象"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">查看对象</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建对象"><span class="toc-number">1.2.</span> <span class="toc-text">创建对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象属性和方法的引用"><span class="toc-number">1.3.</span> <span class="toc-text">对象属性和方法的引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#引用形式"><span class="toc-number">1.3.1.</span> <span class="toc-text">引用形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python动态"><span class="toc-number">1.3.2.</span> <span class="toc-text">python动态</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#面向对象编程-OOP"><span class="toc-number">1.4.</span> <span class="toc-text">面向对象编程(OOP)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#面向对象编程是一种程序设计泛型，同时也是一种程序开发方法"><span class="toc-number">1.4.1.</span> <span class="toc-text">面向对象编程是一种程序设计泛型，同时也是一种程序开发方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#传统程序设计"><span class="toc-number">1.4.2.</span> <span class="toc-text">传统程序设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三个重要特性"><span class="toc-number">1.4.3.</span> <span class="toc-text">三个重要特性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类的定义和调用"><span class="toc-number">1.5.</span> <span class="toc-text">类的定义和调用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是类"><span class="toc-number">1.5.1.</span> <span class="toc-text">什么是类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义类"><span class="toc-number">1.5.2.</span> <span class="toc-text">定义类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化类"><span class="toc-number">1.5.3.</span> <span class="toc-text">初始化类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调用类"><span class="toc-number">1.5.4.</span> <span class="toc-text">调用类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类定义中的特殊方法"><span class="toc-number">1.6.</span> <span class="toc-text">类定义中的特殊方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念"><span class="toc-number">1.6.1.</span> <span class="toc-text">基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#特殊方法（可以理解成拓展内置操作，例如-可以进行对象之间的相加而不是只能数值相加）"><span class="toc-number">1.6.1.1.</span> <span class="toc-text">特殊方法（可以理解成拓展内置操作，例如+可以进行对象之间的相加而不是只能数值相加）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#构造与解构"><span class="toc-number">1.6.2.</span> <span class="toc-text">构造与解构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#对象构造器"><span class="toc-number">1.6.2.1.</span> <span class="toc-text">对象构造器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#析构器"><span class="toc-number">1.6.2.2.</span> <span class="toc-text">析构器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#算术运算"><span class="toc-number">1.6.3.</span> <span class="toc-text">算术运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他特殊方法"><span class="toc-number">1.6.4.</span> <span class="toc-text">其他特殊方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义对象的排序"><span class="toc-number">1.7.</span> <span class="toc-text">自定义对象的排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#列表排序"><span class="toc-number">1.7.1.</span> <span class="toc-text">列表排序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#列表方法"><span class="toc-number">1.7.1.1.</span> <span class="toc-text">列表方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#内置排序函数"><span class="toc-number">1.7.1.2.</span> <span class="toc-text">内置排序函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#特殊方法"><span class="toc-number">1.7.1.3.</span> <span class="toc-text">特殊方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可拓展的“大小”比较及排序"><span class="toc-number">1.7.2.</span> <span class="toc-text">可拓展的“大小”比较及排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类的继承"><span class="toc-number">1.8.</span> <span class="toc-text">类的继承</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#类的继承机制"><span class="toc-number">1.8.1.</span> <span class="toc-text">类的继承机制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#继承"><span class="toc-number">1.8.1.1.</span> <span class="toc-text">继承</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码复用"><span class="toc-number">1.8.1.2.</span> <span class="toc-text">代码复用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#子类与父类"><span class="toc-number">1.9.</span> <span class="toc-text">子类与父类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义"><span class="toc-number">1.9.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#覆盖与添加"><span class="toc-number">1.9.2.</span> <span class="toc-text">覆盖与添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关于self"><span class="toc-number">1.9.3.</span> <span class="toc-text">关于self</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#self的作用"><span class="toc-number">1.9.3.1.</span> <span class="toc-text">self的作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#self实际上代表对象实例"><span class="toc-number">1.9.3.2.</span> <span class="toc-text">self实际上代表对象实例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#self去哪了"><span class="toc-number">1.9.3.3.</span> <span class="toc-text">self去哪了</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#例外处理"><span class="toc-number">2.</span> <span class="toc-text">例外处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#代码错误类型"><span class="toc-number">2.1.</span> <span class="toc-text">代码错误类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码运行可能会意外出现各种错误"><span class="toc-number">2.1.1.</span> <span class="toc-text">代码运行可能会意外出现各种错误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引起程序终止退出的错误"><span class="toc-number">2.1.2.</span> <span class="toc-text">引起程序终止退出的错误</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#捕捉错误"><span class="toc-number">2.2.</span> <span class="toc-text">捕捉错误</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#try-except语句"><span class="toc-number">2.2.1.</span> <span class="toc-text">try-except语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#try-finally语句"><span class="toc-number">2.2.2.</span> <span class="toc-text">try-finally语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#else语句"><span class="toc-number">2.2.3.</span> <span class="toc-text">else语句</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#推导式"><span class="toc-number">3.</span> <span class="toc-text">推导式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是推导式"><span class="toc-number">3.1.</span> <span class="toc-text">什么是推导式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推导式基本语法"><span class="toc-number">3.2.</span> <span class="toc-text">推导式基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#列表推导式"><span class="toc-number">3.2.1.</span> <span class="toc-text">列表推导式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字典推导式"><span class="toc-number">3.2.2.</span> <span class="toc-text">字典推导式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#集合推导式"><span class="toc-number">3.2.3.</span> <span class="toc-text">集合推导式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成器推导式"><span class="toc-number">3.3.</span> <span class="toc-text">生成器推导式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#yield语句（函数暂停与挂起）"><span class="toc-number">3.4.</span> <span class="toc-text">yield语句（函数暂停与挂起）</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -511,7 +717,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "https://hhhfccz.github.io/hhhfccz.github.io/hhhfccz.github.io/2020/01/09/%E7%AE%80%E5%8D%95%E7%9A%84%E7%88%AC%E8%99%AB/",
+  id: "https://hhhfccz.github.io/hhhfccz.github.io/hhhfccz.github.io/2020/01/18/python%E7%9A%84%E7%89%B9%E6%80%A7/",
   owner: 'hhhfccz',
   repo: 'hhhfccz.github.io',
   oauth: {
