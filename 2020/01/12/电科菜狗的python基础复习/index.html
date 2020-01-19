@@ -14,7 +14,7 @@
 <meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;01&#x2F;12&#x2F;%E7%94%B5%E7%A7%91%E8%8F%9C%E7%8B%97%E7%9A%84python%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0&#x2F;index.html">
 <meta property="og:site_name" content="电科菜狗的小博客">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-01-15T09:54:05.091Z">
+<meta property="og:updated_time" content="2020-01-19T13:23:40.132Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -803,66 +803,9 @@ for k,v in adic.items():   #adic,items将其遍历为一个二元组
 def func(**kwargs)   #key = value的多个参数（带名字，字典）</code></pre><blockquote>
 <p>位置参数在前，关键字参数在后</p>
 </blockquote>
-<h1 id="以上是我对python最最基础知识的小小总结"><a href="#以上是我对python最最基础知识的小小总结" class="headerlink" title="以上是我对python最最基础知识的小小总结"></a>以上是我对python最最基础知识的小小总结</h1><h2 id="下面贴一个代码，运用以上知识就能大致看懂"><a href="#下面贴一个代码，运用以上知识就能大致看懂" class="headerlink" title="下面贴一个代码，运用以上知识就能大致看懂"></a>下面贴一个代码，运用以上知识就能大致看懂</h2><pre><code>#！/uer/bin/env python
-# ——*——coding:utf-8——*——
-# author:hhhfccz（胡珈魁） time:2020/1/11
-import math
-print(&apos;processing data……&apos;)
+<h1 id="以上是我对python最最基础知识的小小总结"><a href="#以上是我对python最最基础知识的小小总结" class="headerlink" title="以上是我对python最最基础知识的小小总结"></a>以上是我对python最最基础知识的小小总结</h1><h2 id="下面贴一个代码，运用以上知识就能大致看懂"><a href="#下面贴一个代码，运用以上知识就能大致看懂" class="headerlink" title="下面贴一个代码，运用以上知识就能大致看懂"></a>下面贴一个代码，运用以上知识就能大致看懂</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">#！/uer/bin/env python</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># ——*——coding:utf-8——*——</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># author:hhhfccz（胡珈魁） time:2020/1/11</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">print(<span class="string">'processing data……'</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">b = <span class="number">0</span>                             <span class="comment"># 代价函数变量theta0</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">k = <span class="number">0</span>                             <span class="comment"># 代价函数变量theta1</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">temp_b = <span class="number">0</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">temp_k = <span class="number">0</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">a = input(<span class="string">'学习速率：'</span>)             <span class="comment">#我用的是0.005</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">x = float(a)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">sumk = []</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">sumb = []</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'data.txt'</span>) <span class="keyword">as</span> f:       <span class="comment"># 打开文件</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    file = f.readlines()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">length = len(file)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">m = length - <span class="number">1</span>                    <span class="comment"># 得到我们数据集数据个数</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sta</span><span class="params">(file,k,b,length)</span>:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">    sum_b = <span class="number">0</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">    sum_k = <span class="number">0</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,length):</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">        list1 = file[i].split()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">        num1 = float(list1[<span class="number">0</span>])        <span class="comment"># 得到我们的x值</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">        num2 = float(list1[<span class="number">1</span>])        <span class="comment"># 得到我们真实的y值（有误差）</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">        fore_y = k * num1 + b         <span class="comment"># 得到我们预测的y值</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">        sum_b += x * ( fore_y - num2 )                                <span class="comment">#b梯度计算</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">        sum_k += x * ( ( fore_y - num2 ) * num1 ) / m                 <span class="comment">#k梯度计算</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> sum_k,sum_b</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">var</span><span class="params">(file,k,b,length)</span>:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">    var_sum = <span class="number">0</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,length):</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">        list1 = file[i].split()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">        num1 = float(list1[<span class="number">0</span>])        <span class="comment"># 得到我们的x值</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">        num2 = float(list1[<span class="number">1</span>])        <span class="comment"># 得到我们真实的y值</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">        fore_y = k * num1 + b         <span class="comment"># 得到我们预测的y值</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">        var_sum += math.pow((fore_y - num2), <span class="number">2</span>) / m / <span class="number">2</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line">    <span class="comment"># print('%f'%var_sum)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> var_sum</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line">l = <span class="number">5000</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> l &gt; <span class="number">4770.132844</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line">    sum_k = float(sta(file, k, b, length)[<span class="number">0</span>])</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line">    sum_b = float(sta(file, k, b, length)[<span class="number">1</span>])</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">48</span></pre></td><td class="code"><pre><span class="line">    temp_k = k - x * sum_k</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">49</span></pre></td><td class="code"><pre><span class="line">    temp_b = b - x * sum_b</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">50</span></pre></td><td class="code"><pre><span class="line">    k = (temp_k)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">51</span></pre></td><td class="code"><pre><span class="line">    b = (temp_b)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">52</span></pre></td><td class="code"><pre><span class="line">    l = float( var(file,k,b,length) )</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">53</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">54</span></pre></td><td class="code"><pre><span class="line">    print(<span class="string">'%f %f'</span> % (k, b))</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">55</span></pre></td><td class="code"><pre><span class="line">    writelist_k = str(k)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">56</span></pre></td><td class="code"><pre><span class="line">    writelist_b = str(b)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">57</span></pre></td><td class="code"><pre><span class="line">    writelist = <span class="string">'k:'</span> + writelist_k + <span class="string">'\n'</span> + <span class="string">'b:'</span> + writelist_b</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">58</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">with</span> open(<span class="string">'胡珈魁.txt'</span>,<span class="string">'w'</span>) <span class="keyword">as</span> fi:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">59</span></pre></td><td class="code"><pre><span class="line">        fi.write(writelist)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">60</span></pre></td><td class="code"><pre><span class="line">print(<span class="string">'--*--END--*--'</span>)</span></pre></td></tr></table></figure>
 
-b = 0                             # 代价函数变量theta0
-k = 0                             # 代价函数变量theta1
-temp_b = 0
-temp_k = 0
-a = input(&apos;学习速率：&apos;)             #我用的是0.005
-x = float(a)
-sumk = []
-sumb = []
-
-with open(&apos;data.txt&apos;) as f:       # 打开文件
-    file = f.readlines()
-length = len(file)
-m = length - 1                    # 得到我们数据集数据个数
-
-def sta(file,k,b,length):
-    sum_b = 0
-    sum_k = 0
-    for i in range(1,length):
-        list1 = file[i].split()
-        num1 = float(list1[0])        # 得到我们的x值
-        num2 = float(list1[1])        # 得到我们真实的y值（有误差）
-        fore_y = k * num1 + b         # 得到我们预测的y值
-        sum_b += x * ( fore_y - num2 )                                #b梯度计算
-        sum_k += x * ( ( fore_y - num2 ) * num1 ) / m                 #k梯度计算
-    return sum_k,sum_b
-
-def var(file,k,b,length):
-    var_sum = 0
-    for i in range(1,length):
-        list1 = file[i].split()
-        num1 = float(list1[0])        # 得到我们的x值
-        num2 = float(list1[1])        # 得到我们真实的y值
-        fore_y = k * num1 + b         # 得到我们预测的y值
-        var_sum += math.pow((fore_y - num2), 2) / m / 2
-    # print(&apos;%f&apos;%var_sum)
-    return var_sum
-
-l = 5000
-while l &gt; 4770.132844:
-    sum_k = float(sta(file, k, b, length)[0])
-    sum_b = float(sta(file, k, b, length)[1])
-    temp_k = k - x * sum_k
-    temp_b = b - x * sum_b
-    k = (temp_k)
-    b = (temp_b)
-    l = float( var(file,k,b,length) )
-else:
-    print(&apos;%f %f&apos; % (k, b))
-    writelist_k = str(k)
-    writelist_b = str(b)
-    writelist = &apos;k:&apos; + writelist_k + &apos;\n&apos; + &apos;b:&apos; + writelist_b
-    with open(&apos;胡珈魁.txt&apos;,&apos;w&apos;) as fi:
-        fi.write(writelist)
-print(&apos;--*--END--*--&apos;)</code></pre><div><br>
+<div><br>
     python学习第一弹，收工。    
  </div>
 
