@@ -14,7 +14,7 @@
 <meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;01&#x2F;18&#x2F;python%E7%9A%84%E5%87%A0%E4%B8%AA%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97&#x2F;index.html">
 <meta property="og:site_name" content="电科菜狗的小博客">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-01-18T14:45:17.694Z">
+<meta property="og:updated_time" content="2020-01-19T13:12:09.912Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -223,44 +223,79 @@
         <div><a id="more"></a></div>
 
 <h1 id="几个模块的基本介绍"><a href="#几个模块的基本介绍" class="headerlink" title="几个模块的基本介绍"></a>几个模块的基本介绍</h1><h2 id="datetime模块"><a href="#datetime模块" class="headerlink" title="datetime模块"></a>datetime模块</h2><h3 id="主要的类"><a href="#主要的类" class="headerlink" title="主要的类"></a>主要的类</h3><blockquote>
-<p>datetime.date()  处理日期（年月日）</p>
-</blockquote>
-<blockquote>
-<p>datetime.time()  处理时间（时分秒）</p>
-</blockquote>
-<blockquote>
-<p>datetime.datetime() 处理日期加时间</p>
-</blockquote>
-<blockquote>
-<p>datetime.timedelta() 处理时段（时间间隔）</p>
+<ul>
+<li>datetime.date()  <strong>处理日期（年月日）</strong></li>
+<li>datetime.time()  <strong>处理时间（时分秒）</strong></li>
+<li>datetime.datetime() <strong>处理日期加时间</strong></li>
+<li>datetime.timedelta() <strong>处理时段（时间间隔）</strong></li>
+</ul>
 </blockquote>
 <h3 id="获取当前时间"><a href="#获取当前时间" class="headerlink" title="获取当前时间"></a>获取当前时间</h3><blockquote>
-<p>datetime.date.today() 返回一个日期对象<br>datetime.datetime.now()</p>
+<ul>
+<li>datetime.date.today() <strong>返回一个日期对象</strong></li>
+<li>datetime.datetime.now()</li>
+</ul>
 </blockquote>
-<h3 id="使用strftime格式化"><a href="#使用strftime格式化" class="headerlink" title="使用strftime格式化"></a>使用strftime格式化</h3><pre><code># Y：年；m：月；d：日；H：小时；M：分钟；S：秒
-datetime.date.today().strftime(&apos;%Y-%m-%d %H:%M:%S&apos;)</code></pre><h4 id="标准格式"><a href="#标准格式" class="headerlink" title="标准格式"></a>标准格式</h4><pre><code>datetime.datetime.now.isoformat()</code></pre><h3 id="时间戳"><a href="#时间戳" class="headerlink" title="时间戳"></a>时间戳</h3><p> 时间戳是指格林威治时间1970年01月01日00时00分00秒起到现在的总秒数</p>
+<h3 id="使用strftime格式化"><a href="#使用strftime格式化" class="headerlink" title="使用strftime格式化"></a>使用strftime格式化</h3><blockquote>
+<ul>
+<li>datetime.date.today().strftime(‘%Y-%m-%d %H:%M:%S’) <strong>Y：年；m：月；d：日；H：小时；M：分钟；S：秒</strong></li>
+</ul>
+</blockquote>
+<h4 id="标准格式"><a href="#标准格式" class="headerlink" title="标准格式"></a>标准格式</h4><blockquote>
+<ul>
+<li>datetime.datetime.now.isoformat()</li>
+</ul>
+</blockquote>
+<h3 id="时间戳"><a href="#时间戳" class="headerlink" title="时间戳"></a>时间戳</h3><p> <strong>时间戳是指格林威治时间1970年01月01日00时00分00秒起到现在的总秒数</strong></p>
 <h4 id="将日期转换为时间戳"><a href="#将日期转换为时间戳" class="headerlink" title="将日期转换为时间戳"></a>将日期转换为时间戳</h4><blockquote>
-<p>timetuple() 将时间转换成struct_time格式（元组）</p>
-</blockquote>
-<blockquote>
-<p>time.mktime() 返回用秒数来表示时间的浮点数</p>
+<ul>
+<li>timetuple() <strong>将时间转换成struct_time格式，元组</strong></li>
+<li>time.mktime() <strong>返回用秒数来表示时间的浮点数</strong></li>
+</ul>
 </blockquote>
 <h4 id="将时间戳转换为日期"><a href="#将时间戳转换为日期" class="headerlink" title="将时间戳转换为日期"></a>将时间戳转换为日期</h4><blockquote>
-<p>datetime.date.fromtimestamp(……)  （用浮点数，返回值类型为元组）</p>
+<ul>
+<li>datetime.date.fromtimestamp()  <strong>用浮点数，返回值类型为元组</strong></li>
+</ul>
 </blockquote>
-<h3 id="时间上的加减法"><a href="#时间上的加减法" class="headerlink" title="时间上的加减法"></a>时间上的加减法</h3><pre><code>the_day = datetime.datetime.now() - datetime.timedeta(……) （里面写上需要减去的时间）</code></pre><h2 id="calendar模块"><a href="#calendar模块" class="headerlink" title="calendar模块"></a>calendar模块</h2><h3 id="制作电子日历"><a href="#制作电子日历" class="headerlink" title="制作电子日历"></a>制作电子日历</h3><p> 跟日历相关的若干函数和类，可以生成文本形式的日历</p>
+<h3 id="时间上的加减法"><a href="#时间上的加减法" class="headerlink" title="时间上的加减法"></a>时间上的加减法</h3><blockquote>
+<ul>
+<li>the_day = datetime.datetime.now() - datetime.timedeta()  <strong>里面写上需要减去的时间</strong></li>
+</ul>
+</blockquote>
+<h2 id="calendar模块"><a href="#calendar模块" class="headerlink" title="calendar模块"></a>calendar模块</h2><h3 id="制作电子日历"><a href="#制作电子日历" class="headerlink" title="制作电子日历"></a>制作电子日历</h3><p> <strong>跟日历相关的若干函数和类，可以生成文本形式的日历</strong></p>
 <blockquote>
-<p>calendar.calendar(&lt;年&gt;)<br>calendar.month(&lt;年&gt;,&lt;月&gt;)<br>calendar.prmonth(&lt;年&gt;,&lt;月&gt;)<br>calendar.prcal(&lt;年&gt;)</p>
+<ul>
+<li>calendar.calendar(&lt;年&gt;)</li>
+<li>calendar.month(&lt;年&gt;,&lt;月&gt;)</li>
+<li>calendar.prmonth(&lt;年&gt;,&lt;月&gt;)</li>
+<li>calendar.prcal(&lt;年&gt;)</li>
+</ul>
 </blockquote>
-<h3 id="将日历列表化"><a href="#将日历列表化" class="headerlink" title="将日历列表化"></a>将日历列表化</h3><pre><code>calendar.monthcalendar()</code></pre><blockquote>
-<p>返回某一年的某一个月份日历，类型为一个嵌套列表<br>最里层的列表含有七个元素，代表一周（从周一到周日）如果没有本月的日期就默认为0</p>
+<h3 id="将日历列表化"><a href="#将日历列表化" class="headerlink" title="将日历列表化"></a>将日历列表化</h3><blockquote>
+<ul>
+<li>calendar.monthcalendar()</li>
+</ul>
 </blockquote>
-<h3 id="与日历相关的计算"><a href="#与日历相关的计算" class="headerlink" title="与日历相关的计算"></a>与日历相关的计算</h3><h4 id="判断闰年"><a href="#判断闰年" class="headerlink" title="判断闰年"></a>判断闰年</h4><pre><code>calendar.isleap()</code></pre><h4 id="计算某月一共有多少天，从周几开始"><a href="#计算某月一共有多少天，从周几开始" class="headerlink" title="计算某月一共有多少天，从周几开始"></a>计算某月一共有多少天，从周几开始</h4><pre><code>calendar.monthrange() # 返回一个元祖，第一个元素这个月的第一天是星期几，第二个元素是这个月有多少天
-calendar.weekday()    # 返回一个数字，表示星期几(0~6代表周一到周日)</code></pre><h2 id="time模块"><a href="#time模块" class="headerlink" title="time模块"></a>time模块</h2><h3 id="获取时间戳"><a href="#获取时间戳" class="headerlink" title="获取时间戳"></a>获取时间戳</h3><h4 id="time-time-方法"><a href="#time-time-方法" class="headerlink" title="time.time()方法"></a>time.time()方法</h4><div> <font color="red">E.G.</font> </div>
+<blockquote>
+<p><strong>返回某一年的某一个月份日历，类型为一个嵌套列表</strong><br><strong>最里层的列表含有七个元素，代表一周（从周一到周日）如果没有本月的日期就默认为0</strong></p>
+</blockquote>
+<h3 id="与日历相关的计算"><a href="#与日历相关的计算" class="headerlink" title="与日历相关的计算"></a>与日历相关的计算</h3><h4 id="判断闰年"><a href="#判断闰年" class="headerlink" title="判断闰年"></a>判断闰年</h4><blockquote>
+<ul>
+<li>calendar.isleap()</li>
+</ul>
+</blockquote>
+<h4 id="计算某月一共有多少天，从周几开始"><a href="#计算某月一共有多少天，从周几开始" class="headerlink" title="计算某月一共有多少天，从周几开始"></a>计算某月一共有多少天，从周几开始</h4><blockquote>
+<ul>
+<li>calendar.monthrange() <strong>返回一个元祖，第一个元素这个月的第一天是星期几，第二个元素是这个月有多少天</strong></li>
+<li>calendar.weekday()    <strong>返回一个数字，表示星期几(0~6代表周一到周日)</strong></li>
+</ul>
+</blockquote>
+<h2 id="time模块"><a href="#time模块" class="headerlink" title="time模块"></a>time模块</h2><h3 id="获取时间戳"><a href="#获取时间戳" class="headerlink" title="获取时间戳"></a>获取时间戳</h3><h4 id="time-time-方法"><a href="#time-time-方法" class="headerlink" title="time.time()方法"></a>time.time()方法</h4><div> <font color="red">E.G.</font> </div>
 
 <pre><code>import time
 t1 = time.time()
-…………
+&lt;…………&gt;
 t2 = time.time()
 print(t2 - t1)
 # 用来得知程序运行了多少秒</code></pre><h3 id="获取日期格式"><a href="#获取日期格式" class="headerlink" title="获取日期格式"></a>获取日期格式</h3><h4 id="获取当前时间-1"><a href="#获取当前时间-1" class="headerlink" title="获取当前时间"></a>获取当前时间</h4><blockquote>
@@ -271,74 +306,53 @@ print(t2 - t1)
 </blockquote>
 <h3 id="利用索引获取时间信息"><a href="#利用索引获取时间信息" class="headerlink" title="利用索引获取时间信息"></a>利用索引获取时间信息</h3><h4 id="struct-time类"><a href="#struct-time类" class="headerlink" title="struct_time类"></a>struct_time类</h4><div> <font color="red">E.G.</font> </div>
 
-<pre><code>time.localtime():
-# 返回一个类
-t = time.localtime()
+<pre><code>t = time.localtime()
 year = t[0]
-……</code></pre><h3 id="让程序睡一会"><a href="#让程序睡一会" class="headerlink" title="让程序睡一会"></a>让程序睡一会</h3><pre><code>time.sleep(1)暂停一秒钟</code></pre><h2 id="几个算术模块"><a href="#几个算术模块" class="headerlink" title="几个算术模块"></a>几个算术模块</h2><h3 id="math模块-cmath模块"><a href="#math模块-cmath模块" class="headerlink" title="math模块/cmath模块"></a>math模块/cmath模块</h3><blockquote>
-<p>math.sin() / math.cos() / math.tan() 三角运算</p>
+&lt;……&gt;</code></pre><h3 id="让程序睡一会"><a href="#让程序睡一会" class="headerlink" title="让程序睡一会"></a>让程序睡一会</h3><blockquote>
+<ul>
+<li>time.sleep(1) <strong>暂停一秒钟</strong></li>
+</ul>
 </blockquote>
-<blockquote>
-<p>math.pi π</p>
-</blockquote>
-<blockquote>
-<p>math.log(x,a) 以a为底的x的对数</p>
-</blockquote>
-<blockquote>
-<p>math.pow(x,y) x的y次方</p>
-</blockquote>
-<blockquote>
-<p>cmath.polar() 极坐标</p>
-</blockquote>
-<blockquote>
-<p>cmath.rect()  笛卡尔坐标（直角坐标）</p>
-</blockquote>
-<blockquote>
-<p>cmath.exp(x)  e的X次方</p>
-</blockquote>
-<blockquote>
-<p>cmath.log(x,a)</p>
-</blockquote>
-<blockquote>
-<p>cmath.sqrt(x) x的平方根</p>
+<h2 id="几个算术模块"><a href="#几个算术模块" class="headerlink" title="几个算术模块"></a>几个算术模块</h2><h3 id="math模块-cmath模块"><a href="#math模块-cmath模块" class="headerlink" title="math模块/cmath模块"></a>math模块/cmath模块</h3><blockquote>
+<ul>
+<li>math.sin() / math.cos() / math.tan() <strong>三角运算</strong></li>
+<li>math.pi <strong>π</strong></li>
+<li>math.log(x,a) <strong>以a为底的x的对数</strong></li>
+<li>math.pow(x,y) <strong>x的y次方</strong></li>
+<li>cmath.polar() <strong>极坐标</strong></li>
+<li>cmath.rect()  <strong>笛卡尔坐标（直角坐标）</strong></li>
+<li>cmath.exp(x)  <strong>e的X次方</strong></li>
+<li>cmath.log(x,a) <strong>以a为底的x的对数</strong></li>
+<li>cmath.sqrt(x) <strong>x的平方根</strong></li>
+</ul>
 </blockquote>
 <h3 id="decimal模块"><a href="#decimal模块" class="headerlink" title="decimal模块"></a>decimal模块</h3><blockquote>
-<p>生成小数：Deciamal(‘0.1’)   这个数就是一个decimal类</p>
+<ul>
+<li>Deciamal(‘0.1’)   <strong>生成0.1，这个数就是一个decimal类对象</strong></li>
+</ul>
 </blockquote>
 <h3 id="fractions模块"><a href="#fractions模块" class="headerlink" title="fractions模块"></a>fractions模块</h3><h4 id="生成分数"><a href="#生成分数" class="headerlink" title="生成分数"></a>生成分数</h4><blockquote>
-<p>Fraction(1,4) = 1 / 4( == Fraction(‘0.25’) )</p>
+<p>Fraction(1,4) == Fraction(‘0.25’) </p>
 </blockquote>
 <h4 id="浮点数转换为分数"><a href="#浮点数转换为分数" class="headerlink" title="浮点数转换为分数"></a>浮点数转换为分数</h4><blockquote>
-<p> Fraction.from_float(1.75) 会有精度损失</p>
+<ul>
+<li>Fraction.from_float(1.75) <strong>会有精度损失</strong></li>
+</ul>
 </blockquote>
-<h3 id="random模块-伪随机数"><a href="#random模块-伪随机数" class="headerlink" title="random模块(伪随机数)"></a>random模块(伪随机数)</h3><p>   随机数种子 用于固定序列random.seed(a = None)</p>
-<blockquote>
-<p>random.random() 生成[0,1)之间的随机实数</p>
+<h3 id="random模块-伪随机数"><a href="#random模块-伪随机数" class="headerlink" title="random模块(伪随机数)"></a>random模块(伪随机数)</h3><blockquote>
+<ul>
+<li>random.seed(a = None) <strong>随机数种子 用于固定序列</strong></li>
+<li>random.random() <strong>生成[0,1)之间的随机实数</strong></li>
+<li>random.uniform() <strong>生成指定范围内的随机浮点数</strong></li>
+<li>random.randint() <strong>生成指定范围[m,n]内的整数</strong></li>
+<li>random.randrange(a,b,n) <strong>在[a,b)内，按n递增的集合中，随机选取一个数</strong></li>
+<li>random.getrandbits(k) <strong>生成k位二进制的随机整数</strong></li>
+<li>random.choice() <strong>在序列中随机抽取一个</strong></li>
+<li>random.sample() <strong>能指定每次随机元素的个数</strong></li>
+<li>random.shuffle() <strong>可以将可变序列中的元素打乱</strong></li>
+</ul>
 </blockquote>
-<blockquote>
-<p>random.uniform() 生成指定范围内的随机浮点数</p>
-</blockquote>
-<blockquote>
-<p>random.randint() 生成指定范围[m,n]内的整数</p>
-</blockquote>
-<blockquote>
-<p>random.randrange(a,b,n) 在[a,b)内，按n递增的集合中，随机选取一个数</p>
-</blockquote>
-<blockquote>
-<p>random.getrandbits(k) 生成k位二进制的随机整数</p>
-</blockquote>
-<blockquote>
-<p>random.choice() 在序列中随机抽取一个</p>
-</blockquote>
-<blockquote>
-<p>random.sample() 能指定每次随机元素的个数</p>
-</blockquote>
-<blockquote>
-<p>random.shuffle() 可以将可变序列中的元素打乱</p>
-</blockquote>
-<h2 id="持久化模块"><a href="#持久化模块" class="headerlink" title="持久化模块"></a>持久化模块</h2><h3 id="对象持久化"><a href="#对象持久化" class="headerlink" title="对象持久化"></a>对象持久化</h3><blockquote>
-<p>我们类创建的对象并不是数据库记录，关闭python，对象也会消失<br>我们需要关闭创建他们的程序被关闭后依然存在</p>
-</blockquote>
+<h2 id="持久化模块"><a href="#持久化模块" class="headerlink" title="持久化模块"></a>持久化模块</h2><h3 id="对象持久化"><a href="#对象持久化" class="headerlink" title="对象持久化"></a>对象持久化</h3><p>   <strong>我们类创建的对象并不是数据库记录，关闭python程序，对象也会消失</strong><br>   <strong>我们需要关闭创建他们的程序被关闭后依然存在</strong></p>
 <h3 id="标准库模块"><a href="#标准库模块" class="headerlink" title="标准库模块"></a>标准库模块</h3><blockquote>
 <p>pickle：任意PYTHON对象格式化和解格式化</p>
 </blockquote>
@@ -358,73 +372,74 @@ year = t[0]
 <p>与字典的区别：开始时需要打开shelve，修改或使用完毕后需要关闭<br>数据处理：不支持类似SQL的查询工具，只要通过键获取到对象，就可以对这个对象进行处理</p>
 </blockquote>
 <h3 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h3><blockquote>
-<p>d = shelve.open(filename) open函数在调用时返回一个shelf对象，通过该对象可以存储内容</p>
+<ul>
+<li>d = shelve.open(filename) <strong>open函数在调用时返回一个shelf对象，通过该对象可以存储内容</strong></li>
+<li>d[key] = data  <strong>写入shelve</strong></li>
+<li>value = d[key] <strong>读出shelve</strong></li>
+<li>del d[key]     <strong>从shelve中删除</strong></li>
+<li>d.close()      <strong>关闭shelve</strong></li>
+</ul>
 </blockquote>
-<blockquote>
-<p>d[key] = data  写入shelve</p>
+<p><strong>使用过程中，可以把它看做成一个字典，记得打开和关闭即可</strong><br><br><br>   <strong>注：Shelve中的列表提取出来后不能直接进行.append等操作（先读出来，操作完后保存回去，用temp做中间值）</strong><br>   <strong>用于实现程序与程序之间的交换与共享</strong></p>
+<h2 id="文件读写模块"><a href="#文件读写模块" class="headerlink" title="文件读写模块"></a>文件读写模块</h2><h3 id="文件的打开"><a href="#文件的打开" class="headerlink" title="文件的打开"></a>文件的打开</h3><h4 id="普通文件：数据持久化的最简单类型"><a href="#普通文件：数据持久化的最简单类型" class="headerlink" title="普通文件：数据持久化的最简单类型"></a>普通文件：数据持久化的最简单类型</h4><blockquote>
+<ul>
+<li>open()</li>
+</ul>
 </blockquote>
-<blockquote>
-<p>value = d[key] 读出shelve</p>
-</blockquote>
-<blockquote>
-<p>del d[key]     从shelve中删除</p>
-</blockquote>
-<blockquote>
-<p>d.close()      关闭shelve        </p>
-</blockquote>
-<pre><code>使用过程中，可以把它看做成一个字典，记得打开和关闭即可
+ <div> <font color="red">E.G.</font> </div>
 
-注：Shelve中的列表提取出来后不能直接进行.append等操作（先读出来，操作完后保存回去，用temp做中间值）
-用于实现程序与程序之间的交换与共享</code></pre><h2 id="文件读写模块"><a href="#文件读写模块" class="headerlink" title="文件读写模块"></a>文件读写模块</h2><h3 id="文件的打开"><a href="#文件的打开" class="headerlink" title="文件的打开"></a>文件的打开</h3><h4 id="普通文件：数据持久化的最简单类型"><a href="#普通文件：数据持久化的最简单类型" class="headerlink" title="普通文件：数据持久化的最简单类型"></a>普通文件：数据持久化的最简单类型</h4><blockquote>
-<p>open()</p>
-</blockquote>
-<pre><code>f = open(filename[,mode[,buffering]])</code></pre><blockquote>
-<p>返回的文件对象，filename就是文件的字符串名字，mode可选参数，打开模式和文件类型，buffering可选参数，文件的缓冲区，默认为-1</p>
-</blockquote>
+<pre><code>f = open(filename[,mode[,buffering]])</code></pre><p><strong>返回的文件对象，filename就是文件的字符串名字，mode可选参数，打开模式和文件类型，buffering可选参数，文件的缓冲区，默认为-1</strong></p>
 <h4 id="mode"><a href="#mode" class="headerlink" title="mode"></a>mode</h4><blockquote>
 <p>第一个字母表明对文件要做什么样的操作</p>
 <blockquote>
-<p>   ‘r’表示读<br>   ‘w’表示写<br>   ‘x’表示在文件不存在的情况下新创建并写文件<br>   ‘a’表示在文件末尾追加写内容<br>   ‘+’表示读写模式</p>
+<ul>
+<li>‘r’表示读</li>
+<li>‘w’表示写</li>
+<li>‘x’表示在文件不存在的情况下新创建并写文件</li>
+<li>‘a’表示在文件末尾追加写内容</li>
+<li>‘+’表示读写模式</li>
+</ul>
 </blockquote>
 </blockquote>
 <blockquote>
 <p>第二个字母表明文件类型</p>
 <blockquote>
-<p>‘t’表示文本类型<br>‘b’表示二进制文件类型</p>
+<ul>
+<li>‘t’表示文本类型</li>
+<li>‘b’表示二进制文件类型</li>
+</ul>
 </blockquote>
 </blockquote>
 <h3 id="文件的读写与访问"><a href="#文件的读写与访问" class="headerlink" title="文件的读写与访问"></a>文件的读写与访问</h3><blockquote>
-<p>f.write(str)<br>f.writelines(strlist) 写入一个字符串列表<br>f.read()<br>f.readline() 返回一行<br>f.readlines() 返回所有行、列表</p>
+<ul>
+<li>f.write(str)</li>
+<li>f.writelines(strlist) <strong>写入一个字符串列表</strong></li>
+<li>f.read()</li>
+<li>f.readline() <strong>返回一行</strong></li>
+<li>f.readlines() <strong>返回所有行、列表</strong></li>
+</ul>
 </blockquote>
-<h3 id="文件的关闭"><a href="#文件的关闭" class="headerlink" title="文件的关闭"></a>文件的关闭</h3><h4 id="文件打开后一定要记得关闭"><a href="#文件打开后一定要记得关闭" class="headerlink" title="文件打开后一定要记得关闭"></a>文件打开后一定要记得关闭</h4><blockquote>
-<p>写文件时会先将数据写入内存中的一块区域，文件关闭后才会刷到硬盘上</p>
-</blockquote>
+<h3 id="文件的关闭"><a href="#文件的关闭" class="headerlink" title="文件的关闭"></a>文件的关闭</h3><h4 id="文件打开后一定要记得关闭"><a href="#文件打开后一定要记得关闭" class="headerlink" title="文件打开后一定要记得关闭"></a>文件打开后一定要记得关闭</h4><p>  <strong>写文件时会先将数据写入内存中的一块区域，文件关闭后才会刷到硬盘上</strong></p>
 <blockquote>
-<p>f.close()</p>
+<ul>
+<li>f.close()</li>
+</ul>
 </blockquote>
-<h4 id="上下文管理器"><a href="#上下文管理器" class="headerlink" title="上下文管理器"></a>上下文管理器</h4><pre><code>with open(……) as file:
+<h4 id="上下文管理器"><a href="#上下文管理器" class="headerlink" title="上下文管理器"></a>上下文管理器</h4><div> <font color="red">E.G.</font> </div>
+
+<pre><code>with open(……) as file:
     file.read()
-# 会自动执行关闭文件操作</code></pre><h2 id="结构化文本文件"><a href="#结构化文本文件" class="headerlink" title="结构化文本文件"></a>结构化文本文件</h2><h3 id="CSV：纯文本文件，以’，’作为分隔符（纯文本）"><a href="#CSV：纯文本文件，以’，’作为分隔符（纯文本）" class="headerlink" title="CSV：纯文本文件，以’，’作为分隔符（纯文本）"></a>CSV：纯文本文件，以’，’作为分隔符（纯文本）</h3><p> 值没有类型，所有值都属于字符串，但是不能指定字体颜色等样式，不能指定单元格的宽高，不能合并单元格，没有多个工作表，不能嵌入图像图表</p>
+# 会自动执行关闭文件操作</code></pre><h2 id="结构化文本文件"><a href="#结构化文本文件" class="headerlink" title="结构化文本文件"></a>结构化文本文件</h2><h3 id="CSV：纯文本文件，以’，’作为分隔符（纯文本）"><a href="#CSV：纯文本文件，以’，’作为分隔符（纯文本）" class="headerlink" title="CSV：纯文本文件，以’，’作为分隔符（纯文本）"></a>CSV：纯文本文件，以’，’作为分隔符（纯文本）</h3><p><strong>值没有类型，所有值都属于字符串，但是不能指定字体颜色等样式，不能指定单元格的宽高，不能合并单元格，没有多个工作表，不能嵌入图像图表</strong></p>
 <blockquote>
-<p>r = csv.reader() 接受一个可迭代对象（如csv文件），能返回一个生成器，可以从中解析出内容</p>
-</blockquote>
-<blockquote>
-<p>r = csv.DictReader() 以字典的形式对csv进行访问，一般用于带有表头的csv文件（返回的单元格都放在一个元组的值内）</p>
-</blockquote>
-<blockquote>
-<p>w = csv.writer()</p>
-</blockquote>
-<blockquote>
-<p>w.writerow(rows) 当文件不存在的时候会自动生成，且支持单行写入与多行写入</p>
-</blockquote>
-<blockquote>
-<p>w.DictWriter()</p>
-</blockquote>
-<blockquote>
-<p>w.writeheader() 首先我们得把表头写进去</p>
-</blockquote>
-<blockquote>
-<p>w.writerow(rows) 写入字典</p>
+<ul>
+<li>r = csv.reader() <strong>接受一个可迭代对象（如csv文件），能返回一个生成器，可以从中解析出内容</strong></li>
+<li>r = csv.DictReader() <strong>以字典的形式对csv进行访问，一般用于带有表头的csv文件（返回的单元格都放在一个元组的值内）</strong></li>
+<li>w = csv.writer()</li>
+<li>w.writerow(rows) <strong>当文件不存在的时候会自动生成，且支持单行写入与多行写入</strong></li>
+<li>w.DictWriter()</li>
+<li>w.writeheader() <strong>首先我们得把表头写进去</strong></li>
+<li>w.writerow(rows) <strong>写入字典</strong></li>
+</ul>
 </blockquote>
 <h3 id="EXCEL"><a href="#EXCEL" class="headerlink" title="EXCEL"></a>EXCEL</h3><blockquote>
 <p>openpyxl模块：用来读写扩展名为xlsx/xlsm/xltm/xltx的文件<br>workbook类是对工作簿的抽象<br>worksheet类是对表格的抽象<br>cell类是对单元格的抽象文件写操作</p>
@@ -438,7 +453,14 @@ ws = wb.active()</code></pre><h4 id="读取一个excel文件"><a href="#读取�
 <pre><code>from openpyxl import load_workbook
 wb = load_workbook(filename)
 ws = wb.file.active()</code></pre><h4 id="获取单元格信息、获取cell对象"><a href="#获取单元格信息、获取cell对象" class="headerlink" title="获取单元格信息、获取cell对象"></a>获取单元格信息、获取cell对象</h4><blockquote>
-<p>c = wb[‘sheet’][‘A1’] 索引方式<br>c = wb[‘sheet’].cell(row = 1,column = 1)<br>c.coordinate返回单元格坐标<br>c.value返回单元格的值<br>c.row行坐标 c.column列坐标</p>
+<ul>
+<li>c = wb[‘sheet’][‘A1’] <strong>索引方式</strong></li>
+<li>c = wb[‘sheet’].cell(row = 1,column = 1)</li>
+<li>c.coordinate <strong>返回单元格坐标</strong></li>
+<li>c.value <strong>返回单元格的值</strong></li>
+<li>c.row <strong>行坐标</strong> </li>
+<li>c.column <strong>列坐标</strong></li>
+</ul>
 </blockquote>
 <h3 id="PDF"><a href="#PDF" class="headerlink" title="PDF"></a>PDF</h3><blockquote>
 <p>PyPDF2模块：能进行读写、分隔、合并、文件转换等多种操作<br>只能从PDF文件中提取文本并返回为字符串，而无法提取图像、图表或其他媒体</p>
@@ -464,18 +486,25 @@ pdf_merger.write(&apos;……&apos;)    # 最终合并输出成一个新的pdf�
 page.extractText() # 按照顺序提取文本
 page.getContents() # 访问页面内容
 page.rotateClockwise(angle) # 顺时针旋转
-page.scale(sx,sy)  # 改变页面大小</code></pre><h2 id="图像处理模块-pillow库"><a href="#图像处理模块-pillow库" class="headerlink" title="图像处理模块(pillow库)"></a>图像处理模块(pillow库)</h2><p>   可以对图像做各种处理：缩放、裁剪、旋转、滤镜、文字、调色板等</p>
+page.scale(sx,sy)  # 改变页面大小</code></pre><h2 id="图像处理模块-pillow库"><a href="#图像处理模块-pillow库" class="headerlink" title="图像处理模块(pillow库)"></a>图像处理模块(pillow库)</h2><p><strong>可以对图像做各种处理：缩放、裁剪、旋转、滤镜、文字、调色板等</strong></p>
 <h3 id="图像处理步骤"><a href="#图像处理步骤" class="headerlink" title="图像处理步骤"></a>图像处理步骤</h3><h4 id="打开图像"><a href="#打开图像" class="headerlink" title="打开图像"></a>打开图像</h4><blockquote>
-<p>image.open(&lt;路径+图像名+格式&gt;)</p>
+<ul>
+<li>image.open(&lt;路径+图像名+格式&gt;)</li>
+</ul>
 </blockquote>
 <h4 id="处理图像"><a href="#处理图像" class="headerlink" title="处理图像"></a>处理图像</h4><blockquote>
 <p>略</p>
 </blockquote>
 <h4 id="存储、显示图像"><a href="#存储、显示图像" class="headerlink" title="存储、显示图像"></a>存储、显示图像</h4><blockquote>
-<p>image.show()<br>image.save(&lt;文件名&gt;)</p>
+<ul>
+<li>image.show()</li>
+<li>image.save(&lt;文件名&gt;)</li>
+</ul>
 </blockquote>
-<h3 id="PIL图像操作"><a href="#PIL图像操作" class="headerlink" title="PIL图像操作"></a>PIL图像操作</h3><h4 id="thumbnail缩略图"><a href="#thumbnail缩略图" class="headerlink" title="thumbnail缩略图"></a>thumbnail缩略图</h4><pre><code>thumbnail(size,Image.ANTIALIAS)</code></pre><blockquote>
-<p>size：元组，表示缩略图大小</p>
+<h3 id="PIL图像操作"><a href="#PIL图像操作" class="headerlink" title="PIL图像操作"></a>PIL图像操作</h3><h4 id="thumbnail缩略图"><a href="#thumbnail缩略图" class="headerlink" title="thumbnail缩略图"></a>thumbnail缩略图</h4><blockquote>
+<ul>
+<li>thumbnail(size,Image.ANTIALIAS) <strong>size：元组，表示缩略图大小</strong></li>
+</ul>
 </blockquote>
 <h4 id="模糊效果"><a href="#模糊效果" class="headerlink" title="模糊效果"></a>模糊效果</h4><div> <font color="red">E.G.</font> </div>
 
@@ -489,20 +518,30 @@ img = Image.opne(&lt;……&gt;)
 font = ImageFont.truetype(……,……)                  # 前一个参数指字体， 后一个参数指字号
 draw = ImageDraw(img)
 draw.text((100,0),&apos;  &apos;,(255,255,255),font = font) # 第一个参数指文字坐标，第二个参数指文字本身，第三个参数指颜色，第四个参数指字的属性
-img.save(&lt;&gt;)</code></pre><h2 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h2><h3 id="numpy矩阵处理库"><a href="#numpy矩阵处理库" class="headerlink" title="numpy矩阵处理库"></a>numpy矩阵处理库</h3><p> 可以用作向量、矩阵的运算，包括各种创建矩阵的方法，以及一般的矩阵运算、求逆、求转置</p>
+img.save(&lt;&gt;)</code></pre><h2 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h2><h3 id="numpy矩阵处理库"><a href="#numpy矩阵处理库" class="headerlink" title="numpy矩阵处理库"></a>numpy矩阵处理库</h3><p><strong>可以用作向量、矩阵的运算，包括各种创建矩阵的方法，以及一般的矩阵运算、求逆、求转置</strong></p>
 <h4 id="矩阵计算"><a href="#矩阵计算" class="headerlink" title="矩阵计算"></a>矩阵计算</h4><blockquote>
-<p>a = np.matrix([]) 创建<br>a.I               求逆<br>a.T               转置<br>a*b              乘法</p>
+<ul>
+<li>a = np.matrix([]) <strong>创建</strong> </li>
+<li>a.I               <strong>求逆</strong></li>
+<li>a.T               <strong>转置</strong></li>
+<li>a*b              <strong>乘法</strong></li>
+</ul>
 </blockquote>
 <h4 id="对象属性"><a href="#对象属性" class="headerlink" title="对象属性"></a>对象属性</h4><blockquote>
-<p>数组形状     np.shape<br>对象元素个数 np.size<br>整体数据     np.dtype</p>
+<ul>
+<li>np.shape <strong>数组形状</strong>     </li>
+<li>np.size <strong>对象元素个数</strong> </li>
+<li>np.dtype <strong>整体数据</strong>     </li>
+</ul>
 </blockquote>
-<h3 id="matplotlib绘图库"><a href="#matplotlib绘图库" class="headerlink" title="matplotlib绘图库"></a>matplotlib绘图库</h3><p> 可以使用库中的工具创建各种图形：散点图、折线图、三维、动画……<br> 详情请戳——&gt;<a href="http://matplotlib.org/gallery.html" target="_blank" rel="noopener">http://matplotlib.org/gallery.html</a></p>
-<h3 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h3><blockquote>
-<p>将图像上的一些点的坐标连接起来，即可绘制函数的近似图像，当点越多是，所绘图像越接近函数图像<br>numpy库的linspace()函数生成数组</p>
+<h3 id="matplotlib绘图库"><a href="#matplotlib绘图库" class="headerlink" title="matplotlib绘图库"></a>matplotlib绘图库</h3><p><strong>可以使用库中的工具创建各种图形：散点图、折线图、三维、动画……</strong><br><strong>详情请戳——&gt;<a href="http://matplotlib.org/gallery.html" target="_blank" rel="noopener">matplotlib官网</a></strong></p>
+<h3 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h3><p><strong>将图像上的一些点的坐标连接起来，即可绘制函数的近似图像，当点越多时，所绘图像越接近函数图像</strong></p>
+<h4 id="numpy库的linspace-函数生成数组"><a href="#numpy库的linspace-函数生成数组" class="headerlink" title="numpy库的linspace()函数生成数组"></a>numpy库的linspace()函数生成数组</h4><blockquote>
+<ul>
+<li>numpy.linspace(<start>,<stop></stop>,<num>)</num></start></li>
+</ul>
 </blockquote>
-<pre><code>numpy.linspace(&lt;start&gt;,&lt;stop&gt;,&lt;num&gt;)</code></pre><blockquote>
-<p>matplotlib库的plot()函数用来画图</p>
-</blockquote>
+<h4 id="matplotlib库的plot-函数用来画图"><a href="#matplotlib库的plot-函数用来画图" class="headerlink" title="matplotlib库的plot()函数用来画图"></a>matplotlib库的plot()函数用来画图</h4><p><a href="http://matplotlib.org/gallery.html" target="_blank" rel="noopener"><strong>详情请参考官网</strong></a>    </p>
  <div>python学习第三弹，收工</div>
       
 
@@ -642,7 +681,7 @@ img.save(&lt;&gt;)</code></pre><h2 id="数据可视化"><a href="#数据可视�
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#几个模块的基本介绍"><span class="toc-number">1.</span> <span class="toc-text">几个模块的基本介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#datetime模块"><span class="toc-number">1.1.</span> <span class="toc-text">datetime模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主要的类"><span class="toc-number">1.1.1.</span> <span class="toc-text">主要的类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取当前时间"><span class="toc-number">1.1.2.</span> <span class="toc-text">获取当前时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用strftime格式化"><span class="toc-number">1.1.3.</span> <span class="toc-text">使用strftime格式化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#标准格式"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">标准格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时间戳"><span class="toc-number">1.1.4.</span> <span class="toc-text">时间戳</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#将日期转换为时间戳"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">将日期转换为时间戳</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#将时间戳转换为日期"><span class="toc-number">1.1.4.2.</span> <span class="toc-text">将时间戳转换为日期</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时间上的加减法"><span class="toc-number">1.1.5.</span> <span class="toc-text">时间上的加减法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#calendar模块"><span class="toc-number">1.2.</span> <span class="toc-text">calendar模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#制作电子日历"><span class="toc-number">1.2.1.</span> <span class="toc-text">制作电子日历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将日历列表化"><span class="toc-number">1.2.2.</span> <span class="toc-text">将日历列表化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#与日历相关的计算"><span class="toc-number">1.2.3.</span> <span class="toc-text">与日历相关的计算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#判断闰年"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">判断闰年</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#计算某月一共有多少天，从周几开始"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">计算某月一共有多少天，从周几开始</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#time模块"><span class="toc-number">1.3.</span> <span class="toc-text">time模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#获取时间戳"><span class="toc-number">1.3.1.</span> <span class="toc-text">获取时间戳</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#time-time-方法"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">time.time()方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取日期格式"><span class="toc-number">1.3.2.</span> <span class="toc-text">获取日期格式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#获取当前时间-1"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">获取当前时间</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将元组数据转换为时间"><span class="toc-number">1.3.3.</span> <span class="toc-text">将元组数据转换为时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用索引获取时间信息"><span class="toc-number">1.3.4.</span> <span class="toc-text">利用索引获取时间信息</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#struct-time类"><span class="toc-number">1.3.4.1.</span> <span class="toc-text">struct_time类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#让程序睡一会"><span class="toc-number">1.3.5.</span> <span class="toc-text">让程序睡一会</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#几个算术模块"><span class="toc-number">1.4.</span> <span class="toc-text">几个算术模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#math模块-cmath模块"><span class="toc-number">1.4.1.</span> <span class="toc-text">math模块/cmath模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#decimal模块"><span class="toc-number">1.4.2.</span> <span class="toc-text">decimal模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fractions模块"><span class="toc-number">1.4.3.</span> <span class="toc-text">fractions模块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#生成分数"><span class="toc-number">1.4.3.1.</span> <span class="toc-text">生成分数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#浮点数转换为分数"><span class="toc-number">1.4.3.2.</span> <span class="toc-text">浮点数转换为分数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#random模块-伪随机数"><span class="toc-number">1.4.4.</span> <span class="toc-text">random模块(伪随机数)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#持久化模块"><span class="toc-number">1.5.</span> <span class="toc-text">持久化模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#对象持久化"><span class="toc-number">1.5.1.</span> <span class="toc-text">对象持久化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标准库模块"><span class="toc-number">1.5.2.</span> <span class="toc-text">标准库模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#构建数据库"><span class="toc-number">1.5.3.</span> <span class="toc-text">构建数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用操作"><span class="toc-number">1.5.4.</span> <span class="toc-text">常用操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件读写模块"><span class="toc-number">1.6.</span> <span class="toc-text">文件读写模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文件的打开"><span class="toc-number">1.6.1.</span> <span class="toc-text">文件的打开</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#普通文件：数据持久化的最简单类型"><span class="toc-number">1.6.1.1.</span> <span class="toc-text">普通文件：数据持久化的最简单类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mode"><span class="toc-number">1.6.1.2.</span> <span class="toc-text">mode</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件的读写与访问"><span class="toc-number">1.6.2.</span> <span class="toc-text">文件的读写与访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件的关闭"><span class="toc-number">1.6.3.</span> <span class="toc-text">文件的关闭</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#文件打开后一定要记得关闭"><span class="toc-number">1.6.3.1.</span> <span class="toc-text">文件打开后一定要记得关闭</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#上下文管理器"><span class="toc-number">1.6.3.2.</span> <span class="toc-text">上下文管理器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结构化文本文件"><span class="toc-number">1.7.</span> <span class="toc-text">结构化文本文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSV：纯文本文件，以’，’作为分隔符（纯文本）"><span class="toc-number">1.7.1.</span> <span class="toc-text">CSV：纯文本文件，以’，’作为分隔符（纯文本）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EXCEL"><span class="toc-number">1.7.2.</span> <span class="toc-text">EXCEL</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建一个excel文件-一个workbook对象代表一个EXCEL文档，使用该方法创建一个worksheet对象后才能打开一个表"><span class="toc-number">1.7.2.1.</span> <span class="toc-text">创建一个excel文件 一个workbook对象代表一个EXCEL文档，使用该方法创建一个worksheet对象后才能打开一个表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#读取一个excel文件"><span class="toc-number">1.7.2.2.</span> <span class="toc-text">读取一个excel文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#获取单元格信息、获取cell对象"><span class="toc-number">1.7.2.3.</span> <span class="toc-text">获取单元格信息、获取cell对象</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PDF"><span class="toc-number">1.7.3.</span> <span class="toc-text">PDF</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#读取PDF文件"><span class="toc-number">1.7.3.1.</span> <span class="toc-text">读取PDF文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#写PDF文件"><span class="toc-number">1.7.3.2.</span> <span class="toc-text">写PDF文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#合并多个文档"><span class="toc-number">1.7.3.3.</span> <span class="toc-text">合并多个文档</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#单个页面操作"><span class="toc-number">1.7.3.4.</span> <span class="toc-text">单个页面操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图像处理模块-pillow库"><span class="toc-number">1.8.</span> <span class="toc-text">图像处理模块(pillow库)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#图像处理步骤"><span class="toc-number">1.8.1.</span> <span class="toc-text">图像处理步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#打开图像"><span class="toc-number">1.8.1.1.</span> <span class="toc-text">打开图像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#处理图像"><span class="toc-number">1.8.1.2.</span> <span class="toc-text">处理图像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#存储、显示图像"><span class="toc-number">1.8.1.3.</span> <span class="toc-text">存储、显示图像</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PIL图像操作"><span class="toc-number">1.8.2.</span> <span class="toc-text">PIL图像操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#thumbnail缩略图"><span class="toc-number">1.8.2.1.</span> <span class="toc-text">thumbnail缩略图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#模糊效果"><span class="toc-number">1.8.2.2.</span> <span class="toc-text">模糊效果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#添加文字"><span class="toc-number">1.8.2.3.</span> <span class="toc-text">添加文字</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据可视化"><span class="toc-number">1.9.</span> <span class="toc-text">数据可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#numpy矩阵处理库"><span class="toc-number">1.9.1.</span> <span class="toc-text">numpy矩阵处理库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#矩阵计算"><span class="toc-number">1.9.1.1.</span> <span class="toc-text">矩阵计算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对象属性"><span class="toc-number">1.9.1.2.</span> <span class="toc-text">对象属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#matplotlib绘图库"><span class="toc-number">1.9.2.</span> <span class="toc-text">matplotlib绘图库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本思路"><span class="toc-number">1.9.3.</span> <span class="toc-text">基本思路</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#几个模块的基本介绍"><span class="toc-number">1.</span> <span class="toc-text">几个模块的基本介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#datetime模块"><span class="toc-number">1.1.</span> <span class="toc-text">datetime模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主要的类"><span class="toc-number">1.1.1.</span> <span class="toc-text">主要的类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取当前时间"><span class="toc-number">1.1.2.</span> <span class="toc-text">获取当前时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用strftime格式化"><span class="toc-number">1.1.3.</span> <span class="toc-text">使用strftime格式化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#标准格式"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">标准格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时间戳"><span class="toc-number">1.1.4.</span> <span class="toc-text">时间戳</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#将日期转换为时间戳"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">将日期转换为时间戳</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#将时间戳转换为日期"><span class="toc-number">1.1.4.2.</span> <span class="toc-text">将时间戳转换为日期</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时间上的加减法"><span class="toc-number">1.1.5.</span> <span class="toc-text">时间上的加减法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#calendar模块"><span class="toc-number">1.2.</span> <span class="toc-text">calendar模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#制作电子日历"><span class="toc-number">1.2.1.</span> <span class="toc-text">制作电子日历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将日历列表化"><span class="toc-number">1.2.2.</span> <span class="toc-text">将日历列表化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#与日历相关的计算"><span class="toc-number">1.2.3.</span> <span class="toc-text">与日历相关的计算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#判断闰年"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">判断闰年</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#计算某月一共有多少天，从周几开始"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">计算某月一共有多少天，从周几开始</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#time模块"><span class="toc-number">1.3.</span> <span class="toc-text">time模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#获取时间戳"><span class="toc-number">1.3.1.</span> <span class="toc-text">获取时间戳</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#time-time-方法"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">time.time()方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取日期格式"><span class="toc-number">1.3.2.</span> <span class="toc-text">获取日期格式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#获取当前时间-1"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">获取当前时间</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将元组数据转换为时间"><span class="toc-number">1.3.3.</span> <span class="toc-text">将元组数据转换为时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用索引获取时间信息"><span class="toc-number">1.3.4.</span> <span class="toc-text">利用索引获取时间信息</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#struct-time类"><span class="toc-number">1.3.4.1.</span> <span class="toc-text">struct_time类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#让程序睡一会"><span class="toc-number">1.3.5.</span> <span class="toc-text">让程序睡一会</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#几个算术模块"><span class="toc-number">1.4.</span> <span class="toc-text">几个算术模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#math模块-cmath模块"><span class="toc-number">1.4.1.</span> <span class="toc-text">math模块/cmath模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#decimal模块"><span class="toc-number">1.4.2.</span> <span class="toc-text">decimal模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fractions模块"><span class="toc-number">1.4.3.</span> <span class="toc-text">fractions模块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#生成分数"><span class="toc-number">1.4.3.1.</span> <span class="toc-text">生成分数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#浮点数转换为分数"><span class="toc-number">1.4.3.2.</span> <span class="toc-text">浮点数转换为分数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#random模块-伪随机数"><span class="toc-number">1.4.4.</span> <span class="toc-text">random模块(伪随机数)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#持久化模块"><span class="toc-number">1.5.</span> <span class="toc-text">持久化模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#对象持久化"><span class="toc-number">1.5.1.</span> <span class="toc-text">对象持久化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标准库模块"><span class="toc-number">1.5.2.</span> <span class="toc-text">标准库模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#构建数据库"><span class="toc-number">1.5.3.</span> <span class="toc-text">构建数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用操作"><span class="toc-number">1.5.4.</span> <span class="toc-text">常用操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件读写模块"><span class="toc-number">1.6.</span> <span class="toc-text">文件读写模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文件的打开"><span class="toc-number">1.6.1.</span> <span class="toc-text">文件的打开</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#普通文件：数据持久化的最简单类型"><span class="toc-number">1.6.1.1.</span> <span class="toc-text">普通文件：数据持久化的最简单类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mode"><span class="toc-number">1.6.1.2.</span> <span class="toc-text">mode</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件的读写与访问"><span class="toc-number">1.6.2.</span> <span class="toc-text">文件的读写与访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件的关闭"><span class="toc-number">1.6.3.</span> <span class="toc-text">文件的关闭</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#文件打开后一定要记得关闭"><span class="toc-number">1.6.3.1.</span> <span class="toc-text">文件打开后一定要记得关闭</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#上下文管理器"><span class="toc-number">1.6.3.2.</span> <span class="toc-text">上下文管理器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结构化文本文件"><span class="toc-number">1.7.</span> <span class="toc-text">结构化文本文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSV：纯文本文件，以’，’作为分隔符（纯文本）"><span class="toc-number">1.7.1.</span> <span class="toc-text">CSV：纯文本文件，以’，’作为分隔符（纯文本）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EXCEL"><span class="toc-number">1.7.2.</span> <span class="toc-text">EXCEL</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建一个excel文件-一个workbook对象代表一个EXCEL文档，使用该方法创建一个worksheet对象后才能打开一个表"><span class="toc-number">1.7.2.1.</span> <span class="toc-text">创建一个excel文件 一个workbook对象代表一个EXCEL文档，使用该方法创建一个worksheet对象后才能打开一个表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#读取一个excel文件"><span class="toc-number">1.7.2.2.</span> <span class="toc-text">读取一个excel文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#获取单元格信息、获取cell对象"><span class="toc-number">1.7.2.3.</span> <span class="toc-text">获取单元格信息、获取cell对象</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PDF"><span class="toc-number">1.7.3.</span> <span class="toc-text">PDF</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#读取PDF文件"><span class="toc-number">1.7.3.1.</span> <span class="toc-text">读取PDF文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#写PDF文件"><span class="toc-number">1.7.3.2.</span> <span class="toc-text">写PDF文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#合并多个文档"><span class="toc-number">1.7.3.3.</span> <span class="toc-text">合并多个文档</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#单个页面操作"><span class="toc-number">1.7.3.4.</span> <span class="toc-text">单个页面操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图像处理模块-pillow库"><span class="toc-number">1.8.</span> <span class="toc-text">图像处理模块(pillow库)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#图像处理步骤"><span class="toc-number">1.8.1.</span> <span class="toc-text">图像处理步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#打开图像"><span class="toc-number">1.8.1.1.</span> <span class="toc-text">打开图像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#处理图像"><span class="toc-number">1.8.1.2.</span> <span class="toc-text">处理图像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#存储、显示图像"><span class="toc-number">1.8.1.3.</span> <span class="toc-text">存储、显示图像</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PIL图像操作"><span class="toc-number">1.8.2.</span> <span class="toc-text">PIL图像操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#thumbnail缩略图"><span class="toc-number">1.8.2.1.</span> <span class="toc-text">thumbnail缩略图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#模糊效果"><span class="toc-number">1.8.2.2.</span> <span class="toc-text">模糊效果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#添加文字"><span class="toc-number">1.8.2.3.</span> <span class="toc-text">添加文字</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据可视化"><span class="toc-number">1.9.</span> <span class="toc-text">数据可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#numpy矩阵处理库"><span class="toc-number">1.9.1.</span> <span class="toc-text">numpy矩阵处理库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#矩阵计算"><span class="toc-number">1.9.1.1.</span> <span class="toc-text">矩阵计算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对象属性"><span class="toc-number">1.9.1.2.</span> <span class="toc-text">对象属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#matplotlib绘图库"><span class="toc-number">1.9.2.</span> <span class="toc-text">matplotlib绘图库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本思路"><span class="toc-number">1.9.3.</span> <span class="toc-text">基本思路</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#numpy库的linspace-函数生成数组"><span class="toc-number">1.9.3.1.</span> <span class="toc-text">numpy库的linspace()函数生成数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#matplotlib库的plot-函数用来画图"><span class="toc-number">1.9.3.2.</span> <span class="toc-text">matplotlib库的plot()函数用来画图</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
