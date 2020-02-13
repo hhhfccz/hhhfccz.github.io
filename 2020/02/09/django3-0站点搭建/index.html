@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hhhfccz.github.io/hhhfccz.github.io">
-  <title>django3.0站点搭建 | 电科菜狗的小博客</title>
+  <title>django站点搭建 | 电科菜狗的小博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文章默认用户使用win10系统，并且已经安装pycharm、git、django3.0及配套第三方库（python3.6.0及以上版本，且为anaconda环境），路上有坑，慎入。">
+  <meta name="description" content="本文章默认用户使用win10系统，并且已经安装pycharm、git及配套第三方库（python3.6.0及以上版本，且为anaconda环境），路上有坑，慎入。">
 <meta name="keywords" content="Django">
 <meta property="og:type" content="article">
-<meta property="og:title" content="django3.0站点搭建">
+<meta property="og:title" content="django站点搭建">
 <meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;02&#x2F;09&#x2F;django3-0%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA&#x2F;index.html">
 <meta property="og:site_name" content="电科菜狗的小博客">
-<meta property="og:description" content="本文章默认用户使用win10系统，并且已经安装pycharm、git、django3.0及配套第三方库（python3.6.0及以上版本，且为anaconda环境），路上有坑，慎入。">
+<meta property="og:description" content="本文章默认用户使用win10系统，并且已经安装pycharm、git及配套第三方库（python3.6.0及以上版本，且为anaconda环境），路上有坑，慎入。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-12T15:08:38.065Z">
+<meta property="og:updated_time" content="2020-02-13T04:43:19.368Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -217,12 +217,12 @@
     <center><p>
   
     <h1 class="article-title_code_ant" itemprop="name">
-      django3.0站点搭建
+      django站点搭建
     </h1>
   
 </p></center>
       
-        <p><strong>本文章默认用户使用win10系统，并且已经安装pycharm、git、django3.0及配套第三方库（python3.6.0及以上版本，且为anaconda环境），路上有坑，慎入。</strong></p>
+        <p><strong>本文章默认用户使用win10系统，并且已经安装pycharm、git及配套第三方库（python3.6.0及以上版本，且为anaconda环境），路上有坑，慎入。</strong></p>
 <div><a id="more"></a></div>
 
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在本人所用的anaconda环境中，django是2.2.5版本，为了更新到最新的3.0.3，我们进行如下操作：</p>
@@ -242,7 +242,7 @@ pip install --upgrade django</code></pre><blockquote>
 <blockquote>
 <p>为了安全，我们尽量将代码放在其他文件夹中</p>
 </blockquote>
-<h2 id="观察目录"><a href="#观察目录" class="headerlink" title="观察目录"></a>观察目录</h2><p>双击’mysite’文件夹，我们将看到<strong>一个’mysite’文件夹，与一个’manage.py’文件</strong><br>再次双击’mysite’文件夹，我们将看到<strong>五个.py文件</strong>，分别为<strong>‘<strong>init</strong>‘,’asgi’,’settings’,’urls’,’wsgi’</strong><br>下面介绍这几个文件的用途</p>
+<h2 id="观察目录"><a href="#观察目录" class="headerlink" title="观察目录"></a>观察目录</h2><p>双击’mysite’文件夹，我们将看到<strong>一个’mysite’文件夹，与一个’manage.py’文件</strong><br>再次双击’mysite’文件夹，我们将看到<strong>五个.py文件</strong>，分别为<strong>‘__init__‘,’asgi’,’settings’,’urls’,’wsgi’</strong><br>下面介绍这几个文件的用途</p>
 <h3 id="外层的’mysite’文件夹"><a href="#外层的’mysite’文件夹" class="headerlink" title="外层的’mysite’文件夹"></a>外层的’mysite’文件夹</h3><p>该文件夹即为django项目的容器，可以随意更改名字</p>
 <h3 id="manage-py文件"><a href="#manage-py文件" class="headerlink" title="manage.py文件"></a>manage.py文件</h3><p>一个命令行工具，用于管理整个django项目.<a href="https://docs.djangoproject.com/zh-hans/3.0/ref/django-admin/" target="_blank" rel="noopener">详细信息(未汉化)</a></p>
 <h3 id="内层的’mysite’文件夹"><a href="#内层的’mysite’文件夹" class="headerlink" title="内层的’mysite’文件夹"></a>内层的’mysite’文件夹</h3><p>纯python包，它的名字就是当你引用其内部文件时的包名</p>
@@ -807,6 +807,15 @@ wincertstore              0.2                      py38_0</code></pre><blockquot
   
 <nav id="article-nav">
   
+    <a href="/hhhfccz.github.io/2020/02/12/django%E5%BA%94%E7%94%A8%E7%9A%84%E6%B5%8B%E8%AF%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          django应用的测试
+        
+      </div>
+    </a>
+  
   
     <a href="/hhhfccz.github.io/2020/02/05/%E7%94%B5%E7%A7%91%E8%8F%9C%E7%8B%97%E7%9C%8Bmatplotlib%E5%BA%93-%E5%85%A5%E9%97%A8/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">电科菜狗看matplotlib文档(入门)</div>
@@ -1011,11 +1020,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">web</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">web</a>
               </li>
              
               <li class="article-tag-list-item">
