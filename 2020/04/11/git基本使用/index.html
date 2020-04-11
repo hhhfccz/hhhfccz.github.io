@@ -6,14 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hhhfccz.github.io">
-  <title>Tag: 前端 | 电科菜狗的小博客</title>
+  <title>git基本使用 | 电科菜狗的小博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="python、web">
-<meta property="og:type" content="website">
-<meta property="og:title" content="电科菜狗的小博客">
-<meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;tags&#x2F;%E5%89%8D%E7%AB%AF&#x2F;index.html">
+  <meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git基本使用">
+<meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;04&#x2F;11&#x2F;git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8&#x2F;index.html">
 <meta property="og:site_name" content="电科菜狗的小博客">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-04-11T13:25:14.483Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -176,61 +177,290 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-git基本使用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2020-03-29T09:46:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-29</time>
+      <header class="article-header">
+        
+        
+        
+<a href="/2020/04/11/git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2020-04-11T08:41:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
 </a>
-        </div>
-    	 
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">1.3k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">4分</span>
+      </span>
+    </span>
+</div>
+          
+        
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+    <center><p>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/">前端学习</a>
+    <h1 class="article-title_code_ant" itemprop="name">
+      git基本使用
     </h1>
   
+</p></center>
+      
+        <div><a id="more"></a></div>
 
-        <div class="article-info info-on-right">
-          
+<h1 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h1><h2 id="什么是版本控制"><a href="#什么是版本控制" class="headerlink" title="什么是版本控制"></a>什么是版本控制</h2><p><strong>简单来说，编程世界中的版本控制就是编程人员的后悔药。</strong></p>
+<p>对于一份代码，可能需要多次更改与完善，如果发现修改后的代码存在些许bug，而之前版本的代码没有，我们就可以利用版本控制将以前写过的代码拉回来</p>
+<blockquote>
+<p>当然不一定是为了修复bug，有时候我们需要不同版本的代码来应对不同的需求</p>
+</blockquote>
+<h2 id="为什么需要版本控制"><a href="#为什么需要版本控制" class="headerlink" title="为什么需要版本控制"></a>为什么需要版本控制</h2><p>对于一个团队，每个人的任务可能都建立在不同的版本之上，以便于团队协同开发，这个应该很容易理解</p>
+<p>而对于一个人，就是简单的对代码做修改整理，把自己的代码看成一种需要更新的应用程序，应用程序有版本，程序本身也有版本</p>
+<blockquote>
+<p>对于较为复杂的工程，我们都需要一个既可以管控文件本身，还可以管控文件的内容、支持团队协同修改文件的控制器</p>
+</blockquote>
+<h1 id="Git简介"><a href="#Git简介" class="headerlink" title="Git简介"></a>Git简介</h1><p><strong>Git是一个强大的分布式版本控制工具</strong>，而一个基本的版本控制工具需要具有哪些功能呢？</p>
+<h2 id="版本控制工具的基本功能"><a href="#版本控制工具的基本功能" class="headerlink" title="版本控制工具的基本功能"></a>版本控制工具的基本功能</h2><ol>
+<li>协同修改：为了让一个团队共同修改代码，避免部分修改后代码被覆盖的情况</li>
+<li>数据备份：避免本地代码被误删，或目录出错</li>
+<li>版本管理：需要注意的是，版本控制工具对于不同版本之间所用的重复数据是不会重复保存的</li>
+<li>权限控制：对团队中参加开发人员进行权限控制，避免出现有人瞎捣乱</li>
+<li>历史记录：查看修改的对应信息，也便于将本地代码恢复到某一历史状态</li>
+<li>分支管理：允许多条分支共同完成代码</li>
+</ol>
+<h2 id="分布式版本控制工具"><a href="#分布式版本控制工具" class="headerlink" title="分布式版本控制工具"></a>分布式版本控制工具</h2><p>版本控制工具一般分为两种：一种是集中式版本控制工具，如SVN；一种是分布式版本控制工具，如Git</p>
+<p>两者的主要区别就在于：集中式版本控制工具的数据存放在一个服务器中，如果服务器炸了，那基本上整个工程就炸一半了；分布式版本控制工具的数据是一直存储在本地的，如果某个人的数据出现了错误，可以直接从另一台电脑中直接将版本数据拷贝过来</p>
+<blockquote>
+<p>需要注意的是，并不推荐直接从别人电脑上拷贝数据，一般来说还是需要一个远程数据库</p>
+</blockquote>
+<h2 id="Git与Github"><a href="#Git与Github" class="headerlink" title="Git与Github"></a>Git与Github</h2><h3 id="Git的优势"><a href="#Git的优势" class="headerlink" title="Git的优势"></a>Git的优势</h3><ol>
+<li>本地完成版本控制，不需要连接远程服务器</li>
+<li>每次拉代码都可以用hash进行完整性判断（如果对犹太人对所抄写圣经的完整性判断有了解就能很好的理解这一点）</li>
+<li>分支！分支！分支！（说白了，分支就是指针）</li>
+<li>与Linux命令兼容，没办法，这两个孩子是同一个爸爸</li>
+<li>支持对版本控制的可逆操作</li>
+</ol>
+<h3 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h3><p>直接官网安装就好，默认设置然后一路next就可。当然，推荐Use Git from Git Bash only</p>
+<blockquote>
+<p>不要在什么电脑管家里面找git，去官网</p>
+</blockquote>
+<h3 id="Git本地结构"><a href="#Git本地结构" class="headerlink" title="Git本地结构"></a>Git本地结构</h3><ul>
+<li>工作区：就是你编写代码的地方</li>
+<li>暂存区：代码提交之前的临时存储中心，就是缓存</li>
+<li>本地库：所有历史版本</li>
+</ul>
+<h2 id="代码托管中心"><a href="#代码托管中心" class="headerlink" title="代码托管中心"></a>代码托管中心</h2><p>上面提到我们一般还是需要一个远程数据库来进行版本控制，<strong>代码托管中心就是来维护远程版本控制中心的</strong></p>
+<p>一般来说，我们直接使用Github或者码云（国产）作为我们的代码托管中心</p>
+<blockquote>
+<p>但是在局域网下，也可以使用GitLab服务器进行代码托管</p>
+</blockquote>
+<h3 id="本地库与远程库"><a href="#本地库与远程库" class="headerlink" title="本地库与远程库"></a>本地库与远程库</h3><p>简单来说，团队的版本控制流程是这样的</p>
+<ol>
+<li>本地写好了代码，过了本地的测试，我们可以进行上传(push)了</li>
+<li>我们把本地库push到远程库之后，远程库会进行更新</li>
+<li>团队其他成员可以从远程库中clone远程库中的代码，并初始化形成本地库</li>
+<li>其他成员修改完成后，将他的本地库内容push到远程库</li>
+<li>项目管理人员将修改过的代码pull到本地进行查看</li>
+</ol>
+<p>如果有新人想要修改</p>
+<ol>
+<li>新人可以先fork远程库中的代码</li>
+<li>新人在自己的远程库中修改并上传代码</li>
+<li>新人将自己的远程库想原项目远程库发起pull request</li>
+<li>经过审核后，原项目管理人可以通过merge，将远程库进行合并</li>
+</ol>
+<blockquote>
+<p>pull就是查看修改，clone就是把整个项目搞下来</p>
+</blockquote>
+<h1 id="Git命令行"><a href="#Git命令行" class="headerlink" title="Git命令行"></a>Git命令行</h1><h1 id="Git图形化操作"><a href="#Git图形化操作" class="headerlink" title="Git图形化操作"></a>Git图形化操作</h1><h1 id="Git-Page个人博客搭建"><a href="#Git-Page个人博客搭建" class="headerlink" title="Git Page个人博客搭建"></a>Git Page个人博客搭建</h1><h1 id="Gitlab服务器环境搭建"><a href="#Gitlab服务器环境搭建" class="headerlink" title="Gitlab服务器环境搭建"></a>Gitlab服务器环境搭建</h1>
+      
+
+      
+
+  <div class="declare" hidden="hidden"></div>
+
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>求求你教我学高数吧<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">git</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://hhhfccz.github.io/2020/04/11/git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/04/03/yolo%E5%9C%A8windows%E4%B8%8B%E7%9A%84%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">yolo在windows下的配置</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#版本控制"><span class="toc-number">1.</span> <span class="toc-text">版本控制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是版本控制"><span class="toc-number">1.1.</span> <span class="toc-text">什么是版本控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么需要版本控制"><span class="toc-number">1.2.</span> <span class="toc-text">为什么需要版本控制</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git简介"><span class="toc-number">2.</span> <span class="toc-text">Git简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#版本控制工具的基本功能"><span class="toc-number">2.1.</span> <span class="toc-text">版本控制工具的基本功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分布式版本控制工具"><span class="toc-number">2.2.</span> <span class="toc-text">分布式版本控制工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git与Github"><span class="toc-number">2.3.</span> <span class="toc-text">Git与Github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git的优势"><span class="toc-number">2.3.1.</span> <span class="toc-text">Git的优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git安装"><span class="toc-number">2.3.2.</span> <span class="toc-text">Git安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git本地结构"><span class="toc-number">2.3.3.</span> <span class="toc-text">Git本地结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码托管中心"><span class="toc-number">2.4.</span> <span class="toc-text">代码托管中心</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#本地库与远程库"><span class="toc-number">2.4.1.</span> <span class="toc-text">本地库与远程库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git命令行"><span class="toc-number">3.</span> <span class="toc-text">Git命令行</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git图形化操作"><span class="toc-number">4.</span> <span class="toc-text">Git图形化操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-Page个人博客搭建"><span class="toc-number">5.</span> <span class="toc-text">Git Page个人博客搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Gitlab服务器环境搭建"><span class="toc-number">6.</span> <span class="toc-text">Gitlab服务器环境搭建</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "https://hhhfccz.github.io/2020/04/11/git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/",
+  owner: 'hhhfccz',
+  repo: 'hhhfccz.github.io',
+  oauth: {
+    client_id: 'a40621b3c0d5c3039d84',
+    client_secret: 'd4a53084c102e41786aa50607d97d6f18f2c7765',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
+  
 
 
           </div>
@@ -272,9 +502,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: false,

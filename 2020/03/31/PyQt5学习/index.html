@@ -14,10 +14,8 @@
 <meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;03&#x2F;31&#x2F;PyQt5%E5%AD%A6%E4%B9%A0&#x2F;index.html">
 <meta property="og:site_name" content="电科菜狗的小博客">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;pyqt5学习&#x2F;one.png">
-<meta property="og:updated_time" content="2020-04-04T08:19:41.897Z">
+<meta property="og:updated_time" content="2020-04-11T13:52:28.789Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;pyqt5学习&#x2F;one.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -249,35 +247,39 @@
 <li><p>在Tools中找到External Tools，点击界面左上角加号</p>
 </li>
 <li><p>修改：</p>
-<p>Name：Qt Designer</p>
-<p>Programs：D:\Anaconda3\Lib\site-packages\pyqt5_tools\Qt\bin\designer.exe</p>
-<p>Working directory：$ProjectFileDir$</p>
-<blockquote>
+<pre><code>Name：Qt Designer
+
+Programs：D:\Anaconda3\Lib\site-packages\pyqt5_tools\Qt\bin\designer.exe
+
+Working directory：$ProjectFileDir$</code></pre><blockquote>
 <p>Programs参数就是你电脑中designer.exe的路径</p>
 </blockquote>
 </li>
 <li><p>确认后再次点击加号</p>
 </li>
 <li><p>修改：</p>
-<p>Name：PyUIC</p>
-<p>Programs：D:\Anaconda3python.exe</p>
-<p>Working directory：$FileDir$</p>
-<blockquote>
+<pre><code>Name：PyUIC
+
+Programs：D:\Anaconda3python.exe
+
+Working directory：$FileDir$</code></pre><blockquote>
 <p>Programs参数就是你电脑中python.exe的路径，一定要注意环境：如果是在虚拟环境中配置的pyqt请使用对应环境中的python.exe路径</p>
 </blockquote>
 </li>
 </ul>
 <p>在确认后，我们就可以<strong>直接在PyCharm中的Tools-Extenal Tools中直接调用Qt Designer程序</strong>，<strong>PyUIC可以将生成的.ui文件转化成为.py文件</strong></p>
 <h2 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h2><p>我们打开QtDesigner应用程序，创建一个新的Main Window</p>
-<img src="/pyqt5学习/one.png" alt="setup" style="zoom:50%;">
-
 <p><strong>这是我们的主页面，左边的叫做窗口部件盒，右边中间的叫做属性编辑器</strong></p>
 <p>窗口部件盒存放的是当前版本Qt Designer所支持的所有可视化部件，对应部件名称就不在这里翻译了</p>
 <p>属性编辑器用于设置所放置的可视化部件的大小等参数</p>
 <p>在设计完毕后，我们可以在Form中的Preview预览我们设计的样式（也可以在Preview in中找不同的风格来预览）</p>
 <blockquote>
 <p>一般情况下是可以直接在Form-View code中预览代码的，但是也可能会出现报错，说某某路径下没有uic.exe文件，该路径是D:\Anaconda3\Lib\site-packages\pyqt5_tools\Qt\bin\bin\uic.exe，也就是当前文件夹的bin文件夹</p>
+</blockquote>
+<blockquote>
 <p>解决方法：在Qt Designer程序所在文件夹新建一个bin文件夹，将当前文件夹中的所有文件复制到新的bin文件夹中即可成功解决该问题</p>
+</blockquote>
+<blockquote>
 <p>问题本质：在Designer程序原本的Qt环境中，uic.exe及其配套的辅助程序与Designer程序不存在于同级文件夹，而是存在在Designer所在文件夹的bin文件夹下，所以可用上述方法解决</p>
 </blockquote>
 <h2 id="ui转换为-py"><a href="#ui转换为-py" class="headerlink" title=".ui转换为.py"></a>.ui转换为.py</h2><p>我们设计好基本图样后，ctrl+s会保存为.ui文件</p>
@@ -619,11 +621,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">MATLAB</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">MATLAB</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -632,6 +634,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Django</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
