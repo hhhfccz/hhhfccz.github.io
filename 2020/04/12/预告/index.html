@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hhhfccz.github.io">
-  <title>OpenCV介绍 | 电科菜狗的小博客</title>
+  <title>预告 | 电科菜狗的小博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文章默认用户使用win10系统64位，并且已经安装sublime text 3、pycharm及anaconda环境需要具备一定的python基础">
-<meta name="keywords" content="计算机视觉">
+  <meta name="description" content="本站的所有知识介绍性内容将在7月初全部转移到&#x2F;docs&#x2F;站下，本站将作为一个个人问题整理区">
+<meta name="keywords" content="nothing">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OpenCV介绍">
-<meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;02&#x2F;23&#x2F;openCV%E4%BB%8B%E7%BB%8D&#x2F;index.html">
+<meta property="og:title" content="预告">
+<meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;04&#x2F;12&#x2F;%E9%A2%84%E5%91%8A&#x2F;index.html">
 <meta property="og:site_name" content="电科菜狗的小博客">
-<meta property="og:description" content="本文章默认用户使用win10系统64位，并且已经安装sublime text 3、pycharm及anaconda环境需要具备一定的python基础">
+<meta property="og:description" content="本站的所有知识介绍性内容将在7月初全部转移到&#x2F;docs&#x2F;站下，本站将作为一个个人问题整理区">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-22T14:20:14.381Z">
+<meta property="og:updated_time" content="2020-04-12T09:40:37.336Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -172,7 +172,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-openCV介绍" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-预告" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -184,8 +184,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/02/23/openCV%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-  	<time datetime="2020-02-23T10:23:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
+<a href="/2020/04/12/%E9%A2%84%E5%91%8A/" class="archive-article-date">
+  	<time datetime="2020-04-12T09:38:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-12</time>
 </a>
         
           <div style="margin-top:10px;">
@@ -193,7 +193,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">3.8k字</span>
+        <span class="post-count">39字</span>
       </span>
     </span>
 
@@ -202,7 +202,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">16分</span>
+        <span class="post-count">1分</span>
       </span>
     </span>
 </div>
@@ -215,313 +215,12 @@
     <center><p>
   
     <h1 class="article-title_code_ant" itemprop="name">
-      OpenCV介绍
+      预告
     </h1>
   
 </p></center>
       
-        <p><strong>本文章默认用户使用win10系统64位，并且已经安装sublime text 3、pycharm及anaconda环境<br>需要具备一定的python基础</strong></p>
-<div><a id="more"></a></div>
-
-<h1 id="OpenCV介绍"><a href="#OpenCV介绍" class="headerlink" title="OpenCV介绍"></a>OpenCV介绍</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>比较简单的安装方法有两种</p>
-<hr>
-<p><strong>直接用conda安装（不推荐）</strong></p>
-<pre><code>conda install -c menpo opencv==4.1.2</code></pre><blockquote>
-<p>我不知道为什么网上那么多人说 conda 无法直接下载 opencv ，反正我这里是可以的(可能他们将包名写成了 opencv-python )</p>
-</blockquote>
-<p>等待安装完毕（时间非常长，<strong>至少我写完了高数作业还没下载完</strong>）</p>
-<pre><code>The following NEW packages will be INSTALLED:
-
-blas               pkgs/main/win-64::blas-1.0-mkl
-ca-certificates    pkgs/main/win-64::ca-certificates-2020.1.1-0
-certifi            pkgs/main/win-64::certifi-2019.11.28-py37_0
-hdf5               pkgs/main/win-64::hdf5-1.10.2-hac2f561_1
-icc_rt             pkgs/main/win-64::icc_rt-2019.0.0-h0cc432a_1
-intel-openmp       pkgs/main/win-64::intel-openmp-2020.0-166
-jpeg               pkgs/main/win-64::jpeg-9b-hb83a4c4_2
-libopencv          pkgs/main/win-64::libopencv-3.4.1-h875b8b8_3
-libpng             pkgs/main/win-64::libpng-1.6.37-h2a8f88b_0
-libtiff            pkgs/main/win-64::libtiff-4.1.0-h56a325e_0
-mkl                pkgs/main/win-64::mkl-2020.0-166
-mkl-service        pkgs/main/win-64::mkl-service-2.3.0-py37hb782905_0
-mkl_fft            pkgs/main/win-64::mkl_fft-1.0.15-py37h14836fe_0
-mkl_random         pkgs/main/win-64::mkl_random-1.1.0-py37h675688f_0
-numpy              pkgs/main/win-64::numpy-1.18.1-py37h93ca92e_0
-numpy-base         pkgs/main/win-64::numpy-base-1.18.1-py37hc3f5095_1
-opencv             pkgs/main/win-64::opencv-3.4.1-py37h6fd60c2_3
-openssl            pkgs/main/win-64::openssl-1.1.1d-he774522_4
-pip                pkgs/main/win-64::pip-20.0.2-py37_1
-py-opencv          pkgs/main/win-64::py-opencv-3.4.1-py37h1b0d24d_3
-python             pkgs/main/win-64::python-3.7.6-h60c2a47_2
-setuptools         pkgs/main/win-64::setuptools-45.2.0-py37_0
-six                pkgs/main/win-64::six-1.14.0-py37_0
-sqlite             pkgs/main/win-64::sqlite-3.31.1-he774522_0
-vc                 pkgs/main/win-64::vc-14.1-h0510ff6_4
-vs2015_runtime     pkgs/main/win-64::vs2015_runtime-14.16.27012-hf0eaf9b_1
-wheel              pkgs/main/win-64::wheel-0.34.2-py37_0
-wincertstore       pkgs/main/win-64::wincertstore-0.2-py37_0
-xz                 pkgs/main/win-64::xz-5.2.4-h2fa13f4_4
-zlib               pkgs/main/win-64::zlib-1.2.11-h62dcd97_3
-zstd               pkgs/main/win-64::zstd-1.3.7-h508b16e_0</code></pre><p>在下载过程中可能会出现以下问题</p>
-<pre><code>CondaHTTPError: HTTP 000 CONNECTION FAILED for url &lt;https://repo.anaconda.com/pkgs/main/win-64/mkl-2020.0-166.tar.bz2&gt;
-Elapsed: -
-
-An HTTP error occurred when trying to retrieve this URL.
-HTTP errors are often intermittent, and a simple retry will get you on your way.</code></pre><p>重新进行一次安装即可（版本不一定得是3.4.1）</p>
-<p>当然也可以更换为清华源下载，<strong>注意numpy与opencv版本匹配的问题</strong></p>
-<hr>
-<p><strong>离线安装</strong></p>
-<blockquote>
-<p>如果你嫌弃安装速度过慢（比如我），推荐使用以下方法</p>
-</blockquote>
-<p>首先，在 anaconda 中创建 ‘my_opencv_env’ 虚拟环境并激活该虚拟环境<br>在这里我是用python3.7.0，所以选择了<a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv" target="_blank" rel="noopener">opencv_python-4.1.2+contrib-cp37-cp37m-win_amd64.whl</a><br>等待下载完毕（预计半个小时）<br>将文件包放置在 anaconda 安装目录 Lib\site-packages 下，在cmd命令台中输入</p>
-<pre><code>pip install opencv_python-4.1.2+contrib-cp37-cp37m-win_amd64.whl</code></pre><p>观察输出<br>我的输出：</p>
-<pre><code>Processing d:\anaconda\envs\my_opencv_env\lib\site-packages\opencv_python-4.1.2+contrib-cp37-cp37m-win_amd64.whl
-Installing collected packages: opencv-python
-Successfully installed opencv-python-4.1.2+contrib</code></pre><blockquote>
-<p>友情提示：如果是在虚拟环境下安装opencv，需要<strong>提前安装scipy/numpy，或者直接安装sklearn</strong></p>
-</blockquote>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>在该环境下的python中</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="keyword">import</span> cv2</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;cv2.__version__</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="string">'4.1.2'</span></span></pre></td></tr></table></figure>
-<p>这就意味着安装成功</p>
-<h2 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h2><ul>
-<li>角点：一个无论图像往哪边移动，区域内像素值都会变化很大的点</li>
-<li>内部区域：无论是水平、还是垂直的方向移动，都不会对框框内像素造成很大的变化的区域</li>
-<li>边缘区域：水平方向上移动像素没有什么变化，但是垂直方向上移动就会变化很大的点（反之也是）</li>
-</ul>
-<h1 id="基本功"><a href="#基本功" class="headerlink" title="基本功"></a>基本功</h1><p>温馨提示：请在后续所有用到opencv的操作中，<strong>避免中文的出现</strong></p>
-<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><p>我们知道，在计算机眼中，一张彩色图片是由RGB的像素点<strong>矩阵</strong>组成的；而一个视频就可以当做许多图像的连续</p>
-<blockquote>
-<p>灰度图没有RGB通道</p>
-</blockquote>
-<p><strong>图像读取</strong>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">img_cat = cv2.imread(<span class="string">'cat.png'</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">img_cat_g = cv2.imread(<span class="string">'cat.png'</span>, cv2.IMREAD_GRAYSCALE)</span></pre></td></tr></table></figure>
-<p>我们使用cv2.imread()函数读取’cat.png’文件，并将它转化为<strong>BGR</strong>矩阵<br>如果在函数中加入cv2.IMREAD_GRAYSCALE参数，函数就会把图像变成一个灰度图</p>
-<blockquote>
-<p>该矩阵元素[0, 255]，数据类型为uint8</p>
-</blockquote>
-<p>我们也可以利用这个函数进行截图：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">img_cat = cv2.imread(<span class="string">'cat.png'</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">cat = img[<span class="number">0</span>:<span class="number">50</span>, <span class="number">0</span>:<span class="number">200</span>]</span></pre></td></tr></table></figure>
-<p>我们使用该函数，将图像转化为数组，并且利用切片操作得到部分图像</p>
-<hr>
-<p><strong>图像显示</strong>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">cv2.imshow(<span class="string">'image'</span>, img_cat)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">cv2.waitKey(<span class="number">0</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">cv2.destroyAllWindows()</span></pre></td></tr></table></figure>
-<p>我们使用cv2.imshow()函数展示BGR矩阵所对应的图像，并命名为’image’</p>
-<p>我们使用cv2.waitKey()函数与cv2.destroyAllWindows()函数来使图片停留在屏幕上，按任意键后关闭图像</p>
-<hr>
-<p><strong>图像保存</strong>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">cv2.imwrite(<span class="string">'img_cat.png'</span>, img_cat)</span></pre></td></tr></table></figure>
-<p>我们使用cv2.imwrite()函数保存我们处理完毕的图像，并命名为’img_cat.png’</p>
-<hr>
-<p><strong>颜色通道提取</strong>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">b, g, r = cv2.split(img_cat)</span></pre></td></tr></table></figure>
-<p>当然，也可以在使用 imread() 后使用索引得到对应的<strong>B、G、R</strong>数组</p>
-<hr>
-<p><strong>颜色通道组合</strong>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">img = cv2.merge((b, g, r))</span></pre></td></tr></table></figure>
-<p>我们使用了cv2.split()函数来分离图像的BGR颜色通道<br>我们使用了cv2.merge()函数来组合BGR通道</p>
-<blockquote>
-<p>需要注意的是，在cv2.merge()函数中，参数应为<strong>一个</strong>用b, g, r三个数组元素组成的元组。即只传入一个参数，而非三个</p>
-</blockquote>
-<hr>
-<p><strong>视频读取</strong>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">vc = cv2.VideoCapture(<span class="string">'test.mp4'</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> vc.isOpened():</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	open, frame = vc.read()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	open = <span class="literal">False</span></span></pre></td></tr></table></figure>
-<p>我们使用cv2.VideoCapture()函数获取视频信息<br>我们使用.read()函数获取视频第一帧的信息，其返回值</p>
-<ul>
-<li>open是布尔值，用来表示是否成功读取信息</li>
-<li>frame就是该信息，是ndarray类型</li>
-</ul>
-<hr>
-<p><strong>视频简单操作</strong>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> open:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	ret, frame = vc.read()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span> frame.all() == <span class="literal">None</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">break</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span> ret:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">		gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">		cv2.imshow(<span class="string">'result'</span>, gray)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">if</span> cv2.waitKey(<span class="number">20</span>) &amp; <span class="number">0xFF</span> == <span class="number">27</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">break</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">vc.release()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">cv2.destroyAllWindows()</span></pre></td></tr></table></figure>
-<p>我们使用了cv2.cvtColor()函数将从视频中读取出来的图像灰化</p>
-<p>我们使用了cv2.waitKey()函数来确定视频的播放速度（即每播放一张图片后过多少毫秒播放下一张图片）</p>
-<p>我们使用了cv2.waitKey(20) &amp; 0xFF == 27，这个if语句可以使我们按下暂停键后终止输出视频</p>
-<hr>
-<p><strong>边界填充</strong>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">top_size, bottom_size, left_size, right_size = (<span class="number">50</span>, <span class="number">50</span>, <span class="number">50</span>, <span class="number">50</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">replicate = cv2.copyMakeBorder(img_cat, top_size, bottom_size, left_size, right_size, borderType = cv2.BORDER_REPLICATE)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">reflect = cv2.copyMakeBorder(img_cat, top_size, bottom_size, left_size, right_size, borderType = cv2.BORDER_REFLECT)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">reflect_101 = cv2.copyMakeBorder(img_cat, top_size, bottom_size, left_size, right_size, borderType = cv2.BORDER_REFLECT_101)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">wrap = cv2.copyMakeBorder(img_cat, top_size, bottom_size, left_size, right_size, borderType = cv2.BORDER_WRAP)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">constant = cv2.copyMakeBorder(img_cat, top_size, bottom_size, left_size, right_size, borderType = cv2.BORDER_CONSTANT, value = <span class="number">0</span>)</span></pre></td></tr></table></figure>
-<p>我们的目的相当于给图像增加边框<br>我们使用了cv2.copyMakeBorder()函数为我们的图像增加边框，关于borderType参数的意义在下面简单介绍一下：</p>
-<ul>
-<li>BORDER_REPLICATE :利用原图像边缘像素添加边框，即<strong>复制边缘</strong></li>
-<li>BORDER_REFLECT :反射，就是<strong>生成边缘像素的镜像</strong></li>
-<li>BORDER_REFLECT_101 :也是反射，看起来<strong>更加对称</strong></li>
-<li>BORDER_WRAP :外包装，选取边缘图像，<strong>循环</strong></li>
-<li>BORDER_CONSTANT :<strong>增加黑框框</strong></li>
-</ul>
-<blockquote>
-<p>以上的方法与plt中imshow()函数的参数效果一致</p>
-</blockquote>
-<hr>
-<p><strong>图像融合</strong>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">img_dog = cv2.resize(img_dog, (<span class="number">500</span>, <span class="number">414</span>))</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">img_dog2 = cv2.reaize(img_dog, (<span class="number">0</span>, <span class="number">0</span>), fx = <span class="number">3</span>, fy = <span class="number">2</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">res = cv2.addWeighted(img_cat, <span class="number">0.5</span>, img_dog, <span class="number">0.5</span>, <span class="number">0</span>)</span></pre></td></tr></table></figure>
-<p>我们使用cv2.resize()函数对狗图像进行大小转换，其中<strong>第二个参数是(宽度, 高度)，而不是常用的(高度, 宽度)</strong><br>该函数还可以<strong>对图像进行放大与缩小</strong></p>
-<p>我们使用cv2.addWeighted()函数，对两个图像进行0.5:0.5融合</p>
-<blockquote>
-<p>末尾的0表示对结果亮度的提升程度</p>
-</blockquote>
-<h2 id="阈值处理"><a href="#阈值处理" class="headerlink" title="阈值处理"></a>阈值处理</h2><p><strong>ret, dst = cv2.threshold(src, thresh, maxval, type)</strong></p>
-<hr>
-<p><strong>参数表</strong>：</p>
-<ul>
-<li>src：输入图像。需要注意的是<strong>只能输入单通道图像，即灰度图</strong></li>
-<li>dst：输出图像</li>
-<li>thresh：<strong>阈值</strong>，一般设为127</li>
-<li>maxval：最大值。当某点像素<strong>超过阈值，就将该值赋给该点</strong></li>
-</ul>
-<hr>
-<p><strong>type的五种类型</strong>：</p>
-<ul>
-<li>cv2.THRESH_BINARY：<strong>超过阈值的部分取maxval，其余均为0</strong></li>
-<li>cv2.THRESH_BINARY_INV：<strong>与上述操作相反</strong></li>
-<li>cv2.THRESH_TRUNC：<strong>超过阈值的部分取maxval，其余不变</strong></li>
-<li>cv2.THRESH_TOZERO：<strong>超过预制部分不变，其余取0</strong></li>
-<li>cv2.THRESH_TOZERO_INV：<strong>与上述操作相反</strong></li>
-</ul>
-<h2 id="平滑处理"><a href="#平滑处理" class="headerlink" title="平滑处理"></a>平滑处理</h2><p>就是对图像进行<strong>滤波</strong></p>
-<hr>
-<p>均值滤波</p>
-<hr>
-<p>方框滤波</p>
-<hr>
-<p>高斯滤波</p>
-<hr>
-<p>中值滤波</p>
-<h2 id="形态学操作"><a href="#形态学操作" class="headerlink" title="形态学操作"></a>形态学操作</h2><h3 id="腐蚀操作"><a href="#腐蚀操作" class="headerlink" title="腐蚀操作"></a>腐蚀操作</h3><p>一般对特定图像，如：黑底白字等进行腐蚀</p>
-<blockquote>
-<p>  腐蚀，即对一个卷积核进行判断，若存在两种即以上颜色，便将整个核内部变成外围颜色。</p>
-<p>  相当于去掉整个边界</p>
-</blockquote>
-<hr>
-<h3 id="膨胀操作"><a href="#膨胀操作" class="headerlink" title="膨胀操作"></a>膨胀操作</h3><p>与腐蚀操作互为<strong>逆运算</strong></p>
-<blockquote>
-<p>  膨胀，即对一个卷积核进行判断，若存在两种即以上颜色，便将整个核内部变成内围颜色。</p>
-<p>  相当于给图像增加一个边界</p>
-</blockquote>
-<hr>
-<h3 id="开闭运算"><a href="#开闭运算" class="headerlink" title="开闭运算"></a>开闭运算</h3><p>开：先腐蚀后膨胀</p>
-<p>闭：先膨胀后腐蚀</p>
-<hr>
-<h3 id="梯度运算"><a href="#梯度运算" class="headerlink" title="梯度运算"></a>梯度运算</h3><p>得到边缘，即膨胀-腐蚀</p>
-<hr>
-<h3 id="礼帽与黑帽"><a href="#礼帽与黑帽" class="headerlink" title="礼帽与黑帽"></a>礼帽与黑帽</h3><p>礼帽：原始输入-开运算结果</p>
-<p>黑帽：闭运算-原始输入</p>
-<h2 id="梯度处理"><a href="#梯度处理" class="headerlink" title="梯度处理"></a>梯度处理</h2><h3 id="sobel算子"><a href="#sobel算子" class="headerlink" title="sobel算子"></a>sobel算子</h3><p>首先我们需要明确，只有边缘位置才能产生梯度</p>
-<p><strong>dst = cv2.Sobel(src, ddepth, dx, dy, ksize)</strong></p>
-<ul>
-<li>ddepth:图像的深度，默认为-1</li>
-<li>dx和dy分别表示是从水平方向还是竖直方向进行sobel运算</li>
-<li>ksize是Sobel算子的大小，即核的大小，一般为3×3或者5×5</li>
-</ul>
-<blockquote>
-<p>  我们一般会在Sobel()方法中增加cv2.CV_64F来确保结果的准确性</p>
-<p>  即dst = cv2.Sobel(img, cv2.CV_64F, 1, 0, ksize = 3)就代表计算水平方向上的图像梯度</p>
-</blockquote>
-<p>在实际操作中，会遇到sobel算子计算结果小于0的情况，opencv在默认情况下会将小于0的结果重置为0</p>
-<p>原理解释：</p>
-<p><strong>dst = cv2.convertScaleAbs(dst)</strong></p>
-<blockquote>
-<p>  我们一般对上述函数小于0的结果做绝对值处理，以保证计算结果&lt;0的像素点变为黑色</p>
-</blockquote>
-<hr>
-<p>同样的，我们也可以对水平方向与竖直方向按权重进行分配</p>
-<p><strong>sobel = cv2.addWeighted(sobelx, 0.5, sobely, 0.5, 0)</strong></p>
-<blockquote>
-<p>  最后的0代表正则项</p>
-</blockquote>
-<p>但是这种加法不推荐直接计算</p>
-<hr>
-<h3 id="scharr算子"><a href="#scharr算子" class="headerlink" title="scharr算子"></a>scharr算子</h3><p>原理解释：</p>
-<blockquote>
-<p>  该算子较sobel算子更敏感</p>
-</blockquote>
-<hr>
-<h3 id="laplacian算子"><a href="#laplacian算子" class="headerlink" title="laplacian算子"></a>laplacian算子</h3><p>原理解释：</p>
-<blockquote>
-<p>  该算子对噪音点敏感，边缘检测效果稍差</p>
-</blockquote>
-<hr>
-<p><strong>梯度处理代码总结：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">path = <span class="string">'C:\\Users\\Administrator\\PycharmProjects\\untitled\\20200225140546.png'</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">img = cv2.imread(path, cv2.IMREAD_GRAYSCALE)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sobel</span><span class="params">(img)</span>:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    sobelx = cv2.Sobel(img, cv2.CV_64F, <span class="number">1</span>, <span class="number">0</span>, ksize=<span class="number">3</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    sobelx = cv2.convertScaleAbs(sobelx)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    sobely = cv2.Sobel(img, cv2.CV_64F, <span class="number">0</span>, <span class="number">1</span>, ksize=<span class="number">3</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    sobely = cv2.convertScaleAbs(sobely)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    sobel = cv2.addWeighted(sobelx, <span class="number">0.5</span>, sobely, <span class="number">0.5</span>, <span class="number">0</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">    cv2.imshow(<span class="string">'sobel'</span>, sobel)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">    cv2.waitKey(<span class="number">0</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">    cv2.destroyAllWindows()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">scharrx</span><span class="params">(img)</span>:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">    scharrx = cv2.Scharr(img, cv2.CV_64F, <span class="number">1</span>, <span class="number">0</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">    scharrx = cv2.convertScaleAbs(scharrx)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">    scharry = cv2.Scharr(img, cv2.CV_64F, <span class="number">0</span>, <span class="number">1</span>,)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">    scharry = cv2.convertScaleAbs(scharry)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">    scharr = cv2.addWeighted(scharrx, <span class="number">0.5</span>, scharry, <span class="number">0.5</span>, <span class="number">0</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">    cv2.imshow(<span class="string">'scharr'</span>, scharr)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">    cv2.waitKey(<span class="number">0</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">    cv2.destroyAllWindows()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">laplacian</span><span class="params">(img)</span>:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">    laplacian = cv2.Laplacian(img, cv2.CV_64F, <span class="number">1</span>, <span class="number">1</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">    laplacian = cv2.convertScaleAbs(laplacian)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line">    dst = np.hstack((sobel, scharr, laplacian))</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line">    cv2.imshow(<span class="string">'三种算子'</span>, dst)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line">    cv2.waitKey(<span class="number">0</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line">    cv2.destroyAllWindows()</span></pre></td></tr></table></figure>
-
-<h2 id="canny边缘检测"><a href="#canny边缘检测" class="headerlink" title="canny边缘检测"></a>canny边缘检测</h2><p><strong>大致步骤</strong>：</p>
-<ol>
-<li>使用高斯滤波器，以平滑图像、滤除噪声</li>
-<li>计算图像中每个像素点的梯度强度和方向</li>
-<li>应用非极大值抑制，以消除边缘检测带来的杂散响应</li>
-<li>应用双阈值检测来确定真实的和潜在的边缘</li>
-<li>通过抑制孤立的弱边缘最终完成边缘检测</li>
-</ol>
-<hr>
-<h3 id="高斯滤波"><a href="#高斯滤波" class="headerlink" title="高斯滤波"></a>高斯滤波</h3><hr>
-<h3 id="梯度与方向"><a href="#梯度与方向" class="headerlink" title="梯度与方向"></a>梯度与方向</h3><hr>
-<h3 id="非极大值抑制"><a href="#非极大值抑制" class="headerlink" title="非极大值抑制"></a>非极大值抑制</h3><p>方法一：线性插值</p>
-<p>方法二：离散</p>
-<hr>
-<h3 id="双阈值检测"><a href="#双阈值检测" class="headerlink" title="双阈值检测"></a>双阈值检测</h3><p>两个参数maxval、minval，通过梯度判断该点是否为边界</p>
-<hr>
-<h3 id="最终操作"><a href="#最终操作" class="headerlink" title="最终操作"></a>最终操作</h3><p><strong>result = cv2.Canny(img_dog, minval, maxval)</strong></p>
-<p>对就这一行</p>
-<hr>
-<p><strong>边缘检测代码总结（上面是对图像的操作，下面是对视频的操作）</strong>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">path = <span class="string">'C:\\Users\\Administrator\\PycharmProjects\\untitled\\20200225140612.jpg'</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">img = cv2.imread(path, cv2.IMREAD_GRAYSCALE)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">result = cv2.Canny(img, <span class="number">80</span>, <span class="number">150</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">cv2.imshow(<span class="string">'image'</span>, result)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">cv2.waitKey(<span class="number">0</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">cv2.destroyAllWindows()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># cv2.imwrite('hhhfccz.png', result)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">path = <span class="string">'C:\\Users\\Administrator\\PycharmProjects\\untitled\\20190706_173034.mp4'</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">vc = cv2.VideoCapture(path)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> open:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">	ret, frame = vc.read()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span> frame.all() == <span class="literal">None</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">break</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span> ret:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">		gray = cv2.Canny(cv2.medianBlur(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY), <span class="number">5</span>), <span class="number">200</span>, <span class="number">300</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">		cv2.imshow(<span class="string">'result'</span>, gray)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">if</span> cv2.waitKey(<span class="number">8</span>) &amp; <span class="number">0xFF</span> == <span class="number">27</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">break</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">vc.release()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">cv2.destroyAllWindows()</span></pre></td></tr></table></figure>
-
-<h1 id="图像金字塔"><a href="#图像金字塔" class="headerlink" title="图像金字塔"></a>图像金字塔</h1><h2 id="高斯金字塔"><a href="#高斯金字塔" class="headerlink" title="高斯金字塔"></a>高斯金字塔</h2><h3 id="向下采样方法（缩小）"><a href="#向下采样方法（缩小）" class="headerlink" title="向下采样方法（缩小）"></a>向下采样方法（缩小）</h3><p>向下采样，故名思意，其得到图像会越来越小，即<strong>金字塔从下向上</strong></p>
-<ul>
-<li>将对应数组与高斯内核卷积</li>
-<li>将所有偶数行和列去除</li>
-</ul>
-<hr>
-<h3 id="向上采样方法"><a href="#向上采样方法" class="headerlink" title="向上采样方法"></a>向上采样方法</h3><p>向上采样，即<strong>金字塔从上到下</strong></p>
-<ul>
-<li>将图像在每个方向上扩大到原来的四倍，新增的行和列用0填充</li>
-<li>使用高斯内核与放大后的图像卷积，获得近似值</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">up = cv2.pyrUp(img)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">down = cv2.pyrDown(img)</span></pre></td></tr></table></figure>
-
-<blockquote>
-<p>先执行了向上采样然后执行了向下采样，图像会有所区别。反之亦然。</p>
-</blockquote>
-<h2 id="拉普拉斯金字塔"><a href="#拉普拉斯金字塔" class="headerlink" title="拉普拉斯金字塔"></a>拉普拉斯金字塔</h2><p><strong>Li = Gi - PyrUp(PyrDown(Gi))</strong></p>
-<ul>
-<li><strong>Gi</strong>，原始图像</li>
-<li>该公式适用于拉普拉斯金字塔的每一层。下一层为Gi，所得结果（上一层）为Li</li>
-</ul>
-<p><strong>具体操作流程：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">down = cv2.pyrDown(img)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">down_up = cv2.pyrUp(down)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">l_1 = img - down_up</span></pre></td></tr></table></figure>
-
-<h1 id="图像轮廓"><a href="#图像轮廓" class="headerlink" title="图像轮廓"></a>图像轮廓</h1><p><strong>cv2.findCountours(img, mode, method)</strong></p>
-<p>mode: 轮廓检索模式</p>
-<ul>
-<li>RETR_EXTERNAL：只检索最外层的轮廓</li>
-<li>RETR_LIST：检索所有的轮廓，并将其保存到一条链表当中</li>
-<li>RETR_CCOMP：检索所有的轮廓，并将他们组织为两层；顶层是各部分的外部边界，第二层是空洞的边界</li>
-<li><strong>RETR_TREE：检索所有的轮廓，并重构嵌套轮廓的整个层次</strong></li>
-</ul>
-<p>method: 轮廓逼近方法</p>
-<ul>
-<li>CHAIN_APPROX_NONE：以Freeman链码的方式输出轮廓，所有其他方法输出多边形（顶点的序列）</li>
-<li>CHAIN_APPROX_SIMPLE：压缩水平的、垂直的、斜的部分，只保留终点部分</li>
-</ul>
-<blockquote>
-<p>对于一个长方形，<strong>NONE轮廓代表四条边，SIMPLE轮廓代表四个点</strong></p>
-</blockquote>
-<blockquote>
-<p>需要注意的是，我们应该使用<strong>二值图像</strong></p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">img = cv2.imread()   <span class="comment"># 最好读入灰度图</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">ret, thresh = cv2.threshold(gray, <span class="number">127</span>, <span class="number">255</span>, cv2.THRESH_BINARY)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">binary, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)</span></pre></td></tr></table></figure>
-
-<h2 id="绘制轮廓"><a href="#绘制轮廓" class="headerlink" title="绘制轮廓"></a>绘制轮廓</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">draw_img = img.copy()  <span class="comment"># 一定要提前copy，该函数会在原图像上进行改变</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">res = cv2.drawContours(draw_img, contours, <span class="number">-1</span>, (<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), <span class="number">2</span>) <span class="comment"># 如果将-1改为0，则</span></span></pre></td></tr></table></figure>
-
-<h2 id="轮廓特征"><a href="#轮廓特征" class="headerlink" title="轮廓特征"></a>轮廓特征</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">cnt = contours[<span class="number">0</span>]        <span class="comment"># 抽出具体的轮廓</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">cv2.contourArea(cnt)     <span class="comment"># 计算面积</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">cv2.arcLength(cnt, <span class="literal">True</span>) <span class="comment"># 计算周长，True表示轮廓闭合</span></span></pre></td></tr></table></figure>
-
-<h2 id="轮廓近似"><a href="#轮廓近似" class="headerlink" title="轮廓近似"></a>轮廓近似</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr></table></figure>
-
-<h2 id="边界矩形与外接圆"><a href="#边界矩形与外接圆" class="headerlink" title="边界矩形与外接圆"></a>边界矩形与外接圆</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">x, y ,w, h = cv2.boundingRect(cnt)           <span class="comment"># 寻找该轮廓外接矩形的一些特征</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">cnt_area = cv2.comtourArea(cnt)              <span class="comment"># 面积</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">img = cv2.rectangle(img, (x, y), (x+w, y+h), (<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), <span class="number">2</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">area = w * h   <span class="comment"># 轮廓外接矩形的面积</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">extent = float(cnt_area) / area              <span class="comment"># 轮廓面积与边界矩形比</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">(x, y), radius = cv2.minEnclosingCircle(cnt) <span class="comment"># 寻找该轮廓外接圆的一些特征</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">center = ((int)x, (int)y)                    <span class="comment"># 圆心</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">radius = int(radius)                         <span class="comment"># 半径</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">img = cv2.circle(img, center, radius, (<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), <span class="number">1</span>)</span></pre></td></tr></table></figure>
-
-<h1 id="模板匹配"><a href="#模板匹配" class="headerlink" title="模板匹配"></a>模板匹配</h1><p>模板匹配就是将小图像放在大图像上滑动，寻找两个图像最相似的地方，<strong>可以理解成寻找子图</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">img &#x3D; cv2.imread(&#39;&#39;, 0)       # 导入母图</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">template &#x3D; cv2.imread(&#39;&#39;, 0)  # 导入子图</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">h, w &#x3D; template.shape[:2]</span></pre></td></tr></table></figure>
-
-<h1 id="直方图"><a href="#直方图" class="headerlink" title="直方图"></a>直方图</h1><h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><h2 id="鸢尾花分类"><a href="#鸢尾花分类" class="headerlink" title="鸢尾花分类"></a>鸢尾花分类</h2><h2 id="手写数字识别"><a href="#手写数字识别" class="headerlink" title="手写数字识别"></a>手写数字识别</h2><h2 id="人脸识别"><a href="#人脸识别" class="headerlink" title="人脸识别"></a>人脸识别</h2><h2 id="猫狗分类"><a href="#猫狗分类" class="headerlink" title="猫狗分类"></a>猫狗分类</h2>
+        <h1 id="本站的所有知识介绍性内容将在7月初全部转移到-docs-站下，本站将作为一个个人问题整理区"><a href="#本站的所有知识介绍性内容将在7月初全部转移到-docs-站下，本站将作为一个个人问题整理区" class="headerlink" title="本站的所有知识介绍性内容将在7月初全部转移到/docs/站下，本站将作为一个个人问题整理区"></a>本站的所有知识介绍性内容将在7月初全部转移到/docs/站下，本站将作为一个个人问题整理区</h1>
       
 
     
@@ -574,17 +273,6 @@ Successfully installed opencv-python-4.1.2+contrib</code></pre><blockquote>
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">计算机视觉</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -635,7 +323,7 @@ Successfully installed opencv-python-4.1.2+contrib</code></pre><blockquote>
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://hhhfccz.github.iohttps://hhhfccz.github.io/2020/02/23/openCV%E4%BB%8B%E7%BB%8D/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://hhhfccz.github.iohttps://hhhfccz.github.io/2020/04/12/%E9%A2%84%E5%91%8A/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -650,18 +338,9 @@ Successfully installed opencv-python-4.1.2+contrib</code></pre><blockquote>
   
 <nav id="article-nav">
   
-    <a href="/2020/03/15/MATLAB%E5%9C%A8%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          MATLAB在数学建模中的应用
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/02/23/MATLAB%E5%9F%BA%E7%A1%80/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MATLAB基础</div>
+    <a href="/2020/04/12/linux%E5%91%BD%E4%BB%A4%E8%A1%8C/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux常用命令行</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -688,7 +367,7 @@ Successfully installed opencv-python-4.1.2+contrib</code></pre><blockquote>
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#OpenCV介绍"><span class="toc-number">1.</span> <span class="toc-text">OpenCV介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试"><span class="toc-number">1.2.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#几个概念"><span class="toc-number">1.3.</span> <span class="toc-text">几个概念</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基本功"><span class="toc-number">2.</span> <span class="toc-text">基本功</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本操作"><span class="toc-number">2.1.</span> <span class="toc-text">基本操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#阈值处理"><span class="toc-number">2.2.</span> <span class="toc-text">阈值处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#平滑处理"><span class="toc-number">2.3.</span> <span class="toc-text">平滑处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#形态学操作"><span class="toc-number">2.4.</span> <span class="toc-text">形态学操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#腐蚀操作"><span class="toc-number">2.4.1.</span> <span class="toc-text">腐蚀操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#膨胀操作"><span class="toc-number">2.4.2.</span> <span class="toc-text">膨胀操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开闭运算"><span class="toc-number">2.4.3.</span> <span class="toc-text">开闭运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#梯度运算"><span class="toc-number">2.4.4.</span> <span class="toc-text">梯度运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#礼帽与黑帽"><span class="toc-number">2.4.5.</span> <span class="toc-text">礼帽与黑帽</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#梯度处理"><span class="toc-number">2.5.</span> <span class="toc-text">梯度处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sobel算子"><span class="toc-number">2.5.1.</span> <span class="toc-text">sobel算子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#scharr算子"><span class="toc-number">2.5.2.</span> <span class="toc-text">scharr算子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#laplacian算子"><span class="toc-number">2.5.3.</span> <span class="toc-text">laplacian算子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#canny边缘检测"><span class="toc-number">2.6.</span> <span class="toc-text">canny边缘检测</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#高斯滤波"><span class="toc-number">2.6.1.</span> <span class="toc-text">高斯滤波</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#梯度与方向"><span class="toc-number">2.6.2.</span> <span class="toc-text">梯度与方向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#非极大值抑制"><span class="toc-number">2.6.3.</span> <span class="toc-text">非极大值抑制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#双阈值检测"><span class="toc-number">2.6.4.</span> <span class="toc-text">双阈值检测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最终操作"><span class="toc-number">2.6.5.</span> <span class="toc-text">最终操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#图像金字塔"><span class="toc-number">3.</span> <span class="toc-text">图像金字塔</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#高斯金字塔"><span class="toc-number">3.1.</span> <span class="toc-text">高斯金字塔</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#向下采样方法（缩小）"><span class="toc-number">3.1.1.</span> <span class="toc-text">向下采样方法（缩小）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#向上采样方法"><span class="toc-number">3.1.2.</span> <span class="toc-text">向上采样方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#拉普拉斯金字塔"><span class="toc-number">3.2.</span> <span class="toc-text">拉普拉斯金字塔</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#图像轮廓"><span class="toc-number">4.</span> <span class="toc-text">图像轮廓</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#绘制轮廓"><span class="toc-number">4.1.</span> <span class="toc-text">绘制轮廓</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#轮廓特征"><span class="toc-number">4.2.</span> <span class="toc-text">轮廓特征</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#轮廓近似"><span class="toc-number">4.3.</span> <span class="toc-text">轮廓近似</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#边界矩形与外接圆"><span class="toc-number">4.4.</span> <span class="toc-text">边界矩形与外接圆</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#模板匹配"><span class="toc-number">5.</span> <span class="toc-text">模板匹配</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#直方图"><span class="toc-number">6.</span> <span class="toc-text">直方图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实例"><span class="toc-number">7.</span> <span class="toc-text">实例</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#鸢尾花分类"><span class="toc-number">7.1.</span> <span class="toc-text">鸢尾花分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#手写数字识别"><span class="toc-number">7.2.</span> <span class="toc-text">手写数字识别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#人脸识别"><span class="toc-number">7.3.</span> <span class="toc-text">人脸识别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#猫狗分类"><span class="toc-number">7.4.</span> <span class="toc-text">猫狗分类</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#本站的所有知识介绍性内容将在7月初全部转移到-docs-站下，本站将作为一个个人问题整理区"><span class="toc-number">1.</span> <span class="toc-text">本站的所有知识介绍性内容将在7月初全部转移到/docs/站下，本站将作为一个个人问题整理区</span></a></li></ol>
                     </div>
                 </span>
             </div>

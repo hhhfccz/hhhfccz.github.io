@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://hhhfccz.github.io">
   <title>Linux常用命令行 | 电科菜狗的小博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="持续更新，有关如何在windows系统上实现Linux操作，我在yolo那一篇中有讲">
+  <meta name="description" content="持续更新，有关如何在windows系统上实现Linux操作，我在yolo那一篇中有讲。CTRL+L 清空终端内容">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux常用命令行">
 <meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;04&#x2F;12&#x2F;linux%E5%91%BD%E4%BB%A4%E8%A1%8C&#x2F;index.html">
 <meta property="og:site_name" content="电科菜狗的小博客">
-<meta property="og:description" content="持续更新，有关如何在windows系统上实现Linux操作，我在yolo那一篇中有讲">
+<meta property="og:description" content="持续更新，有关如何在windows系统上实现Linux操作，我在yolo那一篇中有讲。CTRL+L 清空终端内容">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-04-12T04:06:57.571Z">
+<meta property="og:updated_time" content="2020-04-12T09:51:13.078Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -63,7 +63,7 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 22
+    		总文章数 23
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -193,7 +193,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">363字</span>
+        <span class="post-count">654字</span>
       </span>
     </span>
 
@@ -202,7 +202,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
@@ -220,25 +220,36 @@
   
 </p></center>
       
-        <p><strong>持续更新，有关如何在windows系统上实现Linux操作，我在yolo那一篇中有讲</strong></p>
+        <p><strong>持续更新，有关如何在windows系统上实现Linux操作，我在yolo那一篇中有讲。CTRL+L 清空终端内容</strong></p>
 <div><a id="more"></a></div>
 
 <ol>
-<li><strong>echo 会输出对应常量，也可以是用$引导的语句</strong></li>
-<li><strong>echo hello &gt; hello.txt 在hello.txt中写入hello (如果是&gt;&gt;就代表追加内容)</strong></li>
-<li><strong>pwd 告诉自己现在所在路径</strong></li>
-<li><strong>cd 转换路径</strong></li>
-<li><strong>cd.. 返回到当前路径的上一级路径</strong></li>
-<li><strong>ls 查看当前路径下的文件目录</strong></li>
-<li><strong>ls -l / ls -la / ls -lh</strong></li>
-<li><strong>man+命令 查看对应命令的用户手册</strong>  (这个有点难演示，可以直接在Linux环境下实验一下，用户手册一般都很长)</li>
-<li><strong>-h / –help 查看对应命令的内置帮助</strong></li>
-<li><strong>less + 文件名 交互式浏览一个文本(如果想在文本中查找单词 / + 想查找单词名即可，使用n / SHIFT n 进行查找到单词之间的跳跃)</strong></li>
-<li><strong>cat + 文件名 打印文本内容 (可以打印多个)</strong></li>
-<li><strong>head / tail + 文件名 打印文本的头或者尾(可以使用 - n 来确定查看前/后几行)</strong></li>
-<li><strong>tail -f + 文件名 如果对应文件有修改，该命令就会打印出对应修改</strong></li>
-<li><strong>cat + 文件名 | grep -n + 单词名 在对应文件中查找对应单词，有点像win下的CTRL + F</strong></li>
-<li><strong>| 管道操作 前一个命令的输出被用作后一个命令的输入(man tail | grep tail &gt; tail.txt 具体效果可以用这个来实验一下)</strong></li>
+<li><strong>echo ：输出对应常量，也可以是用$引导的语句</strong></li>
+<li><strong>echo hello &gt; hello.txt 在hello.txt中写入hello (如果是&gt;&gt;就代表追加内容，会另起一行)</strong></li>
+<li><strong>pwd ：告诉自己现在所在路径</strong></li>
+<li><strong>cd ：转换路径</strong></li>
+<li><strong>cd ~ ：返回到主目录</strong></li>
+<li><strong>cd - ：返回你上一次到达的目录</strong></li>
+<li><strong>cd . /home ：表示跳转到当前路径下的home目录</strong></li>
+<li><strong>cd .. ：返回到当前路径的上一级路径</strong></li>
+<li><strong>ls ：查看当前路径下的文件目录</strong></li>
+<li><strong>ls -l / ls -la / ls -lh ：展示文件的各项信息 最左边一栏显示的字母含义是r:read w:write x:execute</strong></li>
+<li><strong>man+命令 ：查看对应命令的用户手册</strong>  (这个有点难演示，可以直接在Linux环境下实验一下，用户手册一般都很长)</li>
+<li><strong>-h / –help ：查看对应命令的内置帮助</strong></li>
+<li><strong>less + 文件名 ：交互式浏览一个文本(如果想在文本中查找单词 / + 想查找单词名即可，使用n / SHIFT n 进行查找到单词之间的跳跃)</strong></li>
+<li><strong>cat + 文件名 ：打印文本内容 (可以打印多个)</strong></li>
+<li><strong>head / tail + 文件名 ：打印文本的头或者尾(可以使用 - n 来确定查看前/后几行)</strong></li>
+<li><strong>tail -f + 文件名 ：如果对应文件有修改，该命令就会打印出对应修改</strong></li>
+<li><strong>cat + 文件名 | grep -n + 单词名 ：在对应文件中查找对应单词，有点像win下的CTRL + F</strong></li>
+<li><strong>| 管道操作 ：前一个命令的输出被用作后一个命令的输入(man tail | grep tail &gt; tail.txt 具体效果可以用这个来实验一下)</strong></li>
+<li><strong>&lt; 代表连接输出，将文本中的内容作为输入，形成程序的输入</strong>  </li>
+<li><strong>&gt; 代表连接输入，该程序所得结果将作为输出，形成文件的内容</strong></li>
+<li><strong>mv 文件名 文件名 ：将前者文件名改为后者</strong></li>
+<li><strong>cp 文件名 路径/文件名 ：将后面的文件复制到当前目录下 需要使用绝对路径</strong></li>
+<li><strong>rm 文件名 ：删除当前目录下的某文件，但是不能用于删除目录(rmdir用于删除文件夹)</strong></li>
+<li><strong>mkdir 文件夹名 ：在当前目录下创建一个文件夹(尽量不要在文件夹名中出现空格，带空格的名字有可能会被shell识别为多个文件夹)</strong></li>
+<li><strong>sudo su ：将在root权限下进行操作，$将变为#</strong></li>
+<li><strong>xdg-open 文件名 ：用本机设定的配置打开文件</strong></li>
 </ol>
 
       
@@ -368,6 +379,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/04/12/%E9%A2%84%E5%91%8A/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          预告
+        
+      </div>
+    </a>
   
   
     <a href="/2020/04/11/git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
@@ -556,15 +576,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">MATLAB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">web</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">MATLAB</a>
               </li>
              
               <li class="article-tag-list-item">
