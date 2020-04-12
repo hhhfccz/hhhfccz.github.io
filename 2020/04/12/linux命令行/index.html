@@ -6,14 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hhhfccz.github.io">
-  <title>Tag: web | 电科菜狗的小博客</title>
+  <title>Linux常用命令行 | 电科菜狗的小博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="nothing">
-<meta property="og:type" content="website">
-<meta property="og:title" content="电科菜狗的小博客">
-<meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;tags&#x2F;web&#x2F;index.html">
+  <meta name="description" content="持续更新，有关如何在windows系统上实现Linux操作，我在yolo那一篇中有讲">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux常用命令行">
+<meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;04&#x2F;12&#x2F;linux%E5%91%BD%E4%BB%A4%E8%A1%8C&#x2F;index.html">
 <meta property="og:site_name" content="电科菜狗的小博客">
+<meta property="og:description" content="持续更新，有关如何在windows系统上实现Linux操作，我在yolo那一篇中有讲">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-04-12T04:06:57.571Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -169,62 +172,257 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-linux命令行" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/01/25/HTTP%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-  	<time datetime="2020-01-25T13:05:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-25</time>
+      <header class="article-header">
+        
+        
+        
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/04/12/linux%E5%91%BD%E4%BB%A4%E8%A1%8C/" class="archive-article-date">
+  	<time datetime="2020-04-12T02:56:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-12</time>
 </a>
-        </div>
-    	 
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">363字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+</div>
+          
+        
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+    <center><p>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/25/HTTP%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">HTTP基本介绍</a>
+    <h1 class="article-title_code_ant" itemprop="name">
+      Linux常用命令行
     </h1>
   
+</p></center>
+      
+        <p><strong>持续更新，有关如何在windows系统上实现Linux操作，我在yolo那一篇中有讲</strong></p>
+<div><a id="more"></a></div>
 
-        <div class="article-info info-on-right">
-          
+<ol>
+<li><strong>echo 会输出对应常量，也可以是用$引导的语句</strong></li>
+<li><strong>echo hello &gt; hello.txt 在hello.txt中写入hello (如果是&gt;&gt;就代表追加内容)</strong></li>
+<li><strong>pwd 告诉自己现在所在路径</strong></li>
+<li><strong>cd 转换路径</strong></li>
+<li><strong>cd.. 返回到当前路径的上一级路径</strong></li>
+<li><strong>ls 查看当前路径下的文件目录</strong></li>
+<li><strong>ls -l / ls -la / ls -lh</strong></li>
+<li><strong>man+命令 查看对应命令的用户手册</strong>  (这个有点难演示，可以直接在Linux环境下实验一下，用户手册一般都很长)</li>
+<li><strong>-h / –help 查看对应命令的内置帮助</strong></li>
+<li><strong>less + 文件名 交互式浏览一个文本(如果想在文本中查找单词 / + 想查找单词名即可，使用n / SHIFT n 进行查找到单词之间的跳跃)</strong></li>
+<li><strong>cat + 文件名 打印文本内容 (可以打印多个)</strong></li>
+<li><strong>head / tail + 文件名 打印文本的头或者尾(可以使用 - n 来确定查看前/后几行)</strong></li>
+<li><strong>tail -f + 文件名 如果对应文件有修改，该命令就会打印出对应修改</strong></li>
+<li><strong>cat + 文件名 | grep -n + 单词名 在对应文件中查找对应单词，有点像win下的CTRL + F</strong></li>
+<li><strong>| 管道操作 前一个命令的输出被用作后一个命令的输入(man tail | grep tail &gt; tail.txt 具体效果可以用这个来实验一下)</strong></li>
+</ol>
+
+      
+
+    
+       
+         <div class="essayending">
+           <div>
+            <div style="text-align:center;color: #ccc;font-size:22px;">
+            <br/>
+            <br/>
+ -------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------
+            <br/>
+            <br/>
+             <br/>
+             <br/>
+            </div>
+           </div>
+         </div>
+         
+       
+  
+
+      
+
+  <div class="declare" hidden="hidden"></div>
+
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>求求你教我学高数吧<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">web</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://hhhfccz.github.iohttps://hhhfccz.github.io/2020/04/12/linux%E5%91%BD%E4%BB%A4%E8%A1%8C/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/04/11/git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git基本使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
 
+  
+
+  
+  
+
+
+
+   
 
           </div>
         </div>
@@ -265,9 +463,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: false,
