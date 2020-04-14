@@ -14,7 +14,7 @@
 <meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;03&#x2F;29&#x2F;django%E5%AD%A6%E4%B9%A0%E5%B9%B6%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2&#x2F;index.html">
 <meta property="og:site_name" content="电科菜狗的小博客">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-29T09:43:53.878Z">
+<meta property="og:updated_time" content="2020-04-13T06:05:08.727Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -61,7 +61,7 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 23
+    		总文章数 22
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -191,7 +191,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">10.4k字</span>
+        <span class="post-count">10.3k字</span>
       </span>
     </span>
 
@@ -200,7 +200,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">46分</span>
+        <span class="post-count">45分</span>
       </span>
     </span>
 </div>
@@ -230,8 +230,9 @@
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文尽量按照TDD的要求进行测试驱动开发，前半部分为django知识的介绍，主要参考官网；后半部分为我搭建个人博客的整体过程。</p>
 <h1 id="Django知识"><a href="#Django知识" class="headerlink" title="Django知识"></a>Django知识</h1><p><strong>本文章默认用户使用win10系统，并且已经安装pycharm、git及配套第三方库（python3.6.0及以上版本，且为anaconda环境），路上有坑，慎入。</strong></p>
 <h1 id="第一次前言"><a href="#第一次前言" class="headerlink" title="第一次前言"></a>第一次前言</h1><p>在本人所用的anaconda环境中，django是2.2.5版本，为了更新到最新的3.0.3，我们进行如下操作：</p>
-<pre><code>win + R --&gt; cmd
-pip install --upgrade django</code></pre><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">win + R --&gt; cmd</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">pip install --upgrade django</span></pre></td></tr></table></figure>
+
+<blockquote>
 <p>需要等待10~15分钟</p>
 </blockquote>
 <p>至于为什么选择python web？<br><strong>人生苦短，我学python</strong><br>至于采用什么IDE？<br>pycharm或者sublime text 3都可以，我选择后者</p>
@@ -239,7 +240,9 @@ pip install --upgrade django</code></pre><blockquote>
 <p>本篇文章<strong>不会对所用函数做大量注解</strong>，同时需要读者<strong>了解一定的HTTP相关知识与基本的HTML知识</strong></p>
 </blockquote>
 <h1 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h1><h2 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h2><p>首先，在D盘创建’sharecipe’文件夹，鼠标右键、git bash<br>输入：</p>
-<pre><code>django-admin startproject mysite</code></pre><p>这将在你的’sharecipe’文件夹内生成一个’mysite’目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">django-admin startproject mysite</span></pre></td></tr></table></figure>
+
+<p>这将在你的’sharecipe’文件夹内生成一个’mysite’目录</p>
 <blockquote>
 <p>命名注意事项，禁止将django、python内部保留字作为目录名</p>
 </blockquote>
@@ -256,8 +259,12 @@ pip install --upgrade django</code></pre><blockquote>
 <h3 id="wsgi-py"><a href="#wsgi-py" class="headerlink" title="wsgi.py"></a>wsgi.py</h3><p>项目运行在WSGI兼容的Web服务器上的入口。<a href="https://docs.djangoproject.com/zh-hans/3.0/howto/deployment/wsgi/" target="_blank" rel="noopener">详细部署</a></p>
 <h3 id="asgi-py"><a href="#asgi-py" class="headerlink" title="asgi.py"></a>asgi.py</h3><p>项目运行在ASGI兼容的Web服务器上的入口。<a href="https://docs.djangoproject.com/zh-hans/3.0/howto/deployment/asgi/" target="_blank" rel="noopener">详细部署</a></p>
 <h2 id="检验"><a href="#检验" class="headerlink" title="检验"></a>检验</h2><p>跳转到外层’mysite’文件夹，git bash<br>输入：</p>
-<pre><code>python manage.py runserver</code></pre><p>观察输出<br>我的输出:</p>
-<pre><code>Watching for file changes with StateReloader</code></pre><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">python manage.py runserver</span></pre></td></tr></table></figure>
+
+<p>观察输出<br>我的输出:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Watching for file changes with StateReloader</span></pre></td></tr></table></figure>
+
+<blockquote>
 <p>翻译：使用StateReloader查看文件更改，我们这里选择<strong>直接忽略</strong></p>
 </blockquote>
 <p>进入<a href="http://127.0.0.1:8000" target="_blank" rel="noopener">http://127.0.0.1:8000</a> ：<br>是一个django的欢迎界面，这说明你<strong>成功运行了一个网站</strong></p>
@@ -270,7 +277,9 @@ pip install --upgrade django</code></pre><blockquote>
 </blockquote>
 <h1 id="第一个应用：投票"><a href="#第一个应用：投票" class="headerlink" title="第一个应用：投票"></a>第一个应用：投票</h1><h2 id="前言-1"><a href="#前言-1" class="headerlink" title="前言"></a>前言</h2><p>本次应用直接<strong>在原有的文件夹中</strong>添加</p>
 <h2 id="创建目录-1"><a href="#创建目录-1" class="headerlink" title="创建目录"></a>创建目录</h2><p>在与manage.py同级的文件夹中，git bash<br>输入：</p>
-<pre><code>python manage.py startapp polls</code></pre><p>这将在当前文件夹内加入一个polls目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">python manage.py startapp polls</span></pre></td></tr></table></figure>
+
+<p>这将在当前文件夹内加入一个polls目录</p>
 <h2 id="观察目录-1"><a href="#观察目录-1" class="headerlink" title="观察目录"></a>观察目录</h2><p>双击’polls’文件夹，我们将看到<strong>一个’migrations’文件夹，六个.py文件，分别为’__init__‘,’admin’,’apps’,’models’,’tests’,’views’</strong><br>双击’migrations’文件夹，我们将看到<strong>一个.py文件，为’__init__‘</strong></p>
 <h2 id="编写视图"><a href="#编写视图" class="headerlink" title="编写视图"></a>编写视图</h2><p>我们会通过’views.py’编写我们将看到的网页样式<br>修改views.py文件，代码如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">"Hello, world. You're at the polls index."</span>)</span></pre></td></tr></table></figure>
@@ -285,8 +294,12 @@ pip install --upgrade django</code></pre><blockquote>
 <p>原理暂不解释</p>
 </blockquote>
 <h2 id="检验-1"><a href="#检验-1" class="headerlink" title="检验"></a>检验</h2><p>跳转到外层’mysite’文件夹，git bash<br>输入：</p>
-<pre><code>python manage.py runserver</code></pre><p>观察输出<br>我的输出:</p>
-<pre><code>Watching for file changes with StateReloader</code></pre><p>兴冲冲的进入<a href="http://127.0.0.1" target="_blank" rel="noopener">http://127.0.0.1</a><br><strong>是个404</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">python manage.py runserver</span></pre></td></tr></table></figure>
+
+<p>观察输出<br>我的输出:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Watching for file changes with StateReloader</span></pre></td></tr></table></figure>
+
+<p>兴冲冲的进入<a href="http://127.0.0.1" target="_blank" rel="noopener">http://127.0.0.1</a><br><strong>是个404</strong></p>
 <p>……</p>
 <p>好奇宝宝：这是为什么呢？</p>
 <p>答：我们需要仔细观察上述码，我们将’polls.urls’（也就是我们设置的polls/urls.py）设定在polls/路径下，要显示出我们想要的内容，需要改变访问路径为<a href="http://127.0.0.1/polls/" target="_blank" rel="noopener">http://127.0.0.1/polls/</a><br><strong>成功显示”Hello, world. You’re at the polls index.”</strong></p>
@@ -323,27 +336,12 @@ pip install --upgrade django</code></pre><blockquote>
 <li>django.contrib.staticfiles – 管理静态文件的框架</li>
 </ul>
 <p>下面，让我们在数据库中创建一个表<br>在外层’mysite’文件夹中，git bash<br>输入：</p>
-<pre><code>python manage.py migrate</code></pre><p>观察输出<br>我的输出：</p>
-<pre><code>Operations to perform:
-Apply all migrations: admin, auth, contenttypes, sessions
-Running migrations:
-Applying contenttypes.0001_initial... OK
-Applying auth.0001_initial... OK
-Applying admin.0001_initial... OK
-Applying admin.0002_logentry_remove_auto_add... OK
-Applying admin.0003_logentry_add_action_flag_choices... OK
-Applying contenttypes.0002_remove_content_type_name... OK
-Applying auth.0002_alter_permission_name_max_length... OK
-Applying auth.0003_alter_user_email_max_length... OK
-Applying auth.0004_alter_user_username_opts... OK
-Applying auth.0005_alter_user_last_login_null... OK
-Applying auth.0006_require_contenttypes_0002... OK
-Applying auth.0007_alter_validators_add_error_messages... OK
-Applying auth.0008_alter_user_username_max_length... OK
-Applying auth.0009_alter_user_last_name_max_length... OK
-Applying auth.0010_alter_group_name_max_length... OK
-Applying auth.0011_update_proxy_permissions... OK
-Applying sessions.0001_initial... OK</code></pre><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">python manage.py migrate</span></pre></td></tr></table></figure>
+
+<p>观察输出<br>我的输出：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Operations to perform:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">Apply all migrations: admin, auth, contenttypes, sessions</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">Running migrations:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">Applying contenttypes.0001_initial... OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">Applying auth.0001_initial... OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">Applying admin.0001_initial... OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">Applying admin.0002_logentry_remove_auto_add... OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">Applying admin.0003_logentry_add_action_flag_choices... OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">Applying contenttypes.0002_remove_content_type_name... OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">Applying auth.0002_alter_permission_name_max_length... OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">Applying auth.0003_alter_user_email_max_length... OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">Applying auth.0004_alter_user_username_opts... OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">Applying auth.0005_alter_user_last_login_null... OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">Applying auth.0006_require_contenttypes_0002... OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">Applying auth.0007_alter_validators_add_error_messages... OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">Applying auth.0008_alter_user_username_max_length... OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">Applying auth.0009_alter_user_last_name_max_length... OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">Applying auth.0010_alter_group_name_max_length... OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">Applying auth.0011_update_proxy_permissions... OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">Applying sessions.0001_initial... OK</span></pre></td></tr></table></figure>
+
+<blockquote>
 <p>该(migrate)命令用来查看INSTALLED_APPS设置，并根据settings.py文件中的数据库设置和应用程序附带的数据库迁移创建任何必要的数据库表(我们将在后面介绍)。您将看到它所应用的每个迁移的消息。</p>
 </blockquote>
 <blockquote>
@@ -365,20 +363,22 @@ Applying sessions.0001_initial... OK</code></pre><blockquote>
 <p>其本质就是调用’polls’文件夹中，apps.py文件中的PollsConfig类</p>
 </blockquote>
 <p>此时，我们回到外层’mysite’文件夹，git bash</p>
-<pre><code>python manage.py makemigrations polls</code></pre><p>观察输出<br>我的输出：</p>
-<pre><code>Migrations for &apos;polls&apos;:
-  polls\migrations\0001_initial.py
-    - Create model Question
-    - Create model Choice</code></pre><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations polls</span></pre></td></tr></table></figure>
+
+<p>观察输出<br>我的输出：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Migrations for 'polls':</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  polls\migrations\0001_initial.py</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    - Create model Question</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    - Create model Choice</span></pre></td></tr></table></figure>
+
+<blockquote>
 <p>这里，<strong>本人的情况与官网中给出的样例情况有所区别</strong>，可能是因为我太菜了……<a href="https://docs.djangoproject.com/zh-hans/3.0/intro/tutorial02/#activating-models" target="_blank" rel="noopener">官网</a></p>
 </blockquote>
 <p>其中，makemigrations命令会<strong>指示django监测你对模型文件的修改，并将你修改的部分存储</strong>，这种操作被称为<strong>迁移</strong>。在这里不做详细介绍，如果了解过一定的SQL，并且想看看迁移命令会执行哪些SQL语句，<strong>去官网看</strong></p>
 <p>我们回到外层’mysite’文件夹，git bash</p>
-<pre><code>python manage.py migrate</code></pre><p>观察输出<br>我的输出：</p>
-<pre><code>Operations to perform:
-  Apply all migrations: admin, auth, contenttypes, polls, sessions
-Running migrations:
-  Applying polls.0001_initial... OK</code></pre><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">python manage.py migrate</span></pre></td></tr></table></figure>
+
+<p>观察输出<br>我的输出：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Operations to perform:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  Apply all migrations: admin, auth, contenttypes, polls, sessions</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">Running migrations:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  Applying polls.0001_initial... OK</span></pre></td></tr></table></figure>
+
+<blockquote>
 <p>对，在这里我的输出和官方给的输出还是有点不一样</p>
 </blockquote>
 <p>其中，migrate命令会还没有执行过的迁移（Django 通过在数据库中创建一个特殊的表 django_migrations 来跟踪执行过哪些迁移）应用在数据库上 - 也就是<strong>将你对模型的更改同步到数据库结构上。</strong><br>一般迁移都是三步曲：</p>
@@ -388,36 +388,15 @@ Running migrations:
 <li>运行 python manage.py migrate 来应用数据库迁移</li>
 </ul>
 <h2 id="API来了"><a href="#API来了" class="headerlink" title="API来了"></a>API来了</h2><p>在这里，我们介绍一种新的操作方式——<strong>交互式</strong><br>我们回到外层’mysite’文件夹，git bash</p>
-<pre><code>python manage.py shell</code></pre><p>观察输出<br>我的输出：</p>
-<pre><code>Python 3.7.0 (default, Jun 28 2018, 08:04:48) [MSC v.1912 64 bit (AMD64)]
-Type &apos;copyright&apos;, &apos;credits&apos; or &apos;license&apos; for more information
-IPython 6.5.0 -- An enhanced Interactive Python. Type &apos;?&apos; for help.</code></pre><p>接下来，我们按照以下顺序向数据库中添加问题</p>
-<pre><code>In [1]: from polls.models import Choice, Question
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">python manage.py shell</span></pre></td></tr></table></figure>
 
-In [2]: Question.objects.all()
-Out[2]: &lt;QuerySet []&gt;
+<p>观察输出<br>我的输出：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Python 3.7.0 (default, Jun 28 2018, 08:04:48) [MSC v.1912 64 bit (AMD64)]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">Type 'copyright', 'credits' or 'license' for more information</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">IPython 6.5.0 -- An enhanced Interactive Python. Type '?' for help.</span></pre></td></tr></table></figure>
 
-In [3]: from django.utils import timezone
+<p>接下来，我们按照以下顺序向数据库中添加问题</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]: <span class="keyword">from</span> polls.models <span class="keyword">import</span> Choice, Question</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">2</span>]: Question.objects.all()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">Out[<span class="number">2</span>]: &lt;QuerySet []&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">3</span>]: <span class="keyword">from</span> django.utils <span class="keyword">import</span> timezone</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">4</span>]: q = Question(question_text=<span class="string">"What's new?"</span>, pub_date=timezone.now())</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">5</span>]: q.save()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">6</span>]: q.id</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">Out[<span class="number">6</span>]: <span class="number">1</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">7</span>]: q.question_text</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">Out[<span class="number">7</span>]: <span class="string">"What's new?"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">8</span>]: q.pub_date</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">Out[<span class="number">8</span>]: datetime.datetime(<span class="number">2020</span>, <span class="number">2</span>, <span class="number">10</span>, <span class="number">15</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">144374</span>, tzinfo=&lt;UTC&gt;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">9</span>]: q.question_text = <span class="string">"What's up?"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">10</span>]: q.save()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">11</span>]: Question.objects.all()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">Out[<span class="number">11</span>]: &lt;QuerySet [&lt;Question: Question object (<span class="number">1</span>)&gt;]&gt;</span></pre></td></tr></table></figure>
 
-In [4]: q = Question(question_text=&quot;What&apos;s new?&quot;, pub_date=timezone.now())
-
-In [5]: q.save()
-
-In [6]: q.id
-Out[6]: 1
-
-In [7]: q.question_text
-Out[7]: &quot;What&apos;s new?&quot;
-
-In [8]: q.pub_date
-Out[8]: datetime.datetime(2020, 2, 10, 15, 31, 30, 144374, tzinfo=&lt;UTC&gt;)
-
-In [9]: q.question_text = &quot;What&apos;s up?&quot;
-
-In [10]: q.save()
-
-In [11]: Question.objects.all()
-Out[11]: &lt;QuerySet [&lt;Question: Question object (1)&gt;]&gt;</code></pre><blockquote>
+<blockquote>
 <p>其中，调出时间应为实时时间，随个人情况有所不同</p>
 </blockquote>
 <p>我们发现，在Out[11]中并没有给出我们想要的信息（即没有显示出问题本身），我们通过修改’polls’文件夹中的models.py文件解决这个问题，代码如下：</p>
@@ -427,80 +406,30 @@ Out[11]: &lt;QuerySet [&lt;Question: Question object (1)&gt;]&gt;</code></pre><b
 <p>即修改__str__方法，并增加时区处理</p>
 </blockquote>
 <p>再次回到外层’mysite’文件夹，git bash，调出交互式命令行后</p>
-<pre><code>In [1]: from polls.models import Choice, Question
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]: <span class="keyword">from</span> polls.models <span class="keyword">import</span> Choice, Question</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">2</span>]: Question.objects.all()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">Out[<span class="number">2</span>]: &lt;QuerySet [&lt;Question: What<span class="string">'s up?&gt;]&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="string"></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="string">In [3]: Question.objects.filter(id=1)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">Out[3]: &lt;QuerySet [&lt;Question: What's up?&gt;]&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">4</span>]: <span class="keyword">from</span> django.utils <span class="keyword">import</span> timezone</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">5</span>]: current_year = timezone.now().year</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">6</span>]: Question.objects.get(pub_date__year=current_year)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">Out[<span class="number">6</span>]: &lt;Question: What<span class="string">'s up?&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"><span class="string"></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"><span class="string">In [7]: Question.objects.get(pk=1)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">Out[7]: &lt;Question: What's up?&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">8</span>]: q = Question.objects.get(pk=<span class="number">1</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">9</span>]: q.was_published_recently()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">Out[<span class="number">9</span>]: <span class="literal">True</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">10</span>]: q = Question.objects.get(pk=<span class="number">1</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">11</span>]: q.choice_set.all()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">Out[<span class="number">11</span>]: &lt;QuerySet []&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">12</span>]: q.choice_set.create(choice_text=<span class="string">'Not much'</span>, votes=<span class="number">0</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">Out[<span class="number">12</span>]: &lt;Choice: Not much&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">13</span>]: q.choice_set.create(choice_text=<span class="string">'The sky'</span>, votes=<span class="number">0</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">Out[<span class="number">13</span>]: &lt;Choice: The sky&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">14</span>]: c = q.choice_set.create(choice_text=<span class="string">'Just hacking again'</span>, votes=<span class="number">0</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">In [<span class="number">15</span>]: c.question</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">Out[<span class="number">15</span>]: &lt;Question: What<span class="string">'s up?&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line"><span class="string"></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line"><span class="string">In [16]: q.choice_set.all()</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line"><span class="string">Out[16]: &lt;QuerySet [&lt;Choice: Not much&gt;, &lt;Choice: The sky&gt;, &lt;Choice: Just hacking again&gt;]&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line"><span class="string"></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line"><span class="string">In [17]: q.choice_set.count()</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line"><span class="string">Out[17]: 3</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line"><span class="string"></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line"><span class="string">In [18]: Choice.objects.filter(question__pub_date__year=current_year)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line"><span class="string">Out[18]: &lt;QuerySet [&lt;Choice: Not much&gt;, &lt;Choice: The sky&gt;, &lt;Choice: Just hacking again&gt;]&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">48</span></pre></td><td class="code"><pre><span class="line"><span class="string"></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">49</span></pre></td><td class="code"><pre><span class="line"><span class="string">In [19]: c = q.choice_set.filter(choice_text__startswith='</span>Just hacking<span class="string">')</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">50</span></pre></td><td class="code"><pre><span class="line"><span class="string"></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">51</span></pre></td><td class="code"><pre><span class="line"><span class="string">In [20]: c.delete()</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">52</span></pre></td><td class="code"><pre><span class="line"><span class="string">Out[20]: (1, &#123;'</span>polls.Choice<span class="string">': 1&#125;)</span></span></pre></td></tr></table></figure>
 
-In [2]: Question.objects.all()
-Out[2]: &lt;QuerySet [&lt;Question: What&apos;s up?&gt;]&gt;
-
-In [3]: Question.objects.filter(id=1)
-Out[3]: &lt;QuerySet [&lt;Question: What&apos;s up?&gt;]&gt;
-
-In [4]: from django.utils import timezone
-
-In [5]: current_year = timezone.now().year
-
-In [6]: Question.objects.get(pub_date__year=current_year)
-Out[6]: &lt;Question: What&apos;s up?&gt;
-
-In [7]: Question.objects.get(pk=1)
-Out[7]: &lt;Question: What&apos;s up?&gt;
-
-In [8]: q = Question.objects.get(pk=1)
-
-In [9]: q.was_published_recently()
-Out[9]: True
-
-In [10]: q = Question.objects.get(pk=1)
-
-In [11]: q.choice_set.all()
-Out[11]: &lt;QuerySet []&gt;
-
-In [12]: q.choice_set.create(choice_text=&apos;Not much&apos;, votes=0)
-Out[12]: &lt;Choice: Not much&gt;
-
-In [13]: q.choice_set.create(choice_text=&apos;The sky&apos;, votes=0)
-Out[13]: &lt;Choice: The sky&gt;
-
-In [14]: c = q.choice_set.create(choice_text=&apos;Just hacking again&apos;, votes=0)
-
-In [15]: c.question
-Out[15]: &lt;Question: What&apos;s up?&gt;
-
-In [16]: q.choice_set.all()
-Out[16]: &lt;QuerySet [&lt;Choice: Not much&gt;, &lt;Choice: The sky&gt;, &lt;Choice: Just hacking again&gt;]&gt;
-
-In [17]: q.choice_set.count()
-Out[17]: 3
-
-In [18]: Choice.objects.filter(question__pub_date__year=current_year)
-Out[18]: &lt;QuerySet [&lt;Choice: Not much&gt;, &lt;Choice: The sky&gt;, &lt;Choice: Just hacking again&gt;]&gt;
-
-In [19]: c = q.choice_set.filter(choice_text__startswith=&apos;Just hacking&apos;)
-
-In [20]: c.delete()
-Out[20]: (1, {&apos;polls.Choice&apos;: 1})</code></pre><blockquote>
+<blockquote>
 <p>ctrl+z 加回车，退出shell交互式命令台</p>
 </blockquote>
 <h2 id="管理者界面"><a href="#管理者界面" class="headerlink" title="管理者界面"></a>管理者界面</h2><p>在上述步骤中，我们大致上完成了问题与答案的录入，下面介绍django的管理页面<br>在外层’mysite’文件夹中，git bash</p>
-<pre><code>python manage.py createsuperuser</code></pre><p>观察输出<br>我的输出：</p>
-<pre><code>Superuser creation skipped due to not running in a TTY. You can run `manage.py createsuperuser` in your project to create one manually.</code></pre><p>这说明该条命令<strong>无法在git中实现</strong>，至于为什么，感兴趣的同学可以在createsuperuser.py文件中找到答案</p>
-<p>我们跳转到cmd</p>
-<pre><code>C:\Users\Administrator&gt;cd C:\Users\Administrator\PycharmProjects\sharecipe
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">python manage.py createsuperuser</span></pre></td></tr></table></figure>
 
-C:\Users\Administrator\PycharmProjects\sharecipe&gt;py manage.py createsuperuser
-Username (leave blank to use &apos;administrator&apos;): hhhfccz
-Email address: ***
-Password:
-Password (again):
-The password is too similar to the email address.
-Bypass password validation and create user anyway? [y/N]: y
-Superuser created successfully.</code></pre><p>在上面我们可以看到，在cmd命令行中，<strong>不会显示你输入的password，并且会对你的password强度做一定的判断</strong></p>
+<p>观察输出<br>我的输出：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Superuser creation skipped due to not running in a TTY. You can run `manage.py createsuperuser` in your project to create one manually.</span></pre></td></tr></table></figure>
+
+<p>这说明该条命令<strong>无法在git中实现</strong>，至于为什么，感兴趣的同学可以在createsuperuser.py文件中找到答案</p>
+<p>我们跳转到cmd</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator&gt;cd C:\Users\Administrator\PycharmProjects\sharecipe</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator\PycharmProjects\sharecipe&gt;py manage.py createsuperuser</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">Username (leave blank to use 'administrator'): hhhfccz</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">Email address: ***</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">Password:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">Password (again):</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">The password is too similar to the email address.</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">Bypass password validation and create user anyway? [y/N]: y</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">Superuser created successfully.</span></pre></td></tr></table></figure>
+
+<p>在上面我们可以看到，在cmd命令行中，<strong>不会显示你输入的password，并且会对你的password强度做一定的判断</strong></p>
 <p>下面，我们进入django管理界面</p>
 <blockquote>
 <p>将settings.py文件中的<strong>LANGUAGE_CODE选项设置成zh-hans</strong>，以便后续操作</p>
 </blockquote>
 <p>我们跳转到外层’mysite’文件夹，git bash</p>
-<pre><code>python manage.py runserver</code></pre><p>进入<a href="http://127.0.0.1/admin/" target="_blank" rel="noopener">http://127.0.0.1/admin/</a> 输入刚才设置的用户名与密码，惊喜的发现：<br><strong>程序崩了！！！！！！进不去admin！！！！！！</strong><br>一般django崩溃有以下几种情况：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">python manage.py runserver</span></pre></td></tr></table></figure>
+
+<p>进入<a href="http://127.0.0.1/admin/" target="_blank" rel="noopener">http://127.0.0.1/admin/</a> 输入刚才设置的用户名与密码，惊喜的发现：<br><strong>程序崩了！！！！！！进不去admin！！！！！！</strong><br>一般django崩溃有以下几种情况：</p>
 <ul>
 <li>django端口被占用，否定，我没有运行其他任何软件（几个经典的端口重叠：devc++与腾讯手游助手；django与酷狗音乐）</li>
 <li>mysql密码问题，否定，这根本没有用到mysql</li>
@@ -512,65 +441,48 @@ Superuser created successfully.</code></pre><p>在上面我们可以看到，在
 <p>这个是认真的，因为网上普遍存在django3.0及以上版本进不去admin的情况，暂时莫得很好的解决办法</p>
 </blockquote>
 <h1 id="推倒重来"><a href="#推倒重来" class="headerlink" title="推倒重来"></a>推倒重来</h1><h2 id="第一步：卸载django3-0-3"><a href="#第一步：卸载django3-0-3" class="headerlink" title="第一步：卸载django3.0.3"></a>第一步：卸载django3.0.3</h2><p>因为在一开始我是在anaconda大环境下直接下载的django，可能会造成django与其他anaconda自带包的冲突问题，先卸载掉django<br>我们打开Anaconda Prompt，输入：</p>
-<pre><code>pip uninstall django</code></pre><p>成功卸载django后，进行下一步</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">pip uninstall django</span></pre></td></tr></table></figure>
+
+<p>成功卸载django后，进行下一步</p>
 <h2 id="第二步，创建虚拟环境"><a href="#第二步，创建虚拟环境" class="headerlink" title="第二步，创建虚拟环境"></a>第二步，创建虚拟环境</h2><p>以管理员身份打开Anaconda Prompt，输入：</p>
-<pre><code>conda env list</code></pre><p>观察输出<br>我的输出：</p>
-<pre><code># conda environments:
-#
-base                  *  D:\anaconda</code></pre><p>可以看到，此时在我的anaconda中仅存在一个叫做base的环境，接下来输入：</p>
-<pre><code>conda create -n django2.2.5</code></pre><p>观察输出<br>我的输出：</p>
-<pre><code>Collecting package metadata (repodata.json): done
-Solving environment: done
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">conda env list</span></pre></td></tr></table></figure>
 
-## Package Plan ##
+<p>观察输出<br>我的输出：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> conda environments:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">base                  *  D:\anaconda</span></pre></td></tr></table></figure>
 
-   environment location: D:\anaconda\envs\django2.2.5
+<p>可以看到，此时在我的anaconda中仅存在一个叫做base的环境，接下来输入：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">conda create -n django2.2.5</span></pre></td></tr></table></figure>
 
-   Proceed ([y]/n)? y
+<p>观察输出<br>我的输出：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Collecting package metadata (repodata.json): done</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">Solving environment: done</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Package Plan ##</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">   environment location: D:\anaconda\envs\django2.2.5</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">   Proceed ([y]/n)? y</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">Preparing transaction: done</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">Verifying transaction: done</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">Executing transaction: done</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> To activate this environment, use</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">     $ conda activate django2.2.5</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> To deactivate an active environment, use</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">     $ conda deactivate</span></span></pre></td></tr></table></figure>
 
-Preparing transaction: done
-Verifying transaction: done
-Executing transaction: done
-#
-# To activate this environment, use
-#
-#     $ conda activate django2.2.5
-#
-# To deactivate an active environment, use
-#
-#     $ conda deactivate</code></pre><p>这表明我已经<strong>成功创建了一个名为django2.2.5的虚拟环境</strong>，而且anaconda也细心地为我这个小菜狗做出了指导（如何激活虚拟环境与退出）</p>
+<p>这表明我已经<strong>成功创建了一个名为django2.2.5的虚拟环境</strong>，而且anaconda也细心地为我这个小菜狗做出了指导（如何激活虚拟环境与退出）</p>
 <blockquote>
 <p>如果想完全移除虚拟环境，conda remove -n django2.2.5 –all即可</p>
 </blockquote>
 <h2 id="在虚拟环境中安装"><a href="#在虚拟环境中安装" class="headerlink" title="在虚拟环境中安装"></a>在虚拟环境中安装</h2><p>首先，我们激活新的虚拟环境，以管理员身份打开Anaconda Prompt，输入：</p>
-<pre><code>conda activate django2.2.5</code></pre><p>此时我们可以看到在<strong>命令行左边的括号内显示django2.2.5</strong>，这意味着我们进入了这个虚拟环境<br>接下来输入：</p>
-<pre><code>conda install django</code></pre><p>在输入y后，奇妙地出现了<strong>无法定位程序输出点的问题</strong>，<a href="https://blog.csdn.net/qq_37465638/article/details/100071259" target="_blank" rel="noopener">解决办法</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">conda activate django2.2.5</span></pre></td></tr></table></figure>
+
+<p>此时我们可以看到在<strong>命令行左边的括号内显示django2.2.5</strong>，这意味着我们进入了这个虚拟环境<br>接下来输入：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">conda install django</span></pre></td></tr></table></figure>
+
+<p>在输入y后，奇妙地出现了<strong>无法定位程序输出点的问题</strong>，<a href="https://blog.csdn.net/qq_37465638/article/details/100071259" target="_blank" rel="noopener">解决办法</a></p>
 <blockquote>
 <p>这个问题折磨了我一个中午，请大家直接点击解决办法<del>以免错过大量宝贵的对抗崩坏的时间</del></p>
 </blockquote>
 <p>在成功下载django后，我们观察此时环境中的包有哪些<br>以管理员身份打开Anaconda Prompt，输入：</p>
-<pre><code>conda list</code></pre><p>观察输出<br>我的输出：</p>
-<pre><code># packages in environment at D:\anaconda\envs\my_django_env:
-#
-# Name                    Version                   Build  Channel
-ca-certificates           2020.1.1                      0
-certifi                   2019.11.28               py38_0
-django                    2.2.5                    py38_1
-openssl                   1.1.1d               he774522_4
-pip                       20.0.2                   py38_1
-python                    3.8.1                h5fd99cc_1
-pytz                      2019.3                     py_0
-setuptools                45.2.0                   py38_0
-sqlite                    3.31.1               he774522_0
-sqlparse                  0.3.0                      py_0
-vc                        14.1                 h0510ff6_4
-vs2015_runtime            14.16.27012          hf0eaf9b_1
-wheel                     0.34.2                   py38_0
-wincertstore              0.2                      py38_0</code></pre><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">conda list</span></pre></td></tr></table></figure>
+
+<p>观察输出<br>我的输出：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> packages <span class="keyword">in</span> environment at D:\anaconda\envs\my_django_env:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Name                    Version                   Build  Channel</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">ca-certificates           2020.1.1                      0</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">certifi                   2019.11.28               py38_0</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">django                    2.2.5                    py38_1</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">openssl                   1.1.1d               he774522_4</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">pip                       20.0.2                   py38_1</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">python                    3.8.1                h5fd99cc_1</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">pytz                      2019.3                     py_0</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">setuptools                45.2.0                   py38_0</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">sqlite                    3.31.1               he774522_0</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">sqlparse                  0.3.0                      py_0</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">vc                        14.1                 h0510ff6_4</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">vs2015_runtime            14.16.27012          hf0eaf9b_1</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">wheel                     0.34.2                   py38_0</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">wincertstore              0.2                      py38_0</span></pre></td></tr></table></figure>
+
+<blockquote>
 <p>这些都是与django共存的包，不会存在冲突现象</p>
 </blockquote>
 <h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>我们在Anaconda Prompt中<strong>切换到我们想要保存代码的文件夹目录下</strong>，输入：</p>
-<pre><code>django-admin startproject my_django</code></pre><p>剩下的操作相信大家都很熟悉了，<strong>但是一定能够要在进行操作之前进入虚拟环境！！！</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">django-admin startproject my_django</span></pre></td></tr></table></figure>
+
+<p>剩下的操作相信大家都很熟悉了，<strong>但是一定能够要在进行操作之前进入虚拟环境！！！</strong></p>
 <blockquote>
 <p>需在pycharm中添加虚拟环境中的python解释器，此过程较为简单，略</p>
 </blockquote>
@@ -709,12 +621,12 @@ wincertstore              0.2                      py38_0</code></pre><blockquot
 </blockquote>
 <h2 id="测试驱动"><a href="#测试驱动" class="headerlink" title="测试驱动"></a>测试驱动</h2><p>一般我们采取<strong>先写测试后写代码</strong>的原则</p>
 <h1 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h1><h2 id="发现漏洞"><a href="#发现漏洞" class="headerlink" title="发现漏洞"></a>发现漏洞</h2><p>我们在上篇文章的结尾说到，我们的投票系统存在一个bug: <strong>Question.was_published_recently() 方法其实并不能正常判断该问题是否在刚才成功创建</strong>，在这里我们可以手动测试<br>在进入虚拟环境与交互式命令台后，依次输入以下命令</p>
-<pre><code>&gt;&gt;&gt; import datetime
-&gt;&gt;&gt; from django.utils import timezone
-&gt;&gt;&gt; from polls.models import Question
-&gt;&gt;&gt; future_question = Question(pub_date = timezone.now() + datetime.timedelta(days = 30))
-&gt;&gt;&gt; future_question.was_published_recently()</code></pre><p>观察输出<br>我的输出：</p>
-<pre><code>True</code></pre><p>很显然这是有问题的，<strong>未来才会创建的问题不可能是刚才创建的</strong>，这就说明整个项目存在bug</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; import datetime</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; from django.utils import timezone</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; from polls.models import Question</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; future_question = Question(pub_date = timezone.now() + datetime.timedelta(days = 30))</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; future_question.was_published_recently()</span></span></pre></td></tr></table></figure>
+
+<p>观察输出<br>我的输出：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">True</span></pre></td></tr></table></figure>
+
+<p>很显然这是有问题的，<strong>未来才会创建的问题不可能是刚才创建的</strong>，这就说明整个项目存在bug</p>
 <h2 id="暴露漏洞"><a href="#暴露漏洞" class="headerlink" title="暴露漏洞"></a>暴露漏洞</h2><p>我们在外层’polls’文件夹中修改tests.py来完成自动化测试，代码如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.test <span class="keyword">import</span> TestCase</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.utils <span class="keyword">import</span> timezone</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Question</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create your tests here.</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">QuestionModelTests</span><span class="params">(TestCase)</span>:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_was_published_recently_with_future_question</span><span class="params">(self)</span>:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        time = timezone.now() + datetime.timedelta(days=<span class="number">30</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        future_question = Question(pub_date=time)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">        self.assertIs(future_question.was_published_recently(), <span class="literal">False</span>)</span></pre></td></tr></table></figure>
 
@@ -723,23 +635,12 @@ wincertstore              0.2                      py38_0</code></pre><blockquot
 <p>我们在该方法中给出了一个未来的问题实例future_question，并告知tests.py文件其应该返回False</p>
 </blockquote>
 <h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>在外层’mysite’文件夹中输入</p>
-<pre><code>python manage.py test polls</code></pre><p>观察输出<br>我的输出：</p>
-<pre><code>Creating test database for alias &apos;default&apos;...
-System check identified no issues (0 silenced).
-F
-======================================================================
-FAIL: test_was_published_recently_with_future_question (polls.tests.QuestionModelTests)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-File &quot;C:\Users\Administrator\PycharmProjects\my_django\polls\tests.py&quot;, line 18, in test_was_published_recently_with_future_question
-self.assertIs(future_question.was_published_recently(), False)
-AssertionError: True is not False
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">python manage.py test polls</span></pre></td></tr></table></figure>
 
-----------------------------------------------------------------------
-Ran 1 test in 0.002s
+<p>观察输出<br>我的输出：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Creating test database for alias 'default'...</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">System check identified no issues (0 silenced).</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">F</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">======================================================================</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">FAIL: test_was_published_recently_with_future_question (polls.tests.QuestionModelTests)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">----------------------------------------------------------------------</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">File "C:\Users\Administrator\PycharmProjects\my_django\polls\tests.py", line 18, in test_was_published_recently_with_future_question</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">self.assertIs(future_question.was_published_recently(), False)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">AssertionError: True is not False</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">----------------------------------------------------------------------</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">Ran 1 test in 0.002s</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">FAILED (failures=1)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">Destroying test database for alias 'default'...</span></pre></td></tr></table></figure>
 
-FAILED (failures=1)
-Destroying test database for alias &apos;default&apos;...</code></pre><blockquote>
+<blockquote>
 <p>在输出中会给出<strong>错误函数、错误位置、错误原因、错误样例等一系列信息</strong>，有利于编码人员快速定位bug所在</p>
 </blockquote>
 <p>在这里，自动化测试流程为：</p>
@@ -758,14 +659,9 @@ Destroying test database for alias &apos;default&apos;...</code></pre><blockquot
 <p>该代码中的was_published_recently()方法<strong>确保了在一天前到现在所创建的问题都返回True，其余返回False</strong></p>
 </blockquote>
 <p>我们可以重新做一次测试<br>观察输出<br>我的输出：</p>
-<pre><code>Creating test database for alias &apos;default&apos;...
-System check identified no issues (0 silenced).
-.
-----------------------------------------------------------------------
-Ran 1 test in 0.001s
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Creating test database for alias 'default'...</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">System check identified no issues (0 silenced).</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">.</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">----------------------------------------------------------------------</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">Ran 1 test in 0.001s</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">OK</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">Destroying test database for alias 'default'...</span></pre></td></tr></table></figure>
 
-OK
-Destroying test database for alias &apos;default&apos;...</code></pre><p>这说明<strong>针对该方法的bug修复成功</strong>，这也同样意味着，<strong>该方法不会再出现bug</strong>，可以放心调用</p>
+<p>这说明<strong>针对该方法的bug修复成功</strong>，这也同样意味着，<strong>该方法不会再出现bug</strong>，可以放心调用</p>
 <h2 id="更全面的测试"><a href="#更全面的测试" class="headerlink" title="更全面的测试"></a>更全面的测试</h2><p>有这样一种情况：<strong>在修复一个 bug 时不小心引入另一个 bug</strong><br>为了避免这种情况的出现<del>虽然往往无法避免</del>，我们需要进行更加全面的测试<br>我们通过修改’polls’文件夹中的tests.py文件来完善，代码如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.test <span class="keyword">import</span> TestCase</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.utils <span class="keyword">import</span> timezone</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Question</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create your tests here.</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">QuestionModelTests</span><span class="params">(TestCase)</span>:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_was_published_recently_with_future_question</span><span class="params">(self)</span>:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        time = timezone.now() + datetime.timedelta(days=<span class="number">30</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        future_question = Question(pub_date=time)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">        self.assertIs(future_question.was_published_recently(), <span class="literal">False</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">test_was_published_recently_with_old_question</span><span class="params">(self)</span>:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">	    time = timezone.now() - datetime.timedelta(days=<span class="number">1</span>, seconds=<span class="number">1</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">	    old_question = Question(pub_date=time)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">	    self.assertIs(old_question.was_published_recently(), <span class="literal">False</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">test_was_published_recently_with_recent_question</span><span class="params">(self)</span>:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">	    time = timezone.now() - datetime.timedelta(hours=<span class="number">23</span>, minutes=<span class="number">59</span>, seconds=<span class="number">59</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">	    recent_question = Question(pub_date=time)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">	    self.assertIs(recent_question.was_published_recently(), <span class="literal">True</span>)</span></pre></td></tr></table></figure>
 
@@ -775,22 +671,10 @@ Destroying test database for alias &apos;default&apos;...</code></pre><p>这说�
 <p>我们需要明白的是<strong>进行过测试的那些方法的行为永远是符合预期的</strong></p>
 <h2 id="测试视图"><a href="#测试视图" class="headerlink" title="测试视图"></a>测试视图</h2><p>修复了上述bug后，视图方面也会产生一定的问题：系统会发布所有问题，也包括那些未来的问题。<strong>如果将pub_date设置为未来某天，该问题应该在所填写的时间点才被发布</strong>，而在此之前是不可见的。</p>
 <h3 id="测试工具"><a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h3><p>Django 提供了一个供测试使用的 <a href="https://docs.djangoproject.com/zh-hans/2.2/topics/testing/tools/#django.test.Client" target="_blank" rel="noopener">Client</a> 来模拟用户和视图层代码的交互<br>我们通过交互式命令台来使用它，代码及其对应的输出如下：</p>
-<pre><code>&gt;&gt;&gt; from django.test.utils import setup_test_environment
-&gt;&gt;&gt; setup_test_environment()
-&gt;&gt;&gt; from django.test import Client
-&gt;&gt;&gt; client = Client()
-&gt;&gt;&gt; response = client.get(&apos;/&apos;)
-Not Found: /
-&gt;&gt;&gt; response.status_code
-404
-&gt;&gt;&gt; from django.urls import reverse
-&gt;&gt;&gt; response = client.get(reverse(&apos;polls:index&apos;))
-&gt;&gt;&gt; response.status_code
-200
-&gt;&gt;&gt; response.content
-b&apos;\n    &lt;ul&gt;\n    \n        &lt;li&gt;&lt;a href=&quot;/polls/1/&quot;&gt;What&amp;#39;s up?&lt;/a&gt;&lt;/li&gt;\n    \n    &lt;/ul&gt;\n&apos;
-&gt;&gt;&gt; response.context[&apos;latest_question_list&apos;]
-&lt;QuerySet [&lt;Question: What&apos;s up?&gt;]&gt;</code></pre><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; from django.test.utils import setup_test_environment</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; setup_test_environment()</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; from django.test import Client</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; client = Client()</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; response = client.get(<span class="string">'/'</span>)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">Not Found: /</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; response.status_code</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">404</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; from django.urls import reverse</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; response = client.get(reverse(<span class="string">'polls:index'</span>))</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; response.status_code</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">200</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; response.content</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">b'\n    &lt;ul&gt;\n    \n        &lt;li&gt;&lt;a href="/polls/1/"&gt;What&amp;#39;s up?&lt;/a&gt;&lt;/li&gt;\n    \n    &lt;/ul&gt;\n'</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; response.context[<span class="string">'latest_question_list'</span>]</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">&lt;QuerySet [&lt;Question: What's up?&gt;]&gt;</span></pre></td></tr></table></figure>
+
+
+<blockquote>
 <p>了解一定python爬虫requests库的同学应该能很快理解上述代码，我们可以将这里的client理解成requests</p>
 </blockquote>
 <h3 id="开始修复"><a href="#开始修复" class="headerlink" title="开始修复"></a>开始修复</h3><p>我们通过修改’polls’文件夹中的views.py文件来修复视图，代码如下：</p>
@@ -824,7 +708,7 @@ b&apos;\n    &lt;ul&gt;\n    \n        &lt;li&gt;&lt;a href=&quot;/polls/1/&quot
 <p>代码测试是一个较大的内容，一般<strong>我们对于每个模型和视图都建立单独的TestClass；每个测试方法只测试一个功能；给每个测试方法起个能描述其功能的名字</strong></p>
 </blockquote>
 <h1 id="自定义"><a href="#自定义" class="headerlink" title="自定义"></a>自定义</h1><h2 id="自定义页面"><a href="#自定义页面" class="headerlink" title="自定义页面"></a>自定义页面</h2><p>我们在外层’polls’文件夹中创建一个’static’的文件夹，django将会在此文件夹下查找页面对应的静态文件<br>我们在’static’文件夹下创建一个’polls’文件夹，在该文件夹中创建一个style.css文件，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">li a &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    color: green;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span> <span class="selector-tag">a</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="attribute">color</span>: green;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
 
 <p>随后我们修改index.html，使其能够调用.css，代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#123;% load static %&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; type&#x3D;&quot;text&#x2F;css&quot; href&#x3D;&quot;&#123;% static &#39;polls&#x2F;style.css&#39; %&#125;&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&#123;% if latest_question_list %&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    &lt;ul&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    &#123;% for question in latest_question_list %&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        &lt;li&gt;&lt;a href&#x3D;&quot;&#123;% url &#39;polls:detail&#39; question.id %&#125;&quot;&gt;&#123;&#123; question.question_text &#125;&#125;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    &#123;% endfor %&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    &lt;&#x2F;ul&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">&#123;% else %&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    &lt;p&gt;No polls are available.&lt;&#x2F;p&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">&#123;% endif %&#125;</span></pre></td></tr></table></figure>
@@ -1159,7 +1043,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">MATLAB</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1167,7 +1051,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">MATLAB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1183,7 +1067,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1191,11 +1075,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">机器学习</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">

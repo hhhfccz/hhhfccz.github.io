@@ -14,7 +14,7 @@
 <meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;04&#x2F;11&#x2F;git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8&#x2F;index.html">
 <meta property="og:site_name" content="电科菜狗的小博客">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-04-11T13:25:14.483Z">
+<meta property="og:updated_time" content="2020-04-13T04:01:31.775Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -61,7 +61,7 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 23
+    		总文章数 22
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -191,7 +191,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.3k字</span>
+        <span class="post-count">1.5k字</span>
       </span>
     </span>
 
@@ -200,7 +200,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">4分</span>
+        <span class="post-count">5分</span>
       </span>
     </span>
 </div>
@@ -283,7 +283,20 @@
 <blockquote>
 <p>pull就是查看修改，clone就是把整个项目搞下来</p>
 </blockquote>
-<h1 id="Git命令行"><a href="#Git命令行" class="headerlink" title="Git命令行"></a>Git命令行</h1><h1 id="Git图形化操作"><a href="#Git图形化操作" class="headerlink" title="Git图形化操作"></a>Git图形化操作</h1><h1 id="Git-Page个人博客搭建"><a href="#Git-Page个人博客搭建" class="headerlink" title="Git Page个人博客搭建"></a>Git Page个人博客搭建</h1><h1 id="Gitlab服务器环境搭建"><a href="#Gitlab服务器环境搭建" class="headerlink" title="Gitlab服务器环境搭建"></a>Gitlab服务器环境搭建</h1>
+<h1 id="Git命令行"><a href="#Git命令行" class="headerlink" title="Git命令行"></a>Git命令行</h1><h2 id="本地库初始化"><a href="#本地库初始化" class="headerlink" title="本地库初始化"></a>本地库初始化</h2><ol>
+<li><strong>创建文件夹</strong>，此文件夹将作为今后本地库的存放位置</li>
+<li><strong>git init 初始化本地库</strong>，即将该文件夹初始化为一个本地git仓库，<strong>会生成.git文件夹</strong></li>
+<li><strong>.git文件夹中就是与该本地库相关的文件</strong></li>
+<li><strong>git config 配置用户名(user.name)与邮箱(user.email)</strong>，用于区分不同开发人员的身份(git不会向这个邮箱发邮件的，随便填就可以)</li>
+<li>关于上一点：配置，有两种权限：<strong>仓库权限(config)与管理员权限(config –global)</strong>，管理员可以操控所有本地库，但是仓库只能管理自己，个人使用就直接用管理员权限，方便</li>
+</ol>
+<blockquote>
+<p>需要注意的是，代码托管中心的账号密码与这里的账号密码没有任何关系</p>
+</blockquote>
+<blockquote>
+<p>git所有的设置都会存储到.git/config文件中或者~/.gitconfig中</p>
+</blockquote>
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><h1 id="Git图形化操作"><a href="#Git图形化操作" class="headerlink" title="Git图形化操作"></a>Git图形化操作</h1><h1 id="Git-Page个人博客搭建"><a href="#Git-Page个人博客搭建" class="headerlink" title="Git Page个人博客搭建"></a>Git Page个人博客搭建</h1><h1 id="Gitlab服务器环境搭建"><a href="#Gitlab服务器环境搭建" class="headerlink" title="Gitlab服务器环境搭建"></a>Gitlab服务器环境搭建</h1>
       
 
     
@@ -450,7 +463,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#版本控制"><span class="toc-number">1.</span> <span class="toc-text">版本控制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是版本控制"><span class="toc-number">1.1.</span> <span class="toc-text">什么是版本控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么需要版本控制"><span class="toc-number">1.2.</span> <span class="toc-text">为什么需要版本控制</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git简介"><span class="toc-number">2.</span> <span class="toc-text">Git简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#版本控制工具的基本功能"><span class="toc-number">2.1.</span> <span class="toc-text">版本控制工具的基本功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分布式版本控制工具"><span class="toc-number">2.2.</span> <span class="toc-text">分布式版本控制工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git与Github"><span class="toc-number">2.3.</span> <span class="toc-text">Git与Github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git的优势"><span class="toc-number">2.3.1.</span> <span class="toc-text">Git的优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git安装"><span class="toc-number">2.3.2.</span> <span class="toc-text">Git安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git本地结构"><span class="toc-number">2.3.3.</span> <span class="toc-text">Git本地结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码托管中心"><span class="toc-number">2.4.</span> <span class="toc-text">代码托管中心</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#本地库与远程库"><span class="toc-number">2.4.1.</span> <span class="toc-text">本地库与远程库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git命令行"><span class="toc-number">3.</span> <span class="toc-text">Git命令行</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git图形化操作"><span class="toc-number">4.</span> <span class="toc-text">Git图形化操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-Page个人博客搭建"><span class="toc-number">5.</span> <span class="toc-text">Git Page个人博客搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Gitlab服务器环境搭建"><span class="toc-number">6.</span> <span class="toc-text">Gitlab服务器环境搭建</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#版本控制"><span class="toc-number">1.</span> <span class="toc-text">版本控制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是版本控制"><span class="toc-number">1.1.</span> <span class="toc-text">什么是版本控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么需要版本控制"><span class="toc-number">1.2.</span> <span class="toc-text">为什么需要版本控制</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git简介"><span class="toc-number">2.</span> <span class="toc-text">Git简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#版本控制工具的基本功能"><span class="toc-number">2.1.</span> <span class="toc-text">版本控制工具的基本功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分布式版本控制工具"><span class="toc-number">2.2.</span> <span class="toc-text">分布式版本控制工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git与Github"><span class="toc-number">2.3.</span> <span class="toc-text">Git与Github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git的优势"><span class="toc-number">2.3.1.</span> <span class="toc-text">Git的优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git安装"><span class="toc-number">2.3.2.</span> <span class="toc-text">Git安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git本地结构"><span class="toc-number">2.3.3.</span> <span class="toc-text">Git本地结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码托管中心"><span class="toc-number">2.4.</span> <span class="toc-text">代码托管中心</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#本地库与远程库"><span class="toc-number">2.4.1.</span> <span class="toc-text">本地库与远程库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git命令行"><span class="toc-number">3.</span> <span class="toc-text">Git命令行</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#本地库初始化"><span class="toc-number">3.1.</span> <span class="toc-text">本地库初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本操作"><span class="toc-number">3.2.</span> <span class="toc-text">基本操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分支管理"><span class="toc-number">3.3.</span> <span class="toc-text">分支管理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git图形化操作"><span class="toc-number">4.</span> <span class="toc-text">Git图形化操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-Page个人博客搭建"><span class="toc-number">5.</span> <span class="toc-text">Git Page个人博客搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Gitlab服务器环境搭建"><span class="toc-number">6.</span> <span class="toc-text">Gitlab服务器环境搭建</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -608,7 +621,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">MATLAB</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -616,7 +629,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">MATLAB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -632,7 +645,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -640,11 +653,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">机器学习</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
