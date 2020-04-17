@@ -14,7 +14,7 @@
 <meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;03&#x2F;15&#x2F;MATLAB%E5%9C%A8%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8&#x2F;index.html">
 <meta property="og:site_name" content="电科菜狗的小博客">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-04-03T12:04:36.284Z">
+<meta property="og:updated_time" content="2020-04-16T15:22:05.985Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -191,7 +191,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">109字</span>
+        <span class="post-count">135字</span>
       </span>
     </span>
 
@@ -224,9 +224,9 @@
 <blockquote>
 <p>其余交互请见MATLAB基础</p>
 </blockquote>
-<h2 id="数据拟合"><a href="#数据拟合" class="headerlink" title="数据拟合"></a>数据拟合</h2><h3 id="多项式拟合"><a href="#多项式拟合" class="headerlink" title="多项式拟合"></a>多项式拟合</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">y = [<span class="number">9</span> <span class="number">7</span> <span class="number">6</span> <span class="number">3</span> <span class="number">-1</span> <span class="number">2</span> <span class="number">5</span> <span class="number">7</span> <span class="number">20</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">P = polyfit(x, y, <span class="number">3</span>)   <span class="comment">% 指拟合成三次多项式</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">xi = <span class="number">0</span>:<span class="number">0.2</span>:<span class="number">10</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">yi = ployval(P, xi);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>(xi, yi, x, y, <span class="string">'r*'</span>)</span></pre></td></tr></table></figure>
+<h2 id="数据拟合"><a href="#数据拟合" class="headerlink" title="数据拟合"></a>数据拟合</h2><h3 id="多项式拟合"><a href="#多项式拟合" class="headerlink" title="多项式拟合"></a>多项式拟合</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">y = [<span class="number">9</span> <span class="number">7</span> <span class="number">6</span> <span class="number">3</span> <span class="number">-1</span> <span class="number">2</span> <span class="number">5</span> <span class="number">7</span> <span class="number">20</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">P = polyfit(x, y, <span class="number">3</span>)   <span class="comment">% 指根据x, y数据拟合三次多项式</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">xi = <span class="number">0</span>:<span class="number">0.2</span>:<span class="number">10</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">yi = ployval(P, xi);   <span class="comment">% 根据P，即拟合后的多项式来计算数据</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>(xi, yi, x, y, <span class="string">'r*'</span>)</span></pre></td></tr></table></figure>
 
-
+<h3 id="指定函数拟合"><a href="#指定函数拟合" class="headerlink" title="指定函数拟合"></a>指定函数拟合</h3>
       
 
     
@@ -393,7 +393,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据建模常规方法的MATLAB实现"><span class="toc-number">1.</span> <span class="toc-text">数据建模常规方法的MATLAB实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据的读入与读出"><span class="toc-number">1.1.</span> <span class="toc-text">数据的读入与读出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#excel与MATLAB的交互"><span class="toc-number">1.1.1.</span> <span class="toc-text">excel与MATLAB的交互</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据拟合"><span class="toc-number">1.2.</span> <span class="toc-text">数据拟合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#多项式拟合"><span class="toc-number">1.2.1.</span> <span class="toc-text">多项式拟合</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据建模常规方法的MATLAB实现"><span class="toc-number">1.</span> <span class="toc-text">数据建模常规方法的MATLAB实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据的读入与读出"><span class="toc-number">1.1.</span> <span class="toc-text">数据的读入与读出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#excel与MATLAB的交互"><span class="toc-number">1.1.1.</span> <span class="toc-text">excel与MATLAB的交互</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据拟合"><span class="toc-number">1.2.</span> <span class="toc-text">数据拟合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#多项式拟合"><span class="toc-number">1.2.1.</span> <span class="toc-text">多项式拟合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指定函数拟合"><span class="toc-number">1.2.2.</span> <span class="toc-text">指定函数拟合</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -551,11 +551,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">web</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">web</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -571,11 +571,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -583,11 +583,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">机器学习</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">

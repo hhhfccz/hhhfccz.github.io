@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hhhfccz.github.io">
-  <title>yolo在windows下的配置 | 电科菜狗的小博客</title>
+  <title>yolo | 电科菜狗的小博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="keywords" content="yolo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="yolo在windows下的配置">
+<meta property="og:title" content="yolo">
 <meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;04&#x2F;03&#x2F;yolo%E5%9C%A8windows%E4%B8%8B%E7%9A%84%E9%85%8D%E7%BD%AE&#x2F;index.html">
 <meta property="og:site_name" content="电科菜狗的小博客">
 <meta property="og:locale" content="en">
@@ -21,7 +21,7 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;i2.tiimg.com&#x2F;715999&#x2F;e96074226ac39202.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;i2.tiimg.com&#x2F;715999&#x2F;645b67051428cafe.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;i2.tiimg.com&#x2F;715999&#x2F;c1f6de5067ca9ad2.png">
-<meta property="og:updated_time" content="2020-04-13T09:05:50.918Z">
+<meta property="og:updated_time" content="2020-04-14T13:00:59.863Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;i2.tiimg.com&#x2F;715999&#x2F;3a0cbe7534de6ba0.png">
   
@@ -199,7 +199,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">919字</span>
+        <span class="post-count">1.1k字</span>
       </span>
     </span>
 
@@ -208,7 +208,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3分</span>
+        <span class="post-count">4分</span>
       </span>
     </span>
 </div>
@@ -221,14 +221,15 @@
     <center><p>
   
     <h1 class="article-title_code_ant" itemprop="name">
-      yolo在windows下的配置
+      yolo
     </h1>
   
 </p></center>
       
         <div><a id="more"></a></div>
 
-<h1 id="在windows中实现类UNIX操作"><a href="#在windows中实现类UNIX操作" class="headerlink" title="在windows中实现类UNIX操作"></a>在windows中实现类UNIX操作</h1><h2 id="安装cygwin"><a href="#安装cygwin" class="headerlink" title="安装cygwin"></a>安装cygwin</h2><p>首先我们在<a href="http://www.cygwin.com/" target="_blank" rel="noopener">cygwin官方网站</a>下载<strong>setup.exe</strong></p>
+<h1 id="在windows中实现类UNIX操作"><a href="#在windows中实现类UNIX操作" class="headerlink" title="在windows中实现类UNIX操作"></a>在windows中实现类UNIX操作</h1><p><strong>这一部分是为了那些想在windows上尝尝鲜的小伙伴准备的，当然也可以当做未来进军Linux大坑做准备，提前熟悉熟悉命令行</strong></p>
+<h2 id="安装cygwin"><a href="#安装cygwin" class="headerlink" title="安装cygwin"></a>安装cygwin</h2><p>首先我们在<a href="http://www.cygwin.com/" target="_blank" rel="noopener">cygwin官方网站</a>下载<strong>setup.exe</strong></p>
 <p>双击运行setup.exe将会出现下图</p>
 <img src="http://i2.tiimg.com/715999/3a0cbe7534de6ba0.png" alt="setup"  />
 
@@ -277,7 +278,7 @@
 <h2 id="运行cygwin"><a href="#运行cygwin" class="headerlink" title="运行cygwin"></a>运行cygwin</h2><p>一共有两种运行方法</p>
 <h3 id="直接用cygwin运行"><a href="#直接用cygwin运行" class="headerlink" title="直接用cygwin运行"></a>直接用cygwin运行</h3><p>需要注意的是，在cygwin中，如果需要切换目录，需要以 <strong>cd /cygdrive/</strong> 开头。</p>
 <p>其他UINX操作，例如ls，可以<strong>直接使用</strong></p>
-<h3 id="用cmd"><a href="#用cmd" class="headerlink" title="用cmd"></a>用cmd</h3><p>首先需要<strong>将 install-two 中目录内的 /bin 目录添加到系统Path变量中</strong></p>
+<h3 id="用cmd"><a href="#用cmd" class="headerlink" title="用cmd"></a>用cmd</h3><p>首先需要<strong>将 install-two（第三张图） 中目录内的 /bin 目录添加到系统Path变量中</strong></p>
 <p>随后打开cmd，就可以直接使用类UNIX命令了</p>
 <blockquote>
 <p>如果在后续操作中出现<strong>“不是内部或外部命令，也不是可运行的程序</strong><br><strong>或批处理文件。”</strong>，则是环境变量配置出错</p>
@@ -287,7 +288,7 @@
 </blockquote>
 <h1 id="下载yolo"><a href="#下载yolo" class="headerlink" title="下载yolo"></a>下载yolo</h1><h2 id="darknet"><a href="#darknet" class="headerlink" title="darknet"></a>darknet</h2><p>我们进入 <a href="https://github.com/pjreddie/darknet" target="_blank" rel="noopener">https://github.com/pjreddie/darknet</a> <strong>下载zip包</strong></p>
 <blockquote>
-<p><strong>不要clone</strong>，clone到winodws上的.names文件编码会随windows变化，与本来的UNIX相冲突，会导致darknet在编译过程中无法找到.names文件</p>
+<p><strong>不要clone</strong>，clone到winodws上的.names文件编码会随windows变化，与本来的UNIX相冲突，会导致darknet在编译过程中无法找到.names文件。Linux玩家可略</p>
 </blockquote>
 <p>下载后解压</p>
 <h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>我们在解压后的目录中，<strong>用UNIX命令make</strong>进行编译，编译过程生成的文件会存放在obj文件夹中，</p>
@@ -297,14 +298,23 @@
 <p>在编译过程中可能会出现头文件相关的问题，新版本经测试是没有的。</p>
 <p>如果出现了，可以尝试修改安装目录下的 /examples/go.c 文件，添加头文件<strong>#include &lt;sys.h&gt;</strong></p>
 <p>如果编译成功，将生成<strong>darknet.exe、libdarknet.a、libdarknet.so</strong>三个文件</p>
-<h1 id="使用yolo"><a href="#使用yolo" class="headerlink" title="使用yolo"></a>使用yolo</h1><h2 id="检验"><a href="#检验" class="headerlink" title="检验"></a>检验</h2><p>我们在设置好yolo的文件夹下，cmd</p>
+<h1 id="使用yolo"><a href="#使用yolo" class="headerlink" title="使用yolo"></a>使用yolo</h1><p><strong>警告：接下来的操作基本在Ubuntu上完成，因为本人windows上懒得下载又臭又长的VS，就直接跑来Ubuntu享乐了</strong></p>
+<h2 id="检验"><a href="#检验" class="headerlink" title="检验"></a>检验</h2><p>我们在设置好yolo的文件夹下，cmd</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg</span></pre></td></tr></table></figure>
 
 <p>观察最后的结果，我的结果如下，效果不错</p>
 <img src = "http://i1.fuimg.com/715999/c690da191438011e.png">
 
 <h2 id="使用OpenCV"><a href="#使用OpenCV" class="headerlink" title="使用OpenCV"></a>使用OpenCV</h2><p>我们首先需要安装OpenCV，其次在darknet文件夹下的Makefile中将OPENCV从0改为1即可</p>
-<h2 id="使用Colab"><a href="#使用Colab" class="headerlink" title="使用Colab"></a>使用Colab</h2><p>在机器学习一文中我简单介绍过kaggle的使用，下面我们来看一下另一个免费GPU算力——Google Colab</p>
+<p>我们在终端中输入以下命令即可，可能会出错，重复一次就好</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">sudo apt-get install libopencv-dev</span></pre></td></tr></table></figure>
+
+<p>我的Ubuntu版本是18.04LTS，默认下载的OpenCV版本是3.2.0（可编译最新版yolov3）</p>
+<blockquote>
+<p>  据说OpenCV版本不能高于4.0，反正在windows上安装的OpenCV4.1.2是不能利用上种方法直接编译的，下载了Cmake和VS15的同学倒是可以在Windows上试一试</p>
+</blockquote>
+<h2 id="使用Colab"><a href="#使用Colab" class="headerlink" title="使用Colab"></a>使用Colab</h2><p>为了利用GPU训练yolov3，我们需要某些平台来帮助我们，如Colab</p>
+<p>在机器学习一文中我简单介绍过kaggle的使用，下面我们来看一下另一个免费GPU算力——Google Colab</p>
 <blockquote>
 <p>实在不会上谷歌你就私信我吧，着实不方便在这里讲，需要有一个谷歌账号</p>
 </blockquote>
@@ -634,11 +644,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">web</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">web</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -654,11 +664,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -666,11 +676,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">机器学习</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">
