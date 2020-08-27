@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="电科菜狗的小博客">
 <meta property="og:description" content="本文章默认用户使用win10系统64位，并且已经安装MATLAB2018b及以上版本，最好了解一点C与python">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-04-24T13:14:52.145Z">
+<meta property="og:updated_time" content="2020-08-05T10:14:55.415Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -1043,7 +1043,7 @@
 <li><strong>[n, d] = numden(s)</strong>   提取有理公式的分子与分母</li>
 <li><strong>c = coeffs(s)</strong>     提取符号表达式的系数（系数向量的排列顺序是从低到高的）</li>
 <li><strong>simplify(s)</strong>    化简表达式，也可以用于符号矩阵</li>
-<li><strong>p = sym2poly(s)</strong>  s = poly2sym(p)  符号多项式与数值多项式之间的转换</li>
+<li><strong>p = sym2poly(s)</strong>  <strong>s = poly2sym(p)</strong>  符号多项式与数值多项式之间的转换</li>
 </ul>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">syms a b c x;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">f = a*x*x+b*x+c;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">g = coeffs(f)     <span class="comment">% 此处不能直接使用sym2poly函数</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">g = g(<span class="keyword">end</span>:<span class="number">-1</span>:<span class="number">1</span>);  <span class="comment">% 翻转该向量</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">roots(g)</span></pre></td></tr></table></figure>
 
