@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://hhhfccz.github.io">
   <title>自然语言处理 | 电科菜狗的小博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="WEEK1:一般的翻译过程 DeepL   数据库来自Linguee，卷积神经网络（？）   Google翻译   略   一般的文言文与白话文互翻   效果稀烂  规则法一般包括转化法、中间语法（DeepL会将输入文字先转换为英文，再转换为目标语言） 词典法类似于笨蛋查字典 知识翻译范例法基本思路是电脑模拟大量翻译实例（翻译语料库），进行有效替换的翻译策略。因此该方法依赖于翻译语料库的质量、规模">
+  <meta name="description" content="跟着学长搞nlp">
 <meta name="keywords" content="study">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自然语言处理">
 <meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;10&#x2F;03&#x2F;%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86&#x2F;index.html">
 <meta property="og:site_name" content="电科菜狗的小博客">
-<meta property="og:description" content="WEEK1:一般的翻译过程 DeepL   数据库来自Linguee，卷积神经网络（？）   Google翻译   略   一般的文言文与白话文互翻   效果稀烂  规则法一般包括转化法、中间语法（DeepL会将输入文字先转换为英文，再转换为目标语言） 词典法类似于笨蛋查字典 知识翻译范例法基本思路是电脑模拟大量翻译实例（翻译语料库），进行有效替换的翻译策略。因此该方法依赖于翻译语料库的质量、规模">
+<meta property="og:description" content="跟着学长搞nlp">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-10-03T03:32:37.768Z">
+<meta property="og:updated_time" content="2020-10-03T08:47:36.054Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -188,7 +188,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.2k字</span>
+        <span class="post-count">1.1k字</span>
       </span>
     </span>
 
@@ -197,7 +197,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">4分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
@@ -215,7 +215,10 @@
   
 </p></center>
       
-        <h1 id="WEEK1-一般的翻译过程"><a href="#WEEK1-一般的翻译过程" class="headerlink" title="WEEK1:一般的翻译过程"></a>WEEK1:一般的翻译过程</h1><ol>
+        <p><strong>跟着学长搞nlp</strong></p>
+<div><a id="more"></a></div>
+
+<h1 id="WEEK1-一般的翻译过程"><a href="#WEEK1-一般的翻译过程" class="headerlink" title="WEEK1:一般的翻译过程"></a>WEEK1:一般的翻译过程</h1><ol>
 <li><a href="https://www.deepl.com/translator#en/" target="_blank" rel="noopener">DeepL</a></li>
 </ol>
 <blockquote>
@@ -246,17 +249,58 @@
 <p>针对文言文与白话文的互翻，一般认为与训诂学有关、宋元时期出现过相关研究</p>
 <h3 id="人工智能"><a href="#人工智能" class="headerlink" title="人工智能"></a>人工智能</h3><h4 id="大数据"><a href="#大数据" class="headerlink" title="大数据"></a>大数据</h4><p>强行利用大数据量进行拟合、训练出翻译规则</p>
 <hr>
-<h1 id="WEEK2-数据集"><a href="#WEEK2-数据集" class="headerlink" title="WEEK2:数据集"></a>WEEK2:数据集</h1><h2 id="制作数据集"><a href="#制作数据集" class="headerlink" title="制作数据集"></a>制作数据集</h2><ol>
-<li><a href="https://arxiv.org/pdf/1808.03738.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1808.03738.pdf</a></li>
-<li><a href="https://arxiv.org/pdf/1803.01557.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1803.01557.pdf</a></li>
-</ol>
-<h3 id="第一篇文章：Ancient-Modern-Chinese-Translation-with-a-New-Large-Training-Dataset"><a href="#第一篇文章：Ancient-Modern-Chinese-Translation-with-a-New-Large-Training-Dataset" class="headerlink" title="第一篇文章：Ancient-Modern Chinese Translation with a New Large Training Dataset"></a>第一篇文章：Ancient-Modern Chinese Translation with a New Large Training Dataset</h3><p>这篇文章就是讲如何制作古今汉语的大规模并行语料库，并用几个机器翻译的模型上都跑了一遍</p>
+<h1 id="WEEK2-数据集"><a href="#WEEK2-数据集" class="headerlink" title="WEEK2:数据集"></a>WEEK2:数据集</h1><h2 id="制作数据集"><a href="#制作数据集" class="headerlink" title="制作数据集"></a>制作数据集</h2><p>主要参考：<a href="https://arxiv.org/pdf/1808.03738.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1808.03738.pdf</a></p>
+<h3 id="第一篇文章：Ancient-Modern-Chinese-Translation-with-a-New-Large-Training-Dataset"><a href="#第一篇文章：Ancient-Modern-Chinese-Translation-with-a-New-Large-Training-Dataset" class="headerlink" title="第一篇文章：Ancient-Modern Chinese Translation with a New Large Training Dataset"></a>第一篇文章：Ancient-Modern Chinese Translation with a New Large Training Dataset</h3><p>这篇文章就是讲如何<strong>制作古今汉语的大规模并行语料库</strong>，并用几个机器翻译的模型上都跑了一遍</p>
 <h4 id="古今汉语的一些问题"><a href="#古今汉语的一些问题" class="headerlink" title="古今汉语的一些问题"></a>古今汉语的一些问题</h4><ol>
-<li>古今汉语的语法有很大不同</li>
-<li>现代汉语多为双音节、古代汉语为单音节</li>
-<li>古今汉语为一对多（需要优化，古今汉语更多的是多对多）</li>
+<li>古今汉语的<strong>语法</strong>有很大不同</li>
+<li>古今汉语<strong>音节</strong>不同，现代汉语多为两个字表意、古代汉语为一个字表意</li>
+<li>古今汉语为<strong>一对多</strong>（古今汉语更多的是<strong>多对多</strong>）</li>
+<li>古今汉语语言<strong>汉字共现</strong>现象</li>
 </ol>
-<h3 id="句子排列"><a href="#句子排列" class="headerlink" title="句子排列"></a>句子排列</h3><p>我们从互联网上抓取段落及其对应的现代汉语版本。为了保证现代汉语的质量，我们从互联网上对应段落的古代汉语版本。<br>翻译时，我们从古典文章和中国历史文献这两种文体中选择语料。在对这些段落进行抽样校对后，我们认为这些段落的质量很高。<br>这些段落对齐语料是令人满意的。为了评估该算法，我们抓取了一个相对较小的句子对齐的语料库，包括90个对齐的段落，4,544个对齐的句子。我们对它们进行校对，并纠正一些错误，以保证它们的这个语料库的正确性。</p>
+<h4 id="获取翻译实例"><a href="#获取翻译实例" class="headerlink" title="获取翻译实例"></a>获取翻译实例</h4><p>一般来说，获取翻译实例的最好办法是<strong>双语文本对齐</strong></p>
+<h5 id="文本对齐"><a href="#文本对齐" class="headerlink" title="文本对齐"></a>文本对齐</h5><p><a href="http://proxy.qsclub.cn/index.php?_proxurl=aHR0cDovL2NpdGVzZWVyeC5pc3QucHN1LmVkdS92aWV3ZG9jL2Rvd25sb2FkP2RvaT0xMC4xLjEuMTMuNTI0MCZyZXA9cmVwMSZ0eXBlPXBkZg%3D%3D&_proxfl=1eb" target="_blank" rel="noopener">From the Rosetta stone to the information society</a></p>
+<p>这篇文章主要介绍了平行文本的处理与使用。分为三个部分：</p>
+<ol>
+<li><strong>在句子、词语（不同层次）上进行文本对齐的技术与方法</strong></li>
+<li>平行文本在翻译等领域的应用</li>
+<li><strong>目前可用的语料库和对语句对齐结果的评价方法</strong></li>
+</ol>
+<blockquote>
+<p>Q：什么是平行文本</p>
+<p>A：不同的语言，表示一种意思</p>
+</blockquote>
+<h6 id="自动平行文本对齐方法（bitexts）"><a href="#自动平行文本对齐方法（bitexts）" class="headerlink" title="自动平行文本对齐方法（bitexts）"></a>自动平行文本对齐方法（bitexts）</h6><p>一般分为四个维度：<strong>段落、句子、单词和短语</strong></p>
+<p>一些基本假设：</p>
+<ol>
+<li>为了使译文中的句子对应，其中的单词也必须对应【Kay &amp; Röscheisen (1988, 1993)】</li>
+</ol>
+<blockquote>
+<p>即所有产生的词语间的映射需要来自文本本身，<strong>词语的成功对齐可以导致语句、段落的对齐</strong>。</p>
+</blockquote>
+<p><a href="https://www.researchgate.net/publication/220355417_Text-Translation_Alignment" target="_blank" rel="noopener">(PDF) Text-Translation Alignment - ResearchGate</a></p>
+<blockquote>
+<p>上方文章提出了一种<strong>仅基于内部证据</strong>的文本与翻译对齐算法</p>
+</blockquote>
+<h4 id="古今汉语的对齐"><a href="#古今汉语的对齐" class="headerlink" title="古今汉语的对齐"></a>古今汉语的对齐</h4><p>一般结合使用词法方法与统计学方法</p>
+<p><a href="https://www.researchgate.net/publication/287093608_Sentence_Alignment_for_Ancient_and_Modern_Chinese_Parallel_Corpus" target="_blank" rel="noopener">Sentence Alignment for Ancient and Modern Chinese Parallel Corpus</a>中提出一个对数线性模型进行自动对齐，以句子长度、对齐方式、共现汉字为特征。为纯统计学方法。</p>
+<table>
+<thead>
+<tr>
+<th align="center">特征</th>
+<th align="center">特点</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">句子长度</td>
+<td align="center">长句往往翻译之后也是长句，短句亦然</td>
+<td align="center">句长一般为字符个数、词语个数两种</td>
+</tr>
+</tbody></table>
+<p><a href="https://arxiv.org/pdf/1803.01557.pdf" target="_blank" rel="noopener">Automatic Translating Between Ancient Chinese and Contemporary Chinese with Limited</a>中提出了一个基于最长公共子序列的简单古今汉语句子对齐方法，属于无监督模型。为词法方法+统计学方法。</p>
+<p><a href="https://arxiv.org/pdf/1808.03738.pdf" target="_blank" rel="noopener">Ancient-Modern Chinese Translation with a New Large Training Dataset</a>中将句子划分更细，性能更好</p>
+<h3 id="第二篇文章：Chinese-Ancient-Modern-Sentence-Alignment"><a href="#第二篇文章：Chinese-Ancient-Modern-Sentence-Alignment" class="headerlink" title="第二篇文章：Chinese Ancient-Modern Sentence Alignment"></a>第二篇文章：<a href="http://proxy.qsclub.cn/index.php?_proxurl=aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8yMjA4NTkyNTZfQ2hpbmVzZV9BbmNpZW50LU1vZGVybl9TZW50ZW5jZV9BbGlnbm1lbnQ%3D&_proxfl=1eb" target="_blank" rel="noopener">Chinese Ancient-Modern Sentence Alignment</a></h3><p>本文着重研究n-m对齐模式</p>
+<h3 id="第三篇文章：High-performance-bilingual-text-alignment-using-statistical-and-dictionary-information"><a href="#第三篇文章：High-performance-bilingual-text-alignment-using-statistical-and-dictionary-information" class="headerlink" title="第三篇文章：High-performance bilingual text alignment using statistical and dictionary information"></a>第三篇文章：<a href="https://www.cambridge.org/core/journals/natural-language-engineering/article/highperformance-bilingual-text-alignment-using-statistical-and-dictionary-information/6BC5E487BE1B7764180CE36D51BAA4AE?__cf_chl_jschl_tk__=83349868d29b256b666fa1b793b201175e770c8d-1601295213-0-AXf-GnDpLXjUsTzGiWnpcek_qmHnmcGXybgwtS8bPUknwFiGP8MUeQ_MnHuLvKFL8oH_Va_GX2RtillPRiVPDsYueW5vei4PLP2t6uzpdm4uKIkMKIVm21EM4eBo1iRRrReM9DsXpN_tAKUs_4JbLRd6o9eJh6csKbY2ARbVJZl-g_WGeng7lK5-qPBJGUbt_7jD-ojpi0WUHGTMxh7kjPy1Cy7e1DL9K8liraIOtariOTK990Pe2rwEIqeIkjJ53SiyXdHTLrCobsyBPgCEms8yQPqj5X5lf0cNDH8QM5_HFhBbcXtCOks2VK7DFpXM3fCn96UOhdpnm5I5PCCd63Hi5YKix2VLUGUfGyRXyiN7x14tGhQir2cKke2FVVUNEHsCaVkelgUtYTjlXpylbtc-tDVm9Fn_EWuwhaEADuMEo-yzCPLyl6c1EiHYMVkADD97dnSeYJNvU-Qk_oJFwQdVk-KoJYpKeQgXLWpbdBVacn4WnsxVdqbiIiMdIHIp_4jqnIT7Cp6PLTQx2YA6tkjG06Y_I9j0KJrvpy2ef-0MdQlvVpI0VW97Oo6pgIyrGw#" target="_blank" rel="noopener">High-performance bilingual text alignment using statistical and dictionary information</a></h3><h3 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h3><p><a href="https://www.aclweb.org/anthology/J93-1004.pdf" target="_blank" rel="noopener">A Program for Aligning Sentences in Bilingual Corpora</a></p>
 <h3 id="知识补充"><a href="#知识补充" class="headerlink" title="知识补充"></a>知识补充</h3><table>
 <thead>
 <tr>
@@ -277,17 +321,6 @@
 <td></td>
 </tr>
 </tbody></table>
-<h3 id="文字匹配"><a href="#文字匹配" class="headerlink" title="文字匹配"></a>文字匹配</h3><ol>
-<li>问题1：文言文与白话文语序有不同</li>
-</ol>
-<p>The ancient Chinese was used for thousands of years. There is a huge amount of books and articles written in ancient Chinese. However, both the form and grammar of the ancient Chinese have been changed. Chinese historians and litt´erateurs have made great efforts in translating such literature into contemporary Chinese, a big part of which is publicly available on the Internet. However, there is still a big gap between these literatures and parallel corpora, because most of the corpora are coarsely passage-aligned, the orders of sentences are different. To train an automatic translating model, we need to build a sentence-aligned corpus first.</p>
-<p>古汉语的使用已有几千年的历史。有大量的书籍和文章是用古汉语写的。但是，古汉语的形式和语法都发生了变化。中国的历史学家和文学家在将这些文献翻译成现代汉语方面做出了巨大的努力，其中很大一部分已经在互联网上公开。但是，这些文献与平行语料库之间仍有很大的差距，因为大多数语料库都是粗略的段落对齐，句子的顺序不同。为了训练自动翻译模型，我们需要先建立一个句子对齐的语料库。</p>
-<h3 id="文本对齐"><a href="#文本对齐" class="headerlink" title="文本对齐"></a>文本对齐</h3><p>From the Rosetta stone to the information society :<a href="http://proxy.qsclub.cn/index.php?_proxurl=aHR0cDovL2NpdGVzZWVyeC5pc3QucHN1LmVkdS92aWV3ZG9jL2Rvd25sb2FkP2RvaT0xMC4xLjEuMTMuNTI0MCZyZXA9cmVwMSZ0eXBlPXBkZg%3D%3D&amp;_proxfl=1eb" target="_blank" rel="noopener">http://proxy.qsclub.cn/index.php?_proxurl=aHR0cDovL2NpdGVzZWVyeC5pc3QucHN1LmVkdS92aWV3ZG9jL2Rvd25sb2FkP2RvaT0xMC4xLjEuMTMuNTI0MCZyZXA9cmVwMSZ0eXBlPXBkZg%3D%3D&amp;_proxfl=1eb</a></p>
-<p>Chinese Ancient-Modern Sentence Alignment：<a href="http://proxy.qsclub.cn/index.php?_proxurl=aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8yMjA4NTkyNTZfQ2hpbmVzZV9BbmNpZW50LU1vZGVybl9TZW50ZW5jZV9BbGlnbm1lbnQ%3D&amp;_proxfl=1eb" target="_blank" rel="noopener">http://proxy.qsclub.cn/index.php?_proxurl=aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8yMjA4NTkyNTZfQ2hpbmVzZV9BbmNpZW50LU1vZGVybl9TZW50ZW5jZV9BbGlnbm1lbnQ%3D&amp;_proxfl=1eb</a></p>
-<p>High-performance bilingual text alignment using statistical and dictionary information：<a href="https://www.cambridge.org/core/journals/natural-language-engineering/article/highperformance-bilingual-text-alignment-using-statistical-and-dictionary-information/6BC5E487BE1B7764180CE36D51BAA4AE?__cf_chl_jschl_tk__=83349868d29b256b666fa1b793b201175e770c8d-1601295213-0-AXf-GnDpLXjUsTzGiWnpcek_qmHnmcGXybgwtS8bPUknwFiGP8MUeQ_MnHuLvKFL8oH_Va_GX2RtillPRiVPDsYueW5vei4PLP2t6uzpdm4uKIkMKIVm21EM4eBo1iRRrReM9DsXpN_tAKUs_4JbLRd6o9eJh6csKbY2ARbVJZl-g_WGeng7lK5-qPBJGUbt_7jD-ojpi0WUHGTMxh7kjPy1Cy7e1DL9K8liraIOtariOTK990Pe2rwEIqeIkjJ53SiyXdHTLrCobsyBPgCEms8yQPqj5X5lf0cNDH8QM5_HFhBbcXtCOks2VK7DFpXM3fCn96UOhdpnm5I5PCCd63Hi5YKix2VLUGUfGyRXyiN7x14tGhQir2cKke2FVVUNEHsCaVkelgUtYTjlXpylbtc-tDVm9Fn_EWuwhaEADuMEo-yzCPLyl6c1EiHYMVkADD97dnSeYJNvU-Qk_oJFwQdVk-KoJYpKeQgXLWpbdBVacn4WnsxVdqbiIiMdIHIp_4jqnIT7Cp6PLTQx2YA6tkjG06Y_I9j0KJrvpy2ef-0MdQlvVpI0VW97Oo6pgIyrGw#" target="_blank" rel="noopener">https://www.cambridge.org/core/journals/natural-language-engineering/article/highperformance-bilingual-text-alignment-using-statistical-and-dictionary-information/6BC5E487BE1B7764180CE36D51BAA4AE?__cf_chl_jschl_tk__=83349868d29b256b666fa1b793b201175e770c8d-1601295213-0-AXf-GnDpLXjUsTzGiWnpcek_qmHnmcGXybgwtS8bPUknwFiGP8MUeQ_MnHuLvKFL8oH_Va_GX2RtillPRiVPDsYueW5vei4PLP2t6uzpdm4uKIkMKIVm21EM4eBo1iRRrReM9DsXpN_tAKUs_4JbLRd6o9eJh6csKbY2ARbVJZl-g_WGeng7lK5-qPBJGUbt_7jD-ojpi0WUHGTMxh7kjPy1Cy7e1DL9K8liraIOtariOTK990Pe2rwEIqeIkjJ53SiyXdHTLrCobsyBPgCEms8yQPqj5X5lf0cNDH8QM5_HFhBbcXtCOks2VK7DFpXM3fCn96UOhdpnm5I5PCCd63Hi5YKix2VLUGUfGyRXyiN7x14tGhQir2cKke2FVVUNEHsCaVkelgUtYTjlXpylbtc-tDVm9Fn_EWuwhaEADuMEo-yzCPLyl6c1EiHYMVkADD97dnSeYJNvU-Qk_oJFwQdVk-KoJYpKeQgXLWpbdBVacn4WnsxVdqbiIiMdIHIp_4jqnIT7Cp6PLTQx2YA6tkjG06Y_I9j0KJrvpy2ef-0MdQlvVpI0VW97Oo6pgIyrGw#</a></p>
-<h3 id="数据库搭建"><a href="#数据库搭建" class="headerlink" title="数据库搭建"></a>数据库搭建</h3><p>A Program for Aligning Sentences in Bilingual Corpora ：<a href="https://www.aclweb.org/anthology/J93-1004.pdf" target="_blank" rel="noopener">https://www.aclweb.org/anthology/J93-1004.pdf</a></p>
-<h3 id="数据集-跑模型"><a href="#数据集-跑模型" class="headerlink" title="数据集+跑模型"></a>数据集+跑模型</h3><p>Ancient-Modern Chinese Translation with a New Large Training Dataset：<a href="https://arxiv.org/pdf/1808.03738.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1808.03738.pdf</a></p>
-<p>Automatic Translating Between Ancient Chinese and Contemporary Chinese with Limited：<a href="https://arxiv.org/pdf/1803.01557.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1803.01557.pdf</a></p>
 
       
 
@@ -455,7 +488,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#WEEK1-一般的翻译过程"><span class="toc-number">1.</span> <span class="toc-text">WEEK1:一般的翻译过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#规则法"><span class="toc-number">1.1.</span> <span class="toc-text">规则法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#词典法"><span class="toc-number">1.1.1.</span> <span class="toc-text">词典法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#知识翻译"><span class="toc-number">1.2.</span> <span class="toc-text">知识翻译</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#范例法"><span class="toc-number">1.2.1.</span> <span class="toc-text">范例法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#统计法"><span class="toc-number">1.2.2.</span> <span class="toc-text">统计法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#白话文翻译为文言文"><span class="toc-number">1.3.</span> <span class="toc-text">白话文翻译为文言文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文科"><span class="toc-number">1.3.1.</span> <span class="toc-text">文科</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#人工智能"><span class="toc-number">1.3.2.</span> <span class="toc-text">人工智能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#大数据"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">大数据</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#WEEK2-数据集"><span class="toc-number">2.</span> <span class="toc-text">WEEK2:数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#制作数据集"><span class="toc-number">2.1.</span> <span class="toc-text">制作数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一篇文章：Ancient-Modern-Chinese-Translation-with-a-New-Large-Training-Dataset"><span class="toc-number">2.1.1.</span> <span class="toc-text">第一篇文章：Ancient-Modern Chinese Translation with a New Large Training Dataset</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#古今汉语的一些问题"><span class="toc-number">2.1.1.1.</span> <span class="toc-text">古今汉语的一些问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#句子排列"><span class="toc-number">2.1.2.</span> <span class="toc-text">句子排列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#知识补充"><span class="toc-number">2.1.3.</span> <span class="toc-text">知识补充</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文字匹配"><span class="toc-number">2.1.4.</span> <span class="toc-text">文字匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文本对齐"><span class="toc-number">2.1.5.</span> <span class="toc-text">文本对齐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库搭建"><span class="toc-number">2.1.6.</span> <span class="toc-text">数据库搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据集-跑模型"><span class="toc-number">2.1.7.</span> <span class="toc-text">数据集+跑模型</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#WEEK1-一般的翻译过程"><span class="toc-number">1.</span> <span class="toc-text">WEEK1:一般的翻译过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#规则法"><span class="toc-number">1.1.</span> <span class="toc-text">规则法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#词典法"><span class="toc-number">1.1.1.</span> <span class="toc-text">词典法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#知识翻译"><span class="toc-number">1.2.</span> <span class="toc-text">知识翻译</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#范例法"><span class="toc-number">1.2.1.</span> <span class="toc-text">范例法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#统计法"><span class="toc-number">1.2.2.</span> <span class="toc-text">统计法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#白话文翻译为文言文"><span class="toc-number">1.3.</span> <span class="toc-text">白话文翻译为文言文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文科"><span class="toc-number">1.3.1.</span> <span class="toc-text">文科</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#人工智能"><span class="toc-number">1.3.2.</span> <span class="toc-text">人工智能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#大数据"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">大数据</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#WEEK2-数据集"><span class="toc-number">2.</span> <span class="toc-text">WEEK2:数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#制作数据集"><span class="toc-number">2.1.</span> <span class="toc-text">制作数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一篇文章：Ancient-Modern-Chinese-Translation-with-a-New-Large-Training-Dataset"><span class="toc-number">2.1.1.</span> <span class="toc-text">第一篇文章：Ancient-Modern Chinese Translation with a New Large Training Dataset</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#古今汉语的一些问题"><span class="toc-number">2.1.1.1.</span> <span class="toc-text">古今汉语的一些问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#获取翻译实例"><span class="toc-number">2.1.1.2.</span> <span class="toc-text">获取翻译实例</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#文本对齐"><span class="toc-number">2.1.1.2.1.</span> <span class="toc-text">文本对齐</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#自动平行文本对齐方法（bitexts）"><span class="toc-number">2.1.1.2.1.1.</span> <span class="toc-text">自动平行文本对齐方法（bitexts）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#古今汉语的对齐"><span class="toc-number">2.1.1.3.</span> <span class="toc-text">古今汉语的对齐</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二篇文章：Chinese-Ancient-Modern-Sentence-Alignment"><span class="toc-number">2.1.2.</span> <span class="toc-text">第二篇文章：Chinese Ancient-Modern Sentence Alignment</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三篇文章：High-performance-bilingual-text-alignment-using-statistical-and-dictionary-information"><span class="toc-number">2.1.3.</span> <span class="toc-text">第三篇文章：High-performance bilingual text alignment using statistical and dictionary information</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#搭建"><span class="toc-number">2.1.4.</span> <span class="toc-text">搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#知识补充"><span class="toc-number">2.1.5.</span> <span class="toc-text">知识补充</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
