@@ -60,7 +60,7 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 7
+    		总文章数 8
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -240,6 +240,141 @@
       
         <p class="article-more-link">
           <a class="article-more-a  hvr-shutter-in-horizontal" href="/2030/07/09/%E6%B3%A8%E6%84%8F/">查看更多 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <article id="post-数学" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+        
+        
+<a href="/2020/10/17/%E6%95%B0%E5%AD%A6/" class="archive-article-date">
+  	<time datetime="2020-10-17T04:05:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-17</time>
+</a>
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">1.6k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">5分</span>
+      </span>
+    </span>
+</div>
+          
+        
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+    <center><p>
+  
+    <h1 itemprop="name">
+      <a class="article-title_code_ant" href="/2020/10/17/%E6%95%B0%E5%AD%A6/">数学</a>
+    </h1>
+  
+</p></center>
+      
+        <h1 id="盒维数"><a href="#盒维数" class="headerlink" title="盒维数"></a>盒维数</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>​    分形维数是描述某一几何结构复杂程度的合适指标，盒数分析是一种应用广泛的有效的分形维数估计方法。然而，传统的基于图像的盒数计算方法由于像素的限制，在小盒尺度下往往不能准确计算。本文提出了一种基于分形的分形生成方法，并通过严格的数学定义来确定盒形，以消除每个盒形尺度的偏差，得到更可靠的结果。通过对简单分形和递归分形的几个样本的分析，验证了基于数学定义和区间的盒数方法的准确性。</p>
+<h2 id="introduction"><a href="#introduction" class="headerlink" title="introduction"></a>introduction</h2><p>​    分形的概念起源于海岸线悖论，测量海岸线的长度并不像它看起来那么简单。众所周知，海岸线的长度是不确定的，因为它是由用来测量的尺子的长度决定的。较短的尺子测量更多的弯曲处的小细节，如海湾或入口，而较大的尺子会忽略这些细节，所以随着评判指标（尺子的尺度）的减小，得到的最终长度数值会越来越大。因此，用长度来描述海岸线的几何特征是不恰当的，需要另一个指标来量化其几何特征和复杂程度。因此，分形的概念被引入，分形维数被广泛应用于对海岸线等<strong>复杂对象的自相似性进行量化</strong>。到目前为止，许多学者都在研究基于图像的方法，并提出了大量的优化方法来证明计算精度。</p>
+<p>​    本文提出了一种不依赖于像素图像的有效方法，即基于数学区间来消除像素的限制。介绍了盒维数算法的基本原理，并分别介绍了传统方法和该方法的具体计算过程。分析了传统的基于像素的方法精度较低的原因，提出了数学区间法的解决方法。阐述了该方法的计算过程和原理，并对两种方法的计算结果进行了比较，说明了基于数学区间的方法的优越性。最后，得出结论。</p>
+<h3 id="分形和盒数方法"><a href="#分形和盒数方法" class="headerlink" title="分形和盒数方法"></a>分形和盒数方法</h3><p>​    法国数学家曼德尔布罗特在20世纪70年代提出了分形的概念。在他的论文《英国海岸有多长统计自相似性和分数维数》中，他揭示了一个事实，即大多数的自然物体是如此复杂和不稳定，不能用简单的原始事物来很好地描述。这些复杂的对象表现出很强的自相似性。在他看来，海岸线是非常具有代表性的分形例子，它表现出精确的或统计的自相似性。此外，他指出，自相似性是分形的核心特征，这意味着分形对象可以被细分为许多部分，每个部分都可能是整体的一个小尺度副本，或者至少在统计学上是相似的。因此，越来越多的学者倾向于将分形维数(或Hausdorff维数)作为描述几何自相似性和复杂性程度的指标。</p>
+<p>​    然而，直接计算分形对象的Hausdorff维数是非常困难的，因为<strong>它的测度并不是定值，而是在一定的区间内变化的</strong>，所以很多学者倾向于采用另一个类似的指标，即box-counting维数来进行计算。box-counting维数以盒的个数作为度量，由于其易于计算，且在大多数情况下与Hausdorff维数定义相同，因此可以被广泛使用并得到许多从事分形分析的学者的认可。</p>
+<blockquote>
+<p>这里就是需要一个<strong>自适应</strong>的算法来解决测度的问题</p>
+</blockquote>
+<p>​    为了计算box-counting维数，我们需要将原本的二元数据集（也可以看作是二维曲线）用数个小盒子分割，现假设这些小盒子的长度为ε。我们认定在这些盒子中，有N个盒子覆盖到了数据对应的二维曲线。就像与我们前面介绍的现象：<strong>曲线的总长度与我们选取的尺子的长度相关</strong>一样，N的大小也会受到我们选取的尺子的长度的影响，理论上，当小盒子的边长ε趋于0时，log(N)的大小会趋近于log(1/ε)</p>
+<blockquote>
+<p>我觉着这个东西应该需要证明</p>
+</blockquote>
+<p>​    盒维数可以用于简单的人工分形与自然形成的复杂分形，如下图（他用这个图解释了上面一段的内容）：</p>
+<blockquote>
+<p>这里，我觉得可以举一个复杂一点的例子</p>
+</blockquote>
+<p>​    当然在实际情况中，我们不能将盒子的边长取值为0，并且log(N)与log(1/ε)的比值也不是一个定值（但会存在于一定区间中）。随后，该论文用<strong>最小二乘拟合了一条以log(N)为应变量，log(1/ε)为自变量的直线</strong>，并使用该直线对N-ε进行估计。</p>
+<blockquote>
+<p>关于比值存在与一个固定区间的结论，本论文仅给出了一个“这是由其统计自相似性决定的”一句话，个人觉得如果能给出数学证明更好一点。老是统计学跟万物皆BP一样恶心。</p>
+</blockquote>
+<blockquote>
+<p>还有一个问题，既然log(N)-log(1/ε)是直线关系，N-ε不就是一个反比关系吗</p>
+</blockquote>
+<p>​    这里首先需要明确的是该算法建立在二元数据曲线图像上，对每个1/ε进行搜索得到对应的N，然后做拟合。</p>
+<ol>
+<li>按照给定的ε（正方形边长）对图像进行分割，分成数个小块</li>
+<li>找到覆盖住图像曲线的正方形个数N</li>
+<li>拟合1/ε - N曲线</li>
+</ol>
+<p>​    分形还没有被非常严格地定义。但对于大多数分形，其分形维数为1 ~ 2之间的非整数值。Mandelbrot和Falconer同意，我们不需要给出非常精确的定义，而是通过递归、自相似性、精细细节等特征来确定分形。下面将详细讨论计算方法和误差分析。</p>
+
+      
+
+    
+
+      
+
+  <div class="declare" hidden="hidden"></div>
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">math</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a  hvr-shutter-in-horizontal" href="/2020/10/17/%E6%95%B0%E5%AD%A6/">查看更多 >></a>
         </p>
       
 
@@ -1052,7 +1187,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">yolo</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">math</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1060,11 +1195,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">study</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">yolo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">web</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">study</a>
               </li>
             
             <div class="clearfix"></div>
