@@ -6,15 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hhhfccz.github.io">
-  <title>数学 | 电科菜狗的小博客</title>
+  <title>fractional-calculus | 电科菜狗的小博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="keywords" content="math">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数学">
+<meta property="og:title" content="fractional-calculus">
 <meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;10&#x2F;17&#x2F;%E6%95%B0%E5%AD%A6&#x2F;index.html">
 <meta property="og:site_name" content="电科菜狗的小博客">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-10-19T10:10:10.216Z">
+<meta property="og:updated_time" content="2020-10-19T12:56:41.937Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -186,7 +186,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">2.9k字</span>
+        <span class="post-count">3.1k字</span>
       </span>
     </span>
 
@@ -195,7 +195,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">9分</span>
+        <span class="post-count">10分</span>
       </span>
     </span>
 </div>
@@ -208,7 +208,7 @@
     <center><p>
   
     <h1 class="article-title_code_ant" itemprop="name">
-      数学
+      fractional-calculus
     </h1>
   
 </p></center>
@@ -216,47 +216,41 @@
         <div><a id="more"></a></div>
 
 <h1 id="WEEK1：盒维数"><a href="#WEEK1：盒维数" class="headerlink" title="WEEK1：盒维数"></a>WEEK1：盒维数</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>​    分形维数是描述某一几何结构复杂程度的合适指标，盒数分析是一种应用广泛的有效的分形维数估计方法。然而，传统的基于图像的盒数计算方法由于像素的限制，在小盒尺度下往往不能准确计算。本文提出了一种基于分形的分形生成方法，并通过严格的数学定义来确定盒形，以消除每个盒形尺度的偏差，得到更可靠的结果。通过对简单分形和递归分形的几个样本的分析，验证了基于数学定义和区间的盒数方法的准确性。</p>
-<h2 id="introduction"><a href="#introduction" class="headerlink" title="introduction"></a>introduction</h2><p>​    分形的概念起源于海岸线悖论，测量海岸线的长度并不像它看起来那么简单。众所周知，海岸线的长度是不确定的，因为它是由用来测量的尺子的长度决定的。较短的尺子测量更多的弯曲处的小细节，如海湾或入口，而较大的尺子会忽略这些细节，所以随着评判指标（尺子的尺度）的减小，得到的最终长度数值会越来越大。因此，用长度来描述海岸线的几何特征是不恰当的，需要另一个指标来量化其几何特征和复杂程度。因此，分形的概念被引入，分形维数被广泛应用于对海岸线等<strong>复杂对象的自相似性进行量化</strong>。到目前为止，许多学者都在研究基于图像的方法，并提出了大量的优化方法来证明计算精度。</p>
+<h2 id="introduction"><a href="#introduction" class="headerlink" title="introduction"></a>introduction</h2><p>​    分形的概念起源于海岸线悖论，测量海岸线的长度并不像它看起来那么简单。众所周知，海岸线的长度是不确定的，因为它是由用来测量的尺子的长度决定的。较短的尺子测量更多的弯曲处的小细节，如海湾或入口，而较大的尺子会忽略这些细节，所以随着评判指标（尺子的尺度）的减小，得到的最终长度数值会越来越大  。因此，用长度来描述海岸线的几何特征是不恰当的，需要另一个指标来量化其几何特征和复杂程度。因此，分形的概念被引入，分形维数被广泛应用于对海岸线等<strong>复杂对象的自相似性进行量化</strong>。到目前为止，许多学者都在研究基于图像的方法，并提出了大量的优化方法来证明计算精度。</p>
 <p>​    本文提出了一种不依赖于像素图像的有效方法，即基于数学区间来消除像素的限制。介绍了盒维数算法的基本原理，并分别介绍了传统方法和该方法的具体计算过程。分析了传统的基于像素的方法精度较低的原因，提出了数学区间法的解决方法。阐述了该方法的计算过程和原理，并对两种方法的计算结果进行了比较，说明了基于数学区间的方法的优越性。最后，得出结论。</p>
-<h3 id="分形和盒数方法"><a href="#分形和盒数方法" class="headerlink" title="分形和盒数方法"></a>分形和盒数方法</h3><p>​    法国数学家曼德尔布罗特在20世纪70年代提出了分形的概念。在他的论文《英国海岸有多长统计自相似性和分数维数》中，他揭示了一个事实，即大多数的自然物体是如此复杂和不稳定，不能用简单的原始事物来很好地描述。这些复杂的对象表现出很强的自相似性。在他看来，海岸线是非常具有代表性的分形例子，它表现出精确的或统计的自相似性。此外，他指出，自相似性是分形的核心特征，这意味着分形对象可以被细分为许多部分，每个部分都可能是整体的一个小尺度副本，或者至少在统计学上是相似的。因此，越来越多的学者倾向于将分形维数(或Hausdorff维数)作为描述几何自相似性和复杂性程度的指标。</p>
-<p>​    然而，直接计算分形对象的Hausdorff维数是非常困难的，因为<strong>它的测度并不是定值，而是在一定的区间内变化的</strong>，所以很多学者倾向于采用另一个类似的指标，即box-counting维数来进行计算。box-counting维数以盒的个数作为度量，由于其易于计算，且在大多数情况下与Hausdorff维数定义相同，因此可以被广泛使用并得到许多从事分形分析的学者的认可。</p>
+<h3 id="分形和盒数方法"><a href="#分形和盒数方法" class="headerlink" title="分形和盒数方法"></a>分形和盒数方法</h3><p>​    法国数学家曼德尔布罗特在20世纪70年代提出了分形的概念。在他的论文《英国海岸有多长统计自相似性和分数维数》中，他揭示了一个事实，即大多数的自然物体是如此复杂和不稳定，不能用简单的原始事物来很好地描述。这些复杂的对象表现出很强的自相似性。在他看来，海岸线是非常具有代表性的分形例子，它表现出精确的或统计的自相似性。此外，他指出，<strong>自相似性是分形的核心特征</strong>，这意味着分形对象可以被细分为许多部分，每个部分都可能是整体的一个小尺度副本，或者至少在统计学上是相似的。因此，越来越多的学者倾向于将分形维数(或Hausdorff维数)作为描述几何自相似性和复杂性程度的指标。</p>
+<p>​    然而，直接计算分形对象的Hausdorff维数是非常困难的，因为它的测度并不是定值，而是在一定的区间内变化的，所以很多学者倾向于采用另一个类似的指标，即box-counting维数来进行计算。box-counting维数以盒的个数作为度量，由于其易于计算，且在大多数情况下与Hausdorff维数定义相同，因此可以被广泛使用并得到许多从事分形分析的学者的认可。</p>
 <blockquote>
-<p>这里就是需要一个<strong>自适应</strong>的算法来解决测度的问题</p>
+<p>Hausdorff维数就是需要一个<strong>自适应</strong>的算法去解决测度的问题</p>
 </blockquote>
-<p>​    为了计算box-counting维数，我们需要将原本的二元数据集（也可以看作是二维曲线）用数个小盒子分割，现假设这些小盒子的长度为ε。我们认定在这些盒子中，有N个盒子覆盖到了数据对应的二维曲线。就像与我们前面介绍的现象：<strong>曲线的总长度与我们选取的尺子的长度相关</strong>一样，N的大小也会受到我们选取的尺子的长度的影响，理论上，当小盒子的边长ε趋于0时，log(N)的大小会趋近于log(1/ε)</p>
-<blockquote>
-<p>我觉着这个东西应该需要证明</p>
-</blockquote>
-<p>​    盒维数可以用于简单的人工分形与自然形成的复杂分形，如下图（他用这个图解释了上面一段的内容）：</p>
+<p>​    为了计算box-counting维数，我们需要将原本的二元数据（也可以看作是二维曲线）用数个小盒子分割，现假设这些小盒子的长度为ε。我们认定在这些盒子中，有N个盒子覆盖到了数据对应的二维曲线。就像与我们前面介绍的现象：<strong>曲线的总长度与我们选取的尺子的长度相关</strong>一样，N的大小也会受到我们选取的尺子的长度的影响，<strong>盒维数的值就是log(N)/log(1/ε)的在ε趋于0时的极限</strong>。</p>
+<p>​    盒维数可以用于简单的人工分形与自然形成的复杂分形，他就用了一条直线：</p>
 <blockquote>
 <p>这里，我觉得可以举一个复杂一点的例子</p>
 </blockquote>
-<p>​    当然在实际情况中，我们不能将盒子的边长取值为0，并且log(N)与log(1/ε)的比值也不是一个定值（但会存在于一定区间中）。随后，该论文用<strong>最小二乘拟合了一条以log(N)为应变量，log(1/ε)为自变量的直线</strong>，并使用该直线对N-ε进行估计。</p>
-<p>​    该论文给出了另外一篇<a href="http://proxy.qsclub.cn/index.php?_proxurl=aHR0cHM6Ly93d3cuc2NpZW5jZWRpcmVjdC5jb20vc2NpZW5jZS9hcnRpY2xlL2Ficy9waWkvUzAzNzg0MzcxOTkwMDUxNzg%2FdmlhJTNEaWh1Yg%3D%3D" target="_blank" rel="noopener">论文</a>做这个任务</p>
+<p>​    当然在实际情况中，我们不能将盒子的边长取值为0。并且对于同一张图像，其log(N)与log(1/ε)的比值也不是一个定值（但会存在于一定区间中）。随后，该论文用<strong>最小二乘拟合了一条以log(N)为应变量，log(1/ε)为自变量的直线</strong>，并使用该直线对N-ε进行估计（<a href="https://www.zhihu.com/question/22012482" target="_blank" rel="noopener">对数变换</a>）。</p>
+<p>​    该论文给出了另外一篇<a href="http://proxy.qsclub.cn/index.php?_proxurl=aHR0cHM6Ly93d3cuc2NpZW5jZWRpcmVjdC5jb20vc2NpZW5jZS9hcnRpY2xlL2Ficy9waWkvUzAzNzg0MzcxOTkwMDUxNzg%2FdmlhJTNEaWh1Yg%3D%3D" target="_blank" rel="noopener">论文</a>也做过这个任务</p>
 <blockquote>
-<p>关于比值存在与一个固定区间的结论，本论文仅给出了一个“这是由其统计自相似性决定的”一句话，个人觉得如果能给出数学证明更好一点。老是统计学跟万物皆BP一样恶心。</p>
-</blockquote>
-<blockquote>
-<p>还有一个问题，既然log(N)-log(1/ε)是直线关系，N-ε不就是一个反比关系吗</p>
+<p>关于比值存在于一个固定区间的结论，本论文仅给出了一个“这是由其统计自相似性决定的”一句话</p>
 </blockquote>
 <p>​    这里首先需要明确的是该算法建立在二元数据曲线图像上，对每个1/ε进行搜索得到对应的N，然后做拟合。</p>
 <ol>
 <li>按照给定的ε（正方形边长）对图像进行分割，分成数个小块</li>
 <li>找到覆盖住图像曲线的正方形个数N</li>
-<li>拟合1/ε - N曲线</li>
+<li>拟合log(1/ε) - log(N)曲线</li>
 </ol>
-<p>​    分形还没有被非常严格地定义。但对于大多数分形，其分形维数为1 ~ 2之间的非整数值。Mandelbrot和Falconer同意，我们不需要给出非常精确的定义，而是通过递归、自相似性、精细细节等特征来确定分形。下面将详细讨论计算方法和误差分析。</p>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="传统算法"><a href="#传统算法" class="headerlink" title="传统算法"></a>传统算法</h3><p>​    大多数人采用的boe-counting计算方法是基于加载分形图像，并对N和1/ε进行记录，其中，图像的预处理是对原始图像进行<strong>二值化</strong>。我们使用长度为ε个像素的矩阵对二值图像进行分割。<strong>N即为含有非零元素的矩阵的个数</strong>，因此该方法倾向于将矩阵作为方框来实现计数的功能。实际上，一条直线并不是分形，但由于它的分形维数是1，因此在分形研究中对其结果进行验证是有意义的。</p>
+<p>​    分形还没有被非常严格地定义。但对于大多数分形，其分形维数为1 ~ 2之间的非整数值。Mandelbrot和Falconer同意，我们不需要给出非常精确的定义，而是通过递归、自相似性、精细细节等特征来确定分形（图像）。下面将详细讨论计算方法和误差分析。</p>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="传统算法"><a href="#传统算法" class="headerlink" title="传统算法"></a>传统算法</h3><p>​    大多数人采用的boe-counting计算方法是基于加载分形图像，并对log(N)和log(1/ε)进行记录，其中，图像的预处理是对原始图像进行<strong>二值化</strong>。我们使用长度为ε个像素的矩阵对二值图像进行分割。<strong>N即为含有非零元素的矩阵的个数</strong>，因此该方法倾向于将矩阵作为方框来实现计数的功能。实际上，一条直线并不是分形，但由于它的分形维数是1，因此在分形研究中对其结果进行验证是有意义的。</p>
 <blockquote>
 <p>后续会补上python/matlab实现代码</p>
 </blockquote>
-<p>​    传统的像素方法适用于大多数二维曲线图像，但其精度并不怎么令人满意。分形图像的噪音的放大会影响ε的数值，这会导致ε的最小值即为图像像素的大小，这会使得图像本身具有分裂感（不太懂，图像本身就是分裂的，应该是在说不能用图像方法）。此外，分形和递归细节的最小部分在转化为像素图像时将被忽略。因此，在理论描述和数学描述小盒尺寸分形时，由于图像与真实分形对象之间的畸变而造成偏差。除此之外，更复杂的分形本应在小尺度上拥有精细的、递归的细节，但现在这些微小的细节只能以像素的形式显示出来，这就意味着忽略了微小的结构，造成了很大的偏差。加载高分辨率的图片并不能消除这些畸变和偏差，也不能在实质上补偿精度，因此<strong>必须采用不依赖像素的新方法</strong>来解决这一问题。</p>
+<p>​    传统的像素方法适用于大多数二维曲线图像，但其精度并不怎么令人满意。分形图像的噪音的放大会影响ε的数值，这会导致ε的最小值即为图像像素的大小，这会使得图像本身具有分裂感（不太懂，图像本身就是分裂的，应该是在说不能用图像方法）。此外，分形和递归细节的最小部分在转化为像素图像时将被忽略。除此之外，更复杂的分形本应在小尺度上拥有精细的、递归的细节，但现在这些微小的细节无法以像素的形式显示出来，这就意味着有更微小的结构被忽略了，这可能会造成较大的偏差。加载高分辨率的图片并不能消除这些畸变和偏差，也不能在实质上补偿精度，因此<strong>必须采用不依赖像素的新方法</strong>来解决这一问题。</p>
 <blockquote>
 <p>文章并没有给出为什么高分辨率的图片无法消除误差，按他的道理，分辨率越高、ε相对整张图片的可操作最小值更小，结果会更精确，个人建议用实例做一个对比</p>
 </blockquote>
-<h3 id="这篇论文的方法"><a href="#这篇论文的方法" class="headerlink" title="这篇论文的方法"></a>这篇论文的方法</h3><p>​    为了减少像素在放大时造成的失真，可以直接生成分形对象，在一定的区间上给出精确的表达式作为分形的定义边界，并定义一个比较精确的规律来判断方框和分形对象之间的关系，避免重复计数和矛盾。总的过程和原理类似于上面的方法，检测时仍采用盒维数和最小二乘。但在这种方法中，<strong>分形几何图形将由大量的点组成，这些点是由编程或数学语言如显式方程、迭代函数系统或林登梅尔系统生成的，而不是像素</strong>。每种方法生成这些点的原理可能不同。通过这些手段，分形中的点是通过迭代和迭代次数生成的，它们的每一次最新迭代都是前一次迭代的压缩映射，那些attractors（专业名词？求科普）最终会因此而收敛。</p>
+<h3 id="这篇论文的方法"><a href="#这篇论文的方法" class="headerlink" title="这篇论文的方法"></a>这篇论文的方法</h3><p>​    为了减少像素在放大时造成的失真，可以直接生成分形对象，在一定的区间上给出精确的表达式作为分形的定义边界，并定义一个比较精确的规律来判断方框和分形对象之间的关系，避免重复计数和矛盾。总的过程和原理类似于上面的方法，检测时仍采用盒维数和最小二乘。但在这种方法中，<strong>数据将由大量的点组成，这些点是由<a href="http://www.calresco.org/lucas/classify.htm" target="_blank" rel="noopener">IFS或L System</a>生成的，而不是通过分析图像的像素</strong>。通过这些手段，分形中的点是通过迭代方法和迭代次数决定的，它们的每一次最新迭代都是前一次迭代的<a href="https://zh.wikipedia.org/wiki/%E5%8E%8B%E7%BC%A9%E6%98%A0%E5%B0%84" target="_blank" rel="noopener"><strong>压缩映射</strong></a>，那些attractors（专业名词？求科普）最终会因此而收敛。</p>
 <p>​    对于简单的Y-X的映射（离散的），我们可以直接用MATLAB生成数据。当然，这个数据的生成需要一定的规则：我们知道图形是由许多点组成的，我们需要生成的数据与像素发挥类似作用。我们首先构建一个分形图形，随后取离散点，点与点之间的距离越短，生成的点就越多。</p>
-<p>​    但如果使用<a href="http://www.calresco.org/lucas/classify.htm" target="_blank" rel="noopener">IFS或L System</a>，则不能再用明确的定义绘制图形（因为数据本身十分复杂）。我们需要给出数学上的迭代描述。这意味着需要给出自动机生长元素和迭代次数。经过几次迭代，整个分形图形会变得更加稳定，随着迭代次数的增加，分形的细节会变得更加丰富。编程实现的话，只有拐点（二阶连续导数）会被生成，迭代次数越高，点的数量就会增加（参考线性插值）。</p>
+<p>​    但如果使用<a href="http://www.calresco.org/lucas/classify.htm" target="_blank" rel="noopener">IFS或L System</a>，则不能再用明确的定义绘制图形（因为数据本身十分复杂）。我们需要给出数学上的迭代描述。这意味着需要给出自动机迭代方式和迭代次数。经过几次迭代，整个分形图形会变得更加稳定，随着迭代次数的增加，分形的细节会变得更加丰富。编程实现的话，只有拐点（二阶连续导数）会被生成，迭代次数越高，点的数量就会增加（参考线性插值）。</p>
 <blockquote>
 <p>我觉得就是把图像变成一个可解释的函数，用这个函数去生成数据。分形数据生成本身需要用到插值。我们要做的，其实就是这个过程的逆过程</p>
 </blockquote>
@@ -277,15 +271,33 @@
 </tr>
 </tbody></table>
 <blockquote>
-<p>我觉得该论文就是把图像变成函数，这个我在数模国赛的时候就又想做这个东西，已经有成熟的想法了（针对三维图像的），可以放进来试试</p>
+<p>我觉得该论文就是把图像变成函数，这个我在已经有较为成熟的想法了（针对三维图像的），可以放进来试试</p>
 </blockquote>
 <p>​    本篇论文后续内容就是在讲述二维图像到函数数据的一些细节（调参的细节，这个还是得自己去悟）</p>
 <blockquote>
 <p>需要注意的是，ε应该为2的n次幂</p>
 </blockquote>
 <hr>
-<p>Q:</p>
-<p>A:</p>
+<p>Q：关于用来解决测度问题的自适应算法</p>
+<p>A：自适应算法是针对Hausdorff维数的</p>
+<hr>
+<p>Q：二元数据（集）</p>
+<p>A：就是一个二元函数图像，可以是任意一个函数，包括Weierstrass函数</p>
+<hr>
+<p>Q：分形维数</p>
+<p>A：<a href="https://zh.wikipedia.org/wiki/%E8%AE%A1%E7%9B%92%E7%BB%B4%E6%95%B0" target="_blank" rel="noopener">盒维数，又叫计盒维数</a>就是一种分形维数，它的值就是log(N)/log(1/ε)的在ε趋于0时的极限，是用来描述一个<a href="https://zh.wikipedia.org/wiki/分形" target="_blank" rel="noopener">分形</a>对空间填充程度的统计量。一般来说，无穷分形曲线可以理解为一条一维的曲线在空间中绕行，它的<a href="https://zh.wikipedia.org/wiki/拓撲維數" target="_blank" rel="noopener">拓扑维数</a>仍然是 1，但大于 1 的分形维数暗示了它也应当含有类似曲面的性质。</p>
+<blockquote>
+<p>对的，俺翻译错了，嗯。</p>
+</blockquote>
+<hr>
+<p>Q：关于递归细节会被忽略</p>
+<p>A：看看<a href="https://hhhfccz.github.io/docs/#/matplotlib">这个</a>最后一个雪花的例子。其实可以理解成加入现实中有一个分形物体，它不可能无限的分形下去</p>
+<hr>
+<p>Q：关于自动机迭代方式与迭代次数、压缩映射</p>
+<p>A：细细回想一下校赛用过的元胞自动机，差不多的。指定一个迭代规则/迭代函数系统，按照规则进行迭代。压缩映射的定义就是迭代前到迭代后的映射。</p>
+<blockquote>
+<p>迭代函数系统就是上文提到过的IFS</p>
+</blockquote>
 
       
 
