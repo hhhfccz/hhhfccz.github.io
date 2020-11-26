@@ -14,7 +14,7 @@
 <meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;10&#x2F;17&#x2F;%E6%95%B0%E5%AD%A6&#x2F;index.html">
 <meta property="og:site_name" content="电科菜狗的小博客">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-10-19T12:56:41.937Z">
+<meta property="og:updated_time" content="2020-11-23T07:07:03.780Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -246,7 +246,7 @@
 <li>拟合log(1/ε) - log(N)曲线</li>
 </ol>
 <p>​    分形还没有被非常严格地定义。但对于大多数分形，其分形维数为1 ~ 2之间的非整数值。Mandelbrot和Falconer同意，我们不需要给出非常精确的定义，而是通过递归、自相似性、精细细节等特征来确定分形（图像）。下面将详细讨论计算方法和误差分析。</p>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="传统算法"><a href="#传统算法" class="headerlink" title="传统算法"></a>传统算法</h3><p>​    大多数人采用的boe-counting计算方法是基于加载分形图像，并对log(N)和log(1/ε)进行记录，其中，图像的预处理是对原始图像进行<strong>二值化</strong>。我们使用长度为ε个像素的矩阵对二值图像进行分割。<strong>N即为含有非零元素的矩阵的个数</strong>，因此该方法倾向于将矩阵作为方框来实现计数的功能。实际上，一条直线并不是分形，但由于它的分形维数是1，因此在分形研究中对其结果进行验证是有意义的。</p>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="传统算法"><a href="#传统算法" class="headerlink" title="传统算法"></a>传统算法</h3><p>​    大多数人采用的box-counting计算方法是基于加载分形图像，并对log(N)和log(1/ε)进行记录，其中，图像的预处理是对原始图像进行<strong>二值化</strong>。我们使用长度为ε个像素的矩阵对二值图像进行分割。<strong>N即为含有非零元素的矩阵的个数</strong>，因此该方法倾向于将矩阵作为方框来实现计数的功能。实际上，一条直线并不是分形，但由于它的分形维数是1，因此在分形研究中对其结果进行验证是有意义的。</p>
 <blockquote>
 <p>后续会补上python/matlab实现代码</p>
 </blockquote>
