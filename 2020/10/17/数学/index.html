@@ -17,7 +17,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;d0t451&#x2F;d0fractal&#x2F;master&#x2F;images&#x2F;(-0.52%2B0.62j).png">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;hhhfccz&#x2F;image&#x2F;master&#x2F;img&#x2F;QQ%E5%9B%BE%E7%89%8720201127133450.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;hhhfccz&#x2F;image&#x2F;master&#x2F;img&#x2F;box_counting.png">
-<meta property="og:updated_time" content="2020-11-27T07:33:29.973Z">
+<meta property="og:updated_time" content="2020-11-27T07:45:12.997Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;d0t451&#x2F;d0fractal&#x2F;master&#x2F;images&#x2F;(-0.52%2B0.62j).png">
   
@@ -268,7 +268,7 @@
 <p>​    对于简单的Y-X的映射（离散的），我们可以直接用MATLAB生成数据。当然，这个数据的生成需要一定的规则：我们知道图形是由许多点组成的，我们需要生成的数据与像素发挥类似作用。我们首先构建一个分形图形，随后取离散点，点与点之间的距离越短，生成的点就越多。</p>
 <p>​    但如果使用<a href="http://www.calresco.org/lucas/classify.htm" target="_blank" rel="noopener">IFS或L System</a>，则不能再用明确的定义绘制图形（因为数据本身十分复杂）。我们需要给出数学上的迭代描述。这意味着需要给出自动机迭代方式和迭代次数。经过几次迭代，整个分形图形会变得更加稳定，随着迭代次数的增加，分形的细节会变得更加丰富。编程实现的话，只有拐点（二阶连续导数）会被生成，迭代次数越高，点的数量就会增加（参考线性插值）。</p>
 <blockquote>
-<p>我觉得就是把图像变成一个可解释的函数，用这个函数去生成数据。分形数据生成本身需要用到插值。我们要做的，其实就是这个过程的逆过程</p>
+<p>我觉得就是把图像变成一个可解释的迭代过程，用这个迭代过程去生成数据。分形数据生成本身需要用到插值。我们要做的，其实就是这个过程的逆过程</p>
 </blockquote>
 <table>
 <thead>
