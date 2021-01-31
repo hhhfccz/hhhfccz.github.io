@@ -9,7 +9,7 @@
   <title>image processing | 电科菜狗的小博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="图像处理真有意思">
-<meta name="keywords" content="img">
+<meta name="keywords" content="image processing">
 <meta property="og:type" content="article">
 <meta property="og:title" content="image processing">
 <meta property="og:url" content="https:&#x2F;&#x2F;hhhfccz.github.io&#x2F;2020&#x2F;10&#x2F;27&#x2F;picture-processing&#x2F;index.html">
@@ -32,12 +32,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.sevencdn.com&#x2F;hhhfccz&#x2F;image&#x2F;master&#x2F;gif&#x2F;NR_mat_strange.gif">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.sevencdn.com&#x2F;hhhfccz&#x2F;image&#x2F;master&#x2F;gif&#x2F;NR_mat_p_1e-2.gif">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.sevencdn.com&#x2F;hhhfccz&#x2F;image&#x2F;master&#x2F;gif&#x2F;NR_mat_p_1e-2_pro.gif">
-<meta property="og:image" content="https:&#x2F;&#x2F;raw.sevencdn.com&#x2F;hhhfccz&#x2F;image&#x2F;master&#x2F;img&#x2F;MOTO201506002_00700.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;raw.sevencdn.com&#x2F;hhhfccz&#x2F;image&#x2F;master&#x2F;img&#x2F;MOTO201506002_01000.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;raw.sevencdn.com&#x2F;hhhfccz&#x2F;image&#x2F;master&#x2F;img&#x2F;MOTO201506002_01300.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;raw.sevencdn.com&#x2F;hhhfccz&#x2F;image&#x2F;master&#x2F;img&#x2F;MOTO201506002_01600.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;raw.sevencdn.com&#x2F;hhhfccz&#x2F;image&#x2F;master&#x2F;img&#x2F;MOTO201506002_01900.jpg">
-<meta property="og:updated_time" content="2021-01-28T06:14:09.113Z">
+<meta property="og:updated_time" content="2021-01-31T11:55:34.950Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190515203018529.png">
   
@@ -87,7 +82,7 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 8
+    		总文章数 9
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -216,7 +211,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">5.1k字</span>
+        <span class="post-count">3.1k字</span>
       </span>
     </span>
 
@@ -225,7 +220,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">20分</span>
+        <span class="post-count">12分</span>
       </span>
     </span>
 </div>
@@ -244,7 +239,7 @@
 </p></center>
       
         <p><strong>图像处理真有意思</strong></p>
-<a id="more"></a>
+<div><a id="more"></a></div>
 
 <h1 id="找出最清晰的图像"><a href="#找出最清晰的图像" class="headerlink" title="找出最清晰的图像"></a>找出最清晰的图像</h1><h2 id="task-one：121张tiff格式的图像，找出其中最清晰的一张"><a href="#task-one：121张tiff格式的图像，找出其中最清晰的一张" class="headerlink" title="task-one：121张tiff格式的图像，找出其中最清晰的一张"></a>task-one：121张tiff格式的图像，找出其中最清晰的一张</h2><ol>
 <li>简单了解图像质量评估（IQA）相关知识</li>
@@ -374,85 +369,6 @@
 <li>图像给错了（tiff文件呈现出来的gif中看不出来存在“1”，且mat数据直接转换成tiff文件与原tiff文件并不相同）</li>
 <li>图像需要一定的处理才能得到真正的原始图像。</li>
 </ol>
-<p><strong>TODO</strong></p>
-<h3 id="IQA相关知识"><a href="#IQA相关知识" class="headerlink" title="IQA相关知识"></a>IQA相关知识</h3><p>​    IQA从方法上可分为主观评估和客观评估。主观评估就是<strong>从人的主观感知来评价图像的质量</strong>，首先给出原始参考图像和失真图像，让标注者给失真图像评分，一般采用平均主观得分（Mean Opinion Score, MOS）或平均主观得分差异（Differential Mean Opinion Score, DMOS）表示。客观评估使用数学模型给出量化值，可以使用图像处理技术生成一批失真图像，操作简单，已经成为IQA研究的重点。图像质量评估算法的目标是自动评估与人的主观质量判断相一致的客观图像质量。然而，<strong>主观评估费时费力，在实际应用中不可行，并且主观实验受观看距离、显示设备、照明条件、观测者的视觉能力、情绪等诸多因素影响</strong>。 因此，有必要设计出能够自动精确的预测主观质量的数学模型。</p>
-<p>​    IQA按照原始参考图像提供信息的多少一般分成3类：<strong>全参考</strong>（Full Reference-IQA, FR-IQA）、<strong>半参考</strong>（Reduced Reference-IQA, RR-IQA）和<strong>无参考</strong>（No Reference-IQA, NR-IQA），<strong>无参考也叫盲参考</strong>（Blind IQA, BIQA）。FR-IQA同时有原始（无失真、参考）图像和失真图像，难度较低，核心是对比两幅图像的信息量或特征相似度，是研究比较成熟的方向。<strong>NR-IQA只有失真图像</strong>，难度较高，是近些年的研究热点，也是IQA中最有挑战的问题。RR-IQA只有原始图像的部分信息或从参考图像中提取的部分特征，此类方法介于FR-IQA和NR-IQA之间，且任何FR-IQA和NR-IQA方法经过适当加工都可以转换成RR-IQA方法。进一步，NR-IQA类算法还可以细分成两类，一类<strong>研究特定类型的图像质量</strong>，比如估计模糊、块效应、噪声的严重程度，另一类<strong>估计非特定类型的图像质量</strong>，也就是一个通用的失真评估。一般在实际应用中无法提供参考图像，所以NR-IQA最有实用价值，也有着广泛的应用，使用起来也非常方便，同时，由于图像内容的千变万化并且无参考，也使得NR-IQA成为较难的研究对象。</p>
-<blockquote>
-<p>摘自：<a href="https://zhuanlan.zhihu.com/p/32553977" target="_blank" rel="noopener">知乎：图像质量评估综述</a></p>
-</blockquote>
-<p>​    一般来说为了确保算法的准确性，我们使用以下几种评估方法：</p>
-<h4 id="传统算法"><a href="#传统算法" class="headerlink" title="传统算法"></a>传统算法</h4><p>​    以算法评价值与人眼主观打分值（MOS或者DMOS）的<strong>误差或相关性</strong>对算法进行评价。算法评价值与MOS或DMOS的误差越小、相关性越强，说明评价越准确。</p>
-<table>
-<thead>
-<tr>
-<th align="center">技术指标</th>
-<th align="center">公式</th>
-<th align="center">相关说明</th>
-<th align="center">指标</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">均方根误差（RMSE）</td>
-<td align="center"><img src="https://raw.sevencdn.com/hhhfccz/image/master/img/MOTO201506002_00700.jpg" alt="RMSE"></td>
-<td align="center">比较算法评价值与人眼主观打分之间的绝对误差、准确性</td>
-<td align="center">计算这一指标前需要先进行归一化</td>
-</tr>
-<tr>
-<td align="center">线性相关系数（LCC）</td>
-<td align="center"><img src="https://raw.sevencdn.com/hhhfccz/image/master/img/MOTO201506002_01000.jpg" alt="LCC"></td>
-<td align="center">描述算法评价值与人眼主观打分之间的相关性</td>
-<td align="center">计算标准差</td>
-</tr>
-<tr>
-<td align="center">Spearman秩相关系数</td>
-<td align="center"><img src="https://raw.sevencdn.com/hhhfccz/image/master/img/MOTO201506002_01300.jpg" alt="Spearman"></td>
-<td align="center">衡量算法预测的单调性</td>
-<td align="center">rxi, ryi分别为xi和yi在各自数据序列中的排序位置</td>
-</tr>
-<tr>
-<td align="center">Kendall秩相关系数</td>
-<td align="center"><img src="https://raw.sevencdn.com/hhhfccz/image/master/img/MOTO201506002_01600.jpg" alt="Kendall"></td>
-<td align="center">衡量算法预测的单调性</td>
-<td align="center">nc是数据集中的一致对个数, nd是数据集中的不一致对个数</td>
-</tr>
-<tr>
-<td align="center">离出率（OR）</td>
-<td align="center"><img src="https://raw.sevencdn.com/hhhfccz/image/master/img/MOTO201506002_01900.jpg" alt="OR"></td>
-<td align="center">衡量算法预测结果的一致性</td>
-<td align="center">N(false)是超出主观得分±2倍标准差的样本数, N(total)是总样本数</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>两个数据序列中任何一对数据 (xi, yi) 和 (xj, yj) , 如果满足xi&gt;xj且yi&gt;yj或满足xi&lt;xj且yi&lt;yj, 则称为它们是一致的;如果满足xi&gt;xj且yi&lt;yj或满足xi&lt;xj[…]</p>
-<p>摘自：《无参考图像质量评价综述》 王志明 自动化学报</p>
-</blockquote>
-<h4 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h4><p>​    模型+数据，较为繁杂，略</p>
-<p>​    在本次任务中，我们主要聚焦于研究特定类型的图像质量（估计模糊）</p>
-<hr>
-<h1 id="面向特定失真的无参考图像质量评价"><a href="#面向特定失真的无参考图像质量评价" class="headerlink" title="面向特定失真的无参考图像质量评价"></a>面向特定失真的无参考图像质量评价</h1><p>​    图像模糊度的评价是无参考图像质量评价中研究最早、最多的一类方法，广泛用于相机的自动对焦、图像增强、复原和压缩等处理中。其中，图像模糊度的评价方法可大致分为<strong>基于边缘分析的方法、基于变换域方法和基于像素统计信息的方法</strong>等几类。</p>
-<h2 id="基于边缘分析的方法"><a href="#基于边缘分析的方法" class="headerlink" title="基于边缘分析的方法"></a>基于边缘分析的方法</h2><p>​    一般来说，图像模糊会造成边缘宽度变化，因此有很多模糊估计算法以<strong>分析边缘的宽度</strong>为基础。</p>
-<h3 id="Perceptual-blur-and-ringing-metrics-application-to-JPEG2000"><a href="#Perceptual-blur-and-ringing-metrics-application-to-JPEG2000" class="headerlink" title="Perceptual blur and ringing metrics: application to JPEG2000"></a>Perceptual blur and ringing metrics: application to JPEG2000</h3><p>检测竖直方向Sobel边缘，通过搜索灰度值的局部极值点得到边缘宽度，将所有边缘像素的平均边缘宽度作为图像模糊程度的估计</p>
-<p><a href="https://ieeexplore.ieee.org/document/1220975" target="_blank" rel="noopener">No-reference JPEG-2000 image quality metric</a></p>
-<p>沿梯度搜索得到Canny边缘宽度，并对平均边缘宽度进行指数运算得到模糊度估计</p>
-<p><a href="https://d1rkab7tlqy5f1.cloudfront.net/TNW/Over%20faculteit/Decaan/Publications/2003/CAIP2003_JDMGRALVPV.pdf" target="_blank" rel="noopener">A new sharpness measure based on Gaussian lines and edges</a></p>
-<p>用正交滤波器检测图像中的线条和边缘, 通过高斯形状拟合宽度和幅度, 统计小于某一阈值的点数来估计图像锐利程度</p>
-<p><a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.828.6048&rep=rep1&type=pdf" target="_blank" rel="noopener">A Non-Parametric Blur Measure Based on Edge Analysis for Image Processing Applications</a></p>
-<p>以边缘标准差和幅值的加权均值作为模糊度的估计, 权重由图像对比度得到</p>
-<p><a href="https://ieeexplore.ieee.org/document/1689062" target="_blank" rel="noopener">An Objective Out-of-Focus Blur Measurement</a></p>
-<p>根据阶跃边缘估计线扩散函数和点扩散函数，以点扩散函数的半径作为图像模糊度的度量</p>
-<p><a href="https://ieeexplore.ieee.org/document/5413545" target="_blank" rel="noopener">A no-reference perceptual blur metric using histogram of gradient profile sharpness</a></p>
-<p>以梯度剖面的标准差表示某一点锐利度，建立所有边缘点的锐利度直方图并据此计算图像模糊度</p>
-<p><a href="http://www.kresttechnology.com/krest-academic-projects/krest-major-projects/ECE/B-Tech%20Papers/29.pdf" target="_blank" rel="noopener">No-Reference Image Quality Assessment using Blur and Noise</a></p>
-<p>通过计算水平和竖直梯度极值点找到边缘点, 根据其与邻域的灰度关系判断是否为模糊点, 再以模糊像素数和边缘像素数的比率来评价图像模糊程度</p>
-<p><a href="https://ieeexplore.ieee.org/abstract/document/4566199" target="_blank" rel="noopener">Blind image quality assessment for measuring image blur</a></p>
-<p>在计算图像Canny边缘后, 不是以边缘展宽而是以灰度变化斜率最大值作为模糊度的衡量</p>
-<p>​    基于边缘分析进行模糊度评价方法的优点是<strong>概念直观、计算相对简便，后续的方法考虑了人眼视觉的特点</strong>；其缺点是对图像内容有一定的依赖性，当原始图像中缺少锐利边缘时会导致估计不准确。</p>
-<h2 id="基于变换域方法"><a href="#基于变换域方法" class="headerlink" title="基于变换域方法"></a>基于变换域方法</h2><p>​    有许多方法在<strong>不同的数据变换域</strong>，如离散余弦变换 (DCT)、离散小波变换 (DWT) 进行模糊评价；有些算法<strong>综合利用空间域和变换域信息</strong>。</p>
-<p>​    基于变换域的模糊度评价方法<strong>综合了图像的频域特性和多尺度特征</strong>，有些方法同时利用了空间信息，与单一利用边缘信息相比，对模糊度的估计具有较好的准确性和鲁棒性。</p>
-<h2 id="基于像素统计信息的方法"><a href="#基于像素统计信息的方法" class="headerlink" title="基于像素统计信息的方法"></a>基于像素统计信息的方法</h2><p>​    该方法依赖于图像像素一些<strong>统计信息及其相对变化</strong>。</p>
-<p>​    基于像素的模糊度评价方法的优点是利用了图像的统计信息，<strong>鲁棒性好</strong>；缺点是<strong>忽略了像素的位置信息</strong>，图像中的<strong>噪声</strong>（尤其是脉冲噪声）会形成较强的梯度值，从而对估计造成较大的影响。</p>
-<hr>
-<p>​    总体来看，模糊度估计方法逐渐从早期的基于规则向基于机器学习技术过渡，发展趋势是综合利用空间域、变换域特征，并结合基于训练样本学习的回归分析技术进行定量模糊度估计，其关键问题也演变为图像特征的选取和回归分析技术的选择。</p>
 
       
 
@@ -511,7 +427,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">img</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">image processing</a>
         		</li>
       		
 		</ul>
@@ -620,7 +536,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#找出最清晰的图像"><span class="toc-number">1.</span> <span class="toc-text">找出最清晰的图像</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#task-one：121张tiff格式的图像，找出其中最清晰的一张"><span class="toc-number">1.1.</span> <span class="toc-text">task-one：121张tiff格式的图像，找出其中最清晰的一张</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初步任务"><span class="toc-number">1.1.1.</span> <span class="toc-text">初步任务</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#EOG-Energy-Of-Grad"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">EOG(Energy Of Grad)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Brenner"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">Brenner</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Variance"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">Variance</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tenengrad"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">Tenengrad</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Laplace"><span class="toc-number">1.1.1.5.</span> <span class="toc-text">Laplace</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DFT"><span class="toc-number">1.1.1.6.</span> <span class="toc-text">DFT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DCT"><span class="toc-number">1.1.1.7.</span> <span class="toc-text">DCT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#信息熵"><span class="toc-number">1.1.1.8.</span> <span class="toc-text">信息熵</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关于图像本身"><span class="toc-number">1.1.2.</span> <span class="toc-text">关于图像本身</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#tiff文件"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">tiff文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mat存储的数据"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">mat存储的数据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IQA相关知识"><span class="toc-number">1.1.3.</span> <span class="toc-text">IQA相关知识</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#传统算法"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">传统算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#深度学习"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">深度学习</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#面向特定失真的无参考图像质量评价"><span class="toc-number">2.</span> <span class="toc-text">面向特定失真的无参考图像质量评价</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基于边缘分析的方法"><span class="toc-number">2.1.</span> <span class="toc-text">基于边缘分析的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Perceptual-blur-and-ringing-metrics-application-to-JPEG2000"><span class="toc-number">2.1.1.</span> <span class="toc-text">Perceptual blur and ringing metrics: application to JPEG2000</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基于变换域方法"><span class="toc-number">2.2.</span> <span class="toc-text">基于变换域方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基于像素统计信息的方法"><span class="toc-number">2.3.</span> <span class="toc-text">基于像素统计信息的方法</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#找出最清晰的图像"><span class="toc-number">1.</span> <span class="toc-text">找出最清晰的图像</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#task-one：121张tiff格式的图像，找出其中最清晰的一张"><span class="toc-number">1.1.</span> <span class="toc-text">task-one：121张tiff格式的图像，找出其中最清晰的一张</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初步任务"><span class="toc-number">1.1.1.</span> <span class="toc-text">初步任务</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#EOG-Energy-Of-Grad"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">EOG(Energy Of Grad)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Brenner"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">Brenner</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Variance"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">Variance</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tenengrad"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">Tenengrad</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Laplace"><span class="toc-number">1.1.1.5.</span> <span class="toc-text">Laplace</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DFT"><span class="toc-number">1.1.1.6.</span> <span class="toc-text">DFT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DCT"><span class="toc-number">1.1.1.7.</span> <span class="toc-text">DCT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#信息熵"><span class="toc-number">1.1.1.8.</span> <span class="toc-text">信息熵</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关于图像本身"><span class="toc-number">1.1.2.</span> <span class="toc-text">关于图像本身</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#tiff文件"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">tiff文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mat存储的数据"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">mat存储的数据</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -778,23 +694,35 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">IQA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">image processing</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">web</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">deep learning</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">img</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">hardware</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">image enhancement</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">math</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">study</a>
               </li>
             
             <div class="clearfix"></div>
