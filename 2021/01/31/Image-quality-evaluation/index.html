@@ -23,7 +23,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.sevencdn.com&#x2F;hhhfccz&#x2F;image&#x2F;master&#x2F;img&#x2F;MOTO201506002_01900.jpg">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.sevencdn.com&#x2F;hhhfccz&#x2F;image&#x2F;master&#x2F;test.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.sevencdn.com&#x2F;hhhfccz&#x2F;image&#x2F;master&#x2F;compare.png">
-<meta property="og:updated_time" content="2021-01-31T15:24:42.173Z">
+<meta property="og:updated_time" content="2021-02-01T13:12:21.398Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;raw.sevencdn.com&#x2F;hhhfccz&#x2F;image&#x2F;master&#x2F;img&#x2F;MOTO201506002_00700.jpg">
   
@@ -202,7 +202,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.7k字</span>
+        <span class="post-count">1.9k字</span>
       </span>
     </span>
 
@@ -211,7 +211,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">5分</span>
+        <span class="post-count">6分</span>
       </span>
     </span>
 </div>
@@ -286,7 +286,7 @@
 <h2 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h2><p>​    目前图像任务使用CNN，相关内容将在some cnn一文中做出更详细的解释</p>
 <hr>
 <h1 id="面向特定失真的无参考图像质量评价"><a href="#面向特定失真的无参考图像质量评价" class="headerlink" title="面向特定失真的无参考图像质量评价"></a>面向特定失真的无参考图像质量评价</h1><h2 id="模糊度评价"><a href="#模糊度评价" class="headerlink" title="模糊度评价"></a>模糊度评价</h2><p>图像模糊度的评价广泛用于相机的自动对焦、图像增强、复原和压缩等任务中。其中，图像模糊度的评价方法可大致分为<strong>基于边缘分析的方法、基于变换域方法和基于像素统计信息的方法</strong>等几类。</p>
-<h3 id="基于边缘分析的方法"><a href="#基于边缘分析的方法" class="headerlink" title="基于边缘分析的方法"></a>基于边缘分析的方法</h3><p>一般来说，图像模糊会导致图像边缘较宽，如下：</p>
+<h3 id="基于空间域的方法"><a href="#基于空间域的方法" class="headerlink" title="基于空间域的方法"></a>基于空间域的方法</h3><p>一般来说，图像模糊会导致图像边缘较宽，如下：</p>
 <p>这是一张正常图像：</p>
 <p><img src="https://raw.sevencdn.com/hhhfccz/image/master/test.png" alt="test.png"></p>
 <p>我们对这张图像原图与高斯模糊后的图像进行Sobel边缘检测，得到：</p>
@@ -294,17 +294,29 @@
 <blockquote>
 <p>左边是原图Sobel检测结果，右图是模糊后Sobel检测结果</p>
 </blockquote>
-<p>我们可以很清楚地看到右边图像的线条较左边更粗糙，也就是说存在边缘展宽</p>
-<p>基于模糊图像的这个特点，我们可以通过<strong>计算、比较边缘的宽度</strong>去判断图像模糊程度</p>
-<blockquote>
-<p>我们把模糊判断这个任务转换成了边缘宽度计算这个任务</p>
-</blockquote>
-<h3 id="基于变换域方法"><a href="#基于变换域方法" class="headerlink" title="基于变换域方法"></a>基于变换域方法</h3><p>​    有许多方法在<strong>不同的数据变换域</strong>，如离散余弦变换 (DCT)、离散小波变换 (DWT) 进行模糊评价；有些算法<strong>综合利用空间域和变换域信息</strong>。</p>
-<p>​    基于变换域的模糊度评价方法<strong>综合了图像的频域特性和多尺度特征</strong>，有些方法同时利用了空间信息，与单一利用边缘信息相比，对模糊度的估计具有较好的准确性和鲁棒性。</p>
-<h3 id="基于像素统计信息的方法"><a href="#基于像素统计信息的方法" class="headerlink" title="基于像素统计信息的方法"></a>基于像素统计信息的方法</h3><p>​    该方法依赖于图像像素一些<strong>统计信息及其相对变化</strong>。</p>
-<p>​    基于像素的模糊度评价方法的优点是利用了图像的统计信息，<strong>鲁棒性好</strong>；缺点是<strong>忽略了像素的位置信息</strong>，图像中的<strong>噪声</strong>（尤其是脉冲噪声）会形成较强的梯度值，从而对估计造成较大的影响。</p>
+<p>我们可以很清楚地看到右边图像的边缘存在扩散现象，也就是说存在边缘展宽（宽度增加）</p>
+<p>基于模糊图像的这个特点，我们把图像模糊度判断这个任务转换成了<strong>图像边缘宽度计算</strong>这个任务</p>
+<p>具体步骤如下：</p>
+<ol>
+<li>利用垂直方向的梯度算子进行边缘检测</li>
+<li>利用边缘像素周围像素值的极大值、极小值判断边缘的宽度</li>
+<li>利用边缘宽度的均值作为整幅图像模糊程度的指标</li>
+</ol>
+<p>也就是说，我们将图像边缘宽度计算任务分为了<strong>边缘检测</strong>、<strong>极值判断</strong>两个任务<a href="#refer"><sup>1</sup></a></p>
+<p>当然，也并不是只能以边缘展宽作为图像模糊评判的出发点，也有从灰度变化率出发的模糊度检测<a href="#refer"><sup>2</sup></a></p>
+<p>JNB（可察觉模糊）<a href="#refer"><sup>3</sup></a>是Ferzil通过视觉实验提出的概念，它量化了在不同对比度下人眼感受到图像模糊时的阈值</p>
+<p>一般来说，基于空间域的模糊度评价算法具有低复杂度的特点</p>
+<h3 id="基于变换域方法"><a href="#基于变换域方法" class="headerlink" title="基于变换域方法"></a>基于变换域方法</h3><p>一般来说，图像模糊一般是因为图像中高频信息的衰减，因而频域的强度变化可以反映图像模糊程度</p>
+<p>此类算法通常计算图像在离散余弦域、离散小波域的能量下降情况，并以此进行模糊评价</p>
+<p>基于变换域的模糊度评价方法<strong>综合了图像的频域特性和多尺度特征</strong>，有些方法同时利用了空间信息，与单一利用边缘信息相比，对模糊度的估计具有较好的准确性和鲁棒性，同时也具有较高的计算复杂度。</p>
 <hr>
 <p>​    总体来看，模糊度估计方法逐渐从早期的基于规则向基于机器学习技术过渡，发展趋势是综合利用空间域、变换域特征，并结合基于训练样本学习的回归分析技术进行定量模糊度估计，其关键问题也演变为图像特征的选取和回归分析技术的选择。</p>
+<div id="refer"></div>
+
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>[1] <a href="https://www.sciencedirect.com/science/article/abs/pii/S0923596503000924" target="_blank" rel="noopener">Marziliano P , Dufaux F , Winkler S , et al. Perceptual blur and ringing metrics: application to JPEG2000[J]. Signal Processing Image Communication, 2004, 19(2):163-172.</a></p>
+<p>[2] <a href="https://ieeexplore.ieee.org/document/4566199" target="_blank" rel="noopener">Wang X , Tian B , Liang C , et al. Blind Image Quality Assessment for Measuring Image Blur[C]// Congress on Image &amp; Signal Processing. IEEE, 2008.</a></p>
+<p>[3] <a href="https://ieeexplore.ieee.org/document/4799375" target="_blank" rel="noopener">Ferzli R , Karam L J . A No-Reference Objective Image Sharpness Metric Based on the Notion of Just Noticeable Blur (JNB)[J]. IEEE Transactions on Image Processing, 2009, 18(4):717-728.</a></p>
+<p>[4] <a href="https://ieeexplore.ieee.org/document/1038901/" target="_blank" rel="noopener">Caviedes J , ‘Sabri Gurbuz. No-reference sharpness metric based on local edge kurtosis[C]// Proceedings. International Conference on Image Processing. IEEE, 2002.</a></p>
 
       
 
@@ -463,7 +475,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#IQA简介"><span class="toc-number">1.</span> <span class="toc-text">IQA简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#传统算法"><span class="toc-number">1.1.</span> <span class="toc-text">传统算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#深度学习"><span class="toc-number">1.2.</span> <span class="toc-text">深度学习</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#面向特定失真的无参考图像质量评价"><span class="toc-number">2.</span> <span class="toc-text">面向特定失真的无参考图像质量评价</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#模糊度评价"><span class="toc-number">2.1.</span> <span class="toc-text">模糊度评价</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基于边缘分析的方法"><span class="toc-number">2.1.1.</span> <span class="toc-text">基于边缘分析的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基于变换域方法"><span class="toc-number">2.1.2.</span> <span class="toc-text">基于变换域方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基于像素统计信息的方法"><span class="toc-number">2.1.3.</span> <span class="toc-text">基于像素统计信息的方法</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#IQA简介"><span class="toc-number">1.</span> <span class="toc-text">IQA简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#传统算法"><span class="toc-number">1.1.</span> <span class="toc-text">传统算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#深度学习"><span class="toc-number">1.2.</span> <span class="toc-text">深度学习</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#面向特定失真的无参考图像质量评价"><span class="toc-number">2.</span> <span class="toc-text">面向特定失真的无参考图像质量评价</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#模糊度评价"><span class="toc-number">2.1.</span> <span class="toc-text">模糊度评价</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基于空间域的方法"><span class="toc-number">2.1.1.</span> <span class="toc-text">基于空间域的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基于变换域方法"><span class="toc-number">2.1.2.</span> <span class="toc-text">基于变换域方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#引用"><span class="toc-number">3.</span> <span class="toc-text">引用</span></a></li></ol>
                     </div>
                 </span>
             </div>
